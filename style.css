@@ -1,0 +1,713 @@
+CSS
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: rgb(90,90,90);
+  font-family: 'Montserrat', sans-serif;
+  background-color: #fdf9f7;
+  font-size: 1.5rem;
+}
+
+/*index - three cards--*/
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+}
+
+.card-category {
+  background-size: cover;
+  background-position: center;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.text-featured  {
+  font-weight: 600;
+  font-size: 3rem;
+  text-transform: none;
+  text-transform: uppercase;
+}
+
+/*bio--*/
+.shape-window {
+    border-top-left-radius: 20rem;
+    border-top-right-radius: 20rem;
+}
+
+.padded-2,
+.grid.padded-2 {
+  padding: 2rem;
+}
+
+.padded {padding: 2%;
+}
+
+.boxwindow {
+  box-sizing: border-box;
+}
+
+img {max-width: 100%;}
+
+/*grid retreat--*/
+.tall-50 {min-height: 50vh;
+}
+.tall-70 {min-height: 70vh;
+}
+.tall-100 { min-height: 100vh;
+}
+
+.bg-image {
+    background-size: cover;
+    background-position: center;
+    background-image: url(image_folder/profile.jpg);
+}
+
+.bg-venue { background-image: url(image_folder//retreat/1642160191569.jpg);
+}
+
+.bg-food { background-image: url(image_folder//retreat/1642160191562.jpg);
+}
+
+.bg-kitchen { background-image: url(image_folder//retreat/patio.jpeg);
+}
+
+.bg-dance { background-image: url(image_folder//coupleretreat.png);
+}
+
+.bg-deko { background-image: url(image_folder//retreat/yogapatio.jpeg);
+}
+
+.bg-brunch { background-image: url(image_folder//brunch2.JPG);
+}
+
+.bg-sushi { background-image: url(image_folder/sushibowl.jpg);
+}
+
+.bg-zimmer { background-image: url(image_folder//retreat/zimmer.png);
+}
+
+.bg-unterkunft { background-image: url(image_folder//retreat/bed.jpeg);
+}
+
+.bg-postli { background-image: url(image_folder//hotelimpostli.png);
+}
+
+.bg-dining { background-image: url(image_folder//retreat/PHOTO_dining.jpg);
+}
+
+.bg-fluss { background-image: url(image_folder//retreat/fluss.png);
+}
+
+.bg-blog { background-image: url(image_folder//retreat/fluss.png);
+}
+
+.bg-nature {
+    background-image: url(image_folder//retreat/nature.png);
+    background-position: 50% 31%;
+}
+
+.bg-yogaraum {
+    background-image: url(image_folder//retreat/PHOTO_yogaraum.jpg);
+    background-position: 50% 31%;
+}
+
+.bg-feminine {
+    background-image: url(image_folder//retreat/Divine_Feminine.jpeg);
+    background-position: 50% 31%;
+}
+
+
+/*tabs--*/
+.navbar-foodbydebora {
+  justify-content: space-between;
+  background: #fdf9f7;
+}
+
+.navbar-foodbydebora .navbar-collapse {
+  flex-grow: 0;
+}
+
+.navbar-foodbydebora .navbar-brand img {
+  width: 150px;
+}
+
+.tabs-underlined .tab-underlined {
+  margin: 8px 9px;
+  opacity: 0.5;
+  cursor: pointer;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-bottom: 7px solid transparent;
+}
+
+.tabs-underlined .tab-underlined.active {
+  opacity: 1;
+  border-bottom: 2px solid #555555;
+}
+
+/*--header--*/
+.language {
+  padding-top: 1.5rem;
+  text-transform: uppercase;
+}
+
+.banner {
+  background-image: url("image_folder/IMG_6151.JPG");
+  background-size: cover;
+  background-position: 50% 60%;
+  height: 50vh;
+  position: relative;
+  opacity: 0.9;
+}
+
+.banner_workshops {
+  background-image: url("image_folder/retreat/PHOTO_yogaraum.jpg");
+  background-size: cover;
+  background-position: 50% 60%;
+  height: 60vh;
+  position: relative;
+  opacity: 0.9;
+}
+
+.banner_beratung {
+  background-image: url("image_folder/IMG_9243.jpg");
+  background-size: cover;
+  background-position: 50% 60%;
+  height: 60vh;
+  position: relative;
+  opacity: 0.9;
+}
+
+.banner_shop {
+  background-image: url("image_folder/gewürzetitel.jpeg");
+  background-size: cover;
+  background-position: 50% 62%;
+  height: 60vh;
+  position: relative;
+  opacity: 0.9;
+}
+
+.banner_kochbuch {
+  background-image: url("image_folder/IMG_5569.jpg");
+  background-size: cover;
+  background-position: 50% 60%;
+  height: 50vh;
+  position: relative;
+  opacity: 0.9;
+}
+
+.bannerretreat_spanien {
+  background-image: url("image_folder/retreat/bei_Nacht.jpeg");
+  background-size: cover;
+  background-position: 50% 60%;
+  height: 60vh;
+  position: relative;
+  opacity: 0.9;
+}
+
+.bannercouple_retreat {
+  background-image: url("image_folder/yogaraumriffi.JPG");
+  background-size: cover;
+  background-position: 50% 60%;
+  height: 60vh;
+  position: relative;
+  opacity: 0.9;
+}
+
+.bannermealprep {
+  background-image: url("image_folder/mealprep.JPG");
+  background-size: cover;
+  background-position: 50% 25%;
+  height: 60vh;
+  position: relative;
+  opacity: 0.9;
+}
+
+.container {
+  text-align: center;
+  color: rgb(240,240,240);
+}
+
+h2 {
+  font-weight: 400;
+  padding-bottom: 1rem;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.description {
+  font-size: 2rem;
+}
+
+/*--section---*/
+h1 {
+  font-weight: 400;
+  padding-bottom: 1rem;
+  text-align: center;
+  font-size: 3rem;
+}
+
+.maintext {
+  max-width: 600px;
+  margin: 0 auto;
+  padding-left: 1px;
+  line-height: 1.5;
+}
+
+h4 {
+  width: 1000px;
+  margin: 0 auto;
+  padding-left: 1px;
+  line-height: 1.5;
+  font-size: 1.6rem;
+}
+
+.Referenz {
+  background-color: #A4C5BE;
+  text-align: center;
+}
+
+@media(max-width: 992px) {
+   .maintext {
+      width: 700px;
+   }
+}
+@media(max-width: 768px) {
+   .maintext {
+      width: 500px;
+   }
+}
+
+@media(max-width: 500px) {
+   .maintext {
+      width: 350px;
+   }
+}
+
+.links {
+  padding: 16px 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 4px rgba(0,0,0,0.2);
+  border-radius: 4px;
+  margin: 8px;
+  margin-bottom: 2rem;
+  margin-left: 4rem;
+  margin-right: 4rem;
+  border: 1px solid rgb(90,90,90);
+  background-color: #AFD4CC;
+  font-weight: 500;
+}
+.avatar {
+  width: 100px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+  padding-top: 1rem;
+}
+
+.name {
+  display: center;
+  margin: 0 auto;
+  font-size: 1.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.symbols {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  padding: 0px 50px;
+  color: rgba(0,0,0,0.3);
+}
+
+.symbols-links {
+  display: flex;
+  align-items: center;
+}
+
+.symbols-links a {
+  color: black;
+  opacity: 0.15;
+  text-decoration: none;
+  font-size: 24px;
+  padding: 0px 10px;
+}
+.symbols-links a:hover {
+  opacity: 1;
+}
+
+.avatar-large {
+  width: 200px;
+  display: block;
+  margin: 0 auto;
+  padding-top: 1rem;
+}
+
+.restaurants {
+  width: 100rem;
+  display: block;
+  margin: 0 auto;
+  padding-top: 1rem;
+}
+
+.kochbuch {
+  color: black;
+  background-color: rgba(240,240,240,0.3);
+  background-position: center;
+  font-size: 1.5rem;
+  text-align: center;
+  height: 230px;
+  width: 650px;
+  border-radius: 10px;
+  padding-top: 0.7rem;
+  margin: 0 auto;
+}
+
+.kochbuchbild {
+  width: 500px;
+  display: block;
+  margin: 0 auto;
+  padding-top: 1rem;
+}
+
+.kochbuchcover {
+  width: 400px;
+  display: block;
+  margin: 0 auto;
+  padding-top: 1rem;
+}
+
+.neuerezepte {
+  width: 1000px;
+  display: block;
+  margin: 0 auto;
+  padding-top: 1rem;
+}
+
+.btn-flat {
+  background: #A4C5BE;
+  border-radius: 4px;
+  color: rgb(90,90,90);
+  display: inline-block;
+  margin: 4px 2px;
+  max-width: 35rem;
+  padding: 10px 15px;
+  transition: background 0.3s ease;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.button-container {
+  text-align: center;
+}
+
+.btn-flat:hover {
+  background: #fdf9f7;
+  color: rgb(90,90,90);
+}
+
+.kochkursbild {
+  width: 400px;
+  display: block;
+  margin: 0 auto;
+  padding-top: 1rem;
+}
+
+/*---photos raster---*/
+.photo-container {
+  display: flex;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.photo {
+  background-size: cover;
+  background-position: center;
+  padding: 170px 0px;
+  margin: 5px; 0px;
+  flex: 0 0 15%;
+}
+
+@media(max-width: 992px) {
+   .photo {
+      flex: 25%;
+   }
+}
+@media(max-width: 768px) {
+   .photo {
+      flex: 20%;
+   }
+}
+
+@media(max-width: 500px) {
+   .photo {
+      flex: 30%;
+   }
+}
+
+/*---raster square---*/
+.photo-square {
+  display: flex;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.square {
+  background-size: cover;
+  background-position: center;
+  padding: 120px 0px;
+  margin: 5px; 0px;
+  flex: 0 0 15%;
+}
+
+@media(max-width: 992px) {
+   .square {
+      flex: 25%;
+   }
+}
+
+@media(max-width: 500px) {
+   .square {
+      flex: 40%;
+   }
+}
+
+.picture a {
+  opacity: 1;
+}
+.picture a:hover {
+  opacity: 0.6;
+}
+
+/*---list---*/
+
+.liste {
+  width: 420px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 6rem;
+}
+
+.underoffer {
+  padding-top: 0.5rem;
+}
+
+/*---Card---*/
+.card-product {
+  overflow: hidden;
+  height: 120px;
+  background: #A4C5BE;
+  display: flex;
+  align-items: center;
+  width: 450px;
+  margin: 0 auto;
+}
+
+.card-product img {
+  height: 100%;
+  width: 120px;
+  object-fit: cover;
+}
+
+.card-product h2 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-product h3 {
+  font-size: 14px;
+  margin: 0;
+}
+
+.card-product p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.card-product .card-product-infos {
+  padding: 16px;
+}
+
+/*---Card Shop---*/
+
+.card-shop {
+  overflow: hidden;
+  height: 120px;
+  background: #A4C5BE;
+  display: flex;
+  align-items: center;
+  width: 450px;
+  margin: 0 auto;
+}
+
+.card-shop img {
+  height: 100%;
+  width: 120px;
+  object-fit: cover;
+}
+
+.card-shop h2 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-shop h3 {
+  font-size: 14px;
+  margin: 0;
+}
+
+.card-shop p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.card-shop .card-shop-infos {
+  padding: 16px;
+}
+
+/*---Card bio---*/
+
+.bio {
+  overflow: hidden;
+  height: 450px;
+  background: rgb(240,240,240);
+  display: flex;
+  align-items: center;
+  width: 425px;
+  margin: 0 auto;
+}
+
+.bio img {
+  height: 60%;
+  width: 170px;
+  object-fit: cover;
+}
+
+.bio h2 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.bio h3 {
+  font-size: 14px;
+  margin: 0;
+}
+
+.bio p {
+  font-size: 14px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.bio .bio-infos {
+  padding: 20px;
+}
+
+@media(max-width: 992px) {
+   .bio {
+      flex: 10%;
+   }
+}
+@media(max-width: 768px) {
+   .bio {
+      flex: 30%;
+   }
+}
+
+@media(max-width: 500px) {
+   .bio {
+      flex: 50%;
+   }
+}
+
+
+/* MailChimp Form Embed Code - Horizontal Super Slim - 12/16/2015 v10.7*/
+
+#mc_embed_signup form {text-align:center; background-color: #fdf9f7; padding:10px 30px 10px 30px; margin: 70px,0,70px,0;}
+.mc-field-group { display: inline-block; } /* positions input field horizontally */
+#mc_embed_signup input.email {font-family:"Open Sans","Helvetica Neue",Arial,Helvetica,Verdana,sans-serif; font-size: 15px; border: 1px solid #ABB0B2;  -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; color: #343434; background-color: #A4C5BE; box-sizing:border-box; height:32px; padding: 0px 0.4em; display: inline-block; margin: 0; width:350px; vertical-align:top;}
+#mc_embed_signup label {display:block; font-size:16px; padding-bottom:10px; font-weight:bold;}
+#mc_embed_signup .clear {display: inline-block;} /* positions button horizontally in line with input */
+#mc_embed_signup .button {font-size: 13px; border: none; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; letter-spacing: .03em; color: #555555; background-color: #A4C5BE; box-sizing:border-box; height:32px; line-height:32px; padding:0 18px; display: inline-block; margin: 0; transition: all 0.23s ease-in-out 0s;}
+#mc_embed_signup .button:hover {background-color:#A4C5BE; cursor:pointer;}
+#mc_embed_signup div#mce-responses {float:left; top:-1.4em; padding:0em .5em 0em .5em; overflow:hidden; width:90%;margin: 0 5%; clear: both;}
+#mc_embed_signup div.response {margin:1em 0; padding:1em .5em .5em 0; font-weight:bold; float:left; top:-1.5em; z-index:1; width:80%;}
+#mc_embed_signup #mce-error-response {display:none;}
+#mc_embed_signup #mce-success-response {color:#529214; display:none;}
+#mc_embed_signup label.error {display:block; float:none; width:auto; margin-left:1.05em; text-align:left; padding:.5em 0;}
+@media (max-width: 768px) {
+    #mc_embed_signup input.email {width:100%; margin-bottom:5px;}
+    #mc_embed_signup .clear {display: block; width: 100% }
+    #mc_embed_signup .button {width: 100%; margin:0; }
+    }
+
+/*---footer---*/
+h3 {
+  font-weight: 300;
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+  padding-top: 1rem;
+}
+
+footer {
+  background-color: #A4C5BE;
+  text-align: center;
+  margin: 50px,0,50px,0;
+}
+
+a {
+  color: inherit;                 /*---wirklich ok?---*/
+  text-decoration: none;
+}
+
+.button {
+  font-size: 1.3rem;
+  padding: 1rem;
+  padding-bottom: 3rem;
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+a:hover {
+  color: rgb(10,10,10);                  /*---gute Farbe?---*/
+  text-decoration: none;
+}
+
+.copyright {
+  text-align: center;
+  padding-bottom: 1rem;
+}
