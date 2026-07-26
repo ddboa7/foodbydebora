@@ -1,13 +1,35 @@
+:root {
+  --sage: #7fa89a;
+  --sage-dark: #5c8778;
+  --sage-light: #d9e8e2;
+  --cream: #fdf9f7;
+  --cream-alt: #f2ece5;
+  --ink: #47433e;
+  --ink-soft: #6b6660;
+  --gold: #c9a15f;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --shadow-sm: 0 2px 8px rgba(60,50,40,0.08);
+  --shadow-md: 0 8px 24px rgba(60,50,40,0.12);
+  --shadow-lg: 0 16px 40px rgba(60,50,40,0.16);
+  --transition: 0.25s ease;
+}
+
 * {
   margin: 0;
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  color: rgb(90,90,90);
+  color: var(--ink);
   font-family: 'Montserrat', sans-serif;
-  background-color: #fdf9f7;
-  font-size: 1.5rem;
+  background-color: var(--cream);
+  font-size: 1.125rem;
+  line-height: 1.6;
   overflow-x: hidden;
 }
 
@@ -15,6 +37,18 @@ body {
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+::selection {
+  background: var(--sage-light);
+  color: var(--ink);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--sage-dark);
+  outline-offset: 2px;
 }
 
 /*index - three cards--*/
@@ -27,7 +61,7 @@ body {
 .card-category {
   background-size: cover;
   background-position: center;
-  height: 180px;
+  height: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -35,15 +69,21 @@ body {
   font-size: 24px;
   font-weight: bold;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  border-radius: 5px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.card-category:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
 }
 
 .text-featured  {
   font-weight: 600;
-  font-size: 3rem;
-  text-transform: none;
+  font-size: 2.5rem;
   text-transform: uppercase;
+  letter-spacing: 0.03em;
 }
 
 /*bio--*/
@@ -78,6 +118,29 @@ img {max-width: 100%;}
     background-size: cover;
     background-position: center;
     background-image: url(image_folder/profile.jpg);
+    background-color: var(--sage-light);
+}
+
+/* graceful fallback color for full-bleed sections whose source photo
+   fails to load, so a missing image degrades to a brand color instead
+   of a blank/transparent box */
+.bg-venue,
+.bg-food,
+.bg-kitchen,
+.bg-dance,
+.bg-deko,
+.bg-brunch,
+.bg-sushi,
+.bg-zimmer,
+.bg-unterkunft,
+.bg-postli,
+.bg-dining,
+.bg-fluss,
+.bg-blog,
+.bg-nature,
+.bg-yogaraum,
+.bg-feminine {
+  background-color: var(--sage-light);
 }
 
 .bg-venue { background-image: url(image_folder//retreat/1642160191569.jpg);
@@ -134,11 +197,20 @@ img {max-width: 100%;}
     background-position: 50% 31%;
 }
 
+/* alternating section background used across retreat pages (was previously undefined) */
+.bg-light,
+.bglight {
+  background-color: var(--cream-alt);
+}
 
 /*tabs--*/
 .navbar-foodbydebora {
   justify-content: space-between;
-  background: #fdf9f7;
+  background: var(--cream);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: var(--shadow-sm);
 }
 
 .navbar-foodbydebora .navbar-collapse {
@@ -146,27 +218,53 @@ img {max-width: 100%;}
 }
 
 .navbar-foodbydebora .navbar-brand img {
-  width: 150px;
+  width: 130px;
+  transition: transform var(--transition);
+}
+
+.navbar-foodbydebora .navbar-brand:hover img {
+  transform: scale(1.04);
 }
 
 .tabs-underlined .tab-underlined {
   margin: 8px 9px;
-  opacity: 0.5;
+  opacity: 0.6;
   cursor: pointer;
   text-decoration: none;
   text-transform: uppercase;
-  border-bottom: 7px solid transparent;
+  letter-spacing: 0.02em;
+  font-size: 0.95rem;
+  border-bottom: 2px solid transparent;
+  transition: opacity var(--transition), border-color var(--transition);
+  padding-bottom: 4px;
+}
+
+.tabs-underlined .tab-underlined:hover {
+  opacity: 1;
 }
 
 .tabs-underlined .tab-underlined.active {
   opacity: 1;
-  border-bottom: 2px solid #555555;
+  border-bottom: 2px solid var(--sage-dark);
 }
 
 /*--header--*/
 .language {
   padding-top: 1.5rem;
   text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.banner,
+.banner_workshops,
+.banner_beratung,
+.banner_shop,
+.banner_kochbuch,
+.banner_restaurants,
+.bannerretreat_spanien,
+.bannercouple_retreat,
+.bannermealprep {
+  background-color: var(--sage-light);
 }
 
 .banner {
@@ -175,7 +273,21 @@ img {max-width: 100%;}
   background-position: 50% 60%;
   height: 50vh;
   position: relative;
-  opacity: 0.9;
+}
+
+.banner::after,
+.banner_workshops::after,
+.banner_beratung::after,
+.banner_shop::after,
+.banner_kochbuch::after,
+.banner_restaurants::after,
+.bannerretreat_spanien::after,
+.bannercouple_retreat::after,
+.bannermealprep::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(0,0,0,0.08), rgba(0,0,0,0.18));
 }
 
 .banner_workshops {
@@ -184,7 +296,6 @@ img {max-width: 100%;}
   background-position: 50% 60%;
   height: 60vh;
   position: relative;
-  opacity: 0.9;
 }
 
 .banner_beratung {
@@ -193,16 +304,14 @@ img {max-width: 100%;}
   background-position: 50% 60%;
   height: 60vh;
   position: relative;
-  opacity: 0.9;
 }
 
 .banner_shop {
-  background-image: url("image_folder/gewürzetitel.jpeg");
+  background-image: url("image_folder/gewürzetitel.jpeg");
   background-size: cover;
   background-position: 50% 62%;
   height: 60vh;
   position: relative;
-  opacity: 0.9;
 }
 
 .banner_kochbuch {
@@ -211,7 +320,14 @@ img {max-width: 100%;}
   background-position: 50% 60%;
   height: 50vh;
   position: relative;
-  opacity: 0.9;
+}
+
+.banner_restaurants {
+  background-image: url("image_folder/IMG_1.jpg");
+  background-size: cover;
+  background-position: 50% 60%;
+  height: 50vh;
+  position: relative;
 }
 
 .bannerretreat_spanien {
@@ -220,7 +336,6 @@ img {max-width: 100%;}
   background-position: 50% 60%;
   height: 60vh;
   position: relative;
-  opacity: 0.9;
 }
 
 .bannercouple_retreat {
@@ -229,7 +344,6 @@ img {max-width: 100%;}
   background-position: 50% 60%;
   height: 60vh;
   position: relative;
-  opacity: 0.9;
 }
 
 .bannermealprep {
@@ -238,19 +352,22 @@ img {max-width: 100%;}
   background-position: 50% 25%;
   height: 60vh;
   position: relative;
-  opacity: 0.9;
 }
 
 .container {
   text-align: center;
-  color: rgb(240,240,240);
+  color: rgb(250,250,250);
+  position: relative;
+  z-index: 1;
 }
 
 h2 {
+  font-family: 'Lato', sans-serif;
   font-weight: 400;
   padding-bottom: 1rem;
   text-align: center;
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 1.1rem + 1.5vw, 2rem);
+  color: var(--ink);
 }
 
 .description {
@@ -259,10 +376,12 @@ h2 {
 
 /*--section---*/
 h1 {
+  font-family: 'Lato', sans-serif;
   font-weight: 400;
   padding-bottom: 1rem;
   text-align: center;
-  font-size: 3rem;
+  font-size: clamp(1.9rem, 1.3rem + 2.2vw, 3rem);
+  color: var(--ink);
 }
 
 .maintext {
@@ -270,7 +389,22 @@ h1 {
   width: calc(100% - 2rem);
   margin: 0 auto;
   padding-left: 1px;
-  line-height: 1.5;
+  line-height: 1.65;
+}
+
+.maintext a,
+.liste a,
+.description a {
+  color: var(--sage-dark);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color var(--transition);
+}
+
+.maintext a:hover,
+.liste a:hover,
+.description a:hover {
+  color: var(--gold);
 }
 
 h4 {
@@ -283,7 +417,7 @@ h4 {
 }
 
 .Referenz {
-  background-color: #A4C5BE;
+  background-color: var(--sage-light);
   text-align: center;
 }
 
@@ -309,22 +443,30 @@ h4 {
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 0 4px rgba(0,0,0,0.2);
-  border-radius: 4px;
+  box-shadow: var(--shadow-sm);
+  border-radius: var(--radius-sm);
   margin: 8px;
   margin-bottom: 2rem;
   margin-left: 4rem;
   margin-right: 4rem;
-  border: 1px solid rgb(90,90,90);
-  background-color: #AFD4CC;
+  border: 1px solid var(--sage-light);
+  background-color: var(--sage-light);
   font-weight: 500;
+  transition: box-shadow var(--transition), transform var(--transition);
 }
+
+.links:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
 .avatar {
   width: 100px;
   border-radius: 50%;
   display: block;
   margin: 0 auto;
   padding-top: 1rem;
+  box-shadow: var(--shadow-sm);
 }
 
 .name {
@@ -356,6 +498,7 @@ h4 {
   text-decoration: none;
   font-size: 24px;
   padding: 0px 10px;
+  transition: opacity var(--transition);
 }
 .symbols-links a:hover {
   opacity: 1;
@@ -366,6 +509,8 @@ h4 {
   display: block;
   margin: 0 auto;
   padding-top: 1rem;
+  border-radius: 50%;
+  box-shadow: var(--shadow-sm);
 }
 
 .restaurants {
@@ -377,17 +522,18 @@ h4 {
 }
 
 .kochbuch {
-  color: black;
-  background-color: rgba(240,240,240,0.3);
+  color: var(--ink);
+  background-color: rgba(255,255,255,0.5);
   background-position: center;
   font-size: 1.5rem;
   text-align: center;
   min-height: 230px;
   width: calc(100% - 2rem);
   max-width: 650px;
-  border-radius: 10px;
+  border-radius: var(--radius-md);
   padding-top: 0.7rem;
   margin: 0 auto;
+  box-shadow: var(--shadow-sm);
 }
 
 .kochbuchbild {
@@ -396,6 +542,8 @@ h4 {
   display: block;
   margin: 0 auto;
   padding-top: 1rem;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-sm);
 }
 
 .kochbuchcover {
@@ -404,6 +552,8 @@ h4 {
   display: block;
   margin: 0 auto;
   padding-top: 1rem;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-md);
 }
 
 .neuerezepte {
@@ -415,16 +565,18 @@ h4 {
 }
 
 .btn-flat {
-  background: #A4C5BE;
-  border-radius: 4px;
-  color: rgb(90,90,90);
+  background: var(--sage-dark);
+  border-radius: 999px;
+  color: #fff;
   display: inline-block;
   margin: 4px 2px;
   max-width: 35rem;
-  padding: 10px 15px;
-  transition: background 0.3s ease;
+  padding: 12px 22px;
+  transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
   text-decoration: none;
   text-transform: uppercase;
+  letter-spacing: 0.03em;
+  box-shadow: var(--shadow-sm);
 }
 
 .button-container {
@@ -432,8 +584,10 @@ h4 {
 }
 
 .btn-flat:hover {
-  background: #fdf9f7;
-  color: rgb(90,90,90);
+  background: var(--sage);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
 }
 
 .kochkursbild {
@@ -442,6 +596,8 @@ h4 {
   display: block;
   margin: 0 auto;
   padding-top: 1rem;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-sm);
 }
 
 /*---photos raster---*/
@@ -460,6 +616,13 @@ h4 {
   padding: 170px 0px;
   margin: 5px; 0px;
   flex: 0 0 15%;
+  border-radius: var(--radius-sm);
+  transition: filter var(--transition), box-shadow var(--transition);
+}
+
+.photo:hover {
+  filter: brightness(1.06);
+  box-shadow: var(--shadow-md);
 }
 
 @media(max-width: 992px) {
@@ -495,6 +658,13 @@ h4 {
   padding: 120px 0px;
   margin: 5px; 0px;
   flex: 0 0 15%;
+  border-radius: var(--radius-sm);
+  transition: filter var(--transition), box-shadow var(--transition);
+}
+
+.square:hover {
+  filter: brightness(1.06);
+  box-shadow: var(--shadow-md);
 }
 
 @media(max-width: 992px) {
@@ -526,6 +696,25 @@ h4 {
   padding-right: 1rem;
 }
 
+.liste ul {
+  list-style: none;
+  padding: 0;
+}
+
+.liste li {
+  position: relative;
+  padding-left: 1.4rem;
+  margin-bottom: 0.6rem;
+}
+
+.liste li::before {
+  content: "\2022";
+  position: absolute;
+  left: 0;
+  color: var(--sage-dark);
+  font-weight: bold;
+}
+
 .underoffer {
   padding-top: 0.5rem;
 }
@@ -534,12 +723,20 @@ h4 {
 .card-product {
   overflow: hidden;
   height: 120px;
-  background: #A4C5BE;
+  background: var(--sage-light);
   display: flex;
   align-items: center;
   max-width: 450px;
   width: calc(100% - 2rem);
   margin: 0 auto;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.card-product:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
 }
 
 .card-product img {
@@ -552,6 +749,8 @@ h4 {
   font-size: 18px;
   font-weight: bold;
   margin: 0;
+  padding-bottom: 0;
+  text-align: left;
 }
 
 .card-product h3 {
@@ -576,12 +775,20 @@ h4 {
 .card-shop {
   overflow: hidden;
   height: 120px;
-  background: #A4C5BE;
+  background: var(--sage-light);
   display: flex;
   align-items: center;
   max-width: 450px;
   width: calc(100% - 2rem);
   margin: 0 auto;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.card-shop:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
 }
 
 .card-shop img {
@@ -594,6 +801,8 @@ h4 {
   font-size: 18px;
   font-weight: bold;
   margin: 0;
+  padding-bottom: 0;
+  text-align: left;
 }
 
 .card-shop h3 {
@@ -618,12 +827,14 @@ h4 {
 .bio {
   overflow: hidden;
   height: 450px;
-  background: rgb(240,240,240);
+  background: var(--cream-alt);
   display: flex;
   align-items: center;
   max-width: 425px;
   width: calc(100% - 2rem);
   margin: 0 auto;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
 }
 
 .bio img {
@@ -636,6 +847,8 @@ h4 {
   font-size: 18px;
   font-weight: bold;
   margin: 0;
+  padding-bottom: 0;
+  text-align: left;
 }
 
 .bio h3 {
@@ -675,77 +888,104 @@ h4 {
 
 /* MailChimp Form Embed Code - Horizontal Super Slim - 12/16/2015 v10.7*/
 
-#mc_embed_signup form {text-align:center; background-color: #fdf9f7; padding:10px 30px 10px 30px; margin: 70px,0,70px,0;}
+#mc_embed_signup form {text-align:center; background-color: var(--cream); padding:30px; margin: 70px auto;}
 .mc-field-group { display: inline-block; } /* positions input field horizontally */
-#mc_embed_signup input.email {font-family:"Open Sans","Helvetica Neue",Arial,Helvetica,Verdana,sans-serif; font-size: 15px; border: 1px solid #ABB0B2;  -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; color: #343434; background-color: #A4C5BE; box-sizing:border-box; height:32px; padding: 0px 0.4em; display: inline-block; margin: 0; width:350px; vertical-align:top;}
-#mc_embed_signup label {display:block; font-size:16px; padding-bottom:10px; font-weight:bold;}
+#mc_embed_signup input.email {font-family:"Montserrat","Helvetica Neue",Arial,Helvetica,Verdana,sans-serif; font-size: 15px; border: 1px solid var(--sage-light); border-radius: 999px; color: var(--ink); background-color: #fff; box-sizing:border-box; height:42px; padding: 0px 1rem; display: inline-block; margin: 0; width:350px; vertical-align:top;}
+#mc_embed_signup label {display:block; font-size:16px; padding-bottom:14px; font-weight:600; line-height: 1.5;}
 #mc_embed_signup .clear {display: inline-block;} /* positions button horizontally in line with input */
-#mc_embed_signup .button {font-size: 13px; border: none; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; letter-spacing: .03em; color: #555555; background-color: #A4C5BE; box-sizing:border-box; height:32px; line-height:32px; padding:0 18px; display: inline-block; margin: 0; transition: all 0.23s ease-in-out 0s;}
-#mc_embed_signup .button:hover {background-color:#A4C5BE; cursor:pointer;}
+#mc_embed_signup .button {font-size: 13px; border: none; border-radius: 999px; letter-spacing: .03em; color: #fff; background-color: var(--sage-dark); box-sizing:border-box; height:42px; line-height:42px; padding:0 22px; display: inline-block; margin: 0 0 0 8px; text-transform: uppercase; transition: background var(--transition), transform var(--transition);}
+#mc_embed_signup .button:hover {background-color: var(--sage); cursor:pointer; transform: translateY(-2px);}
 #mc_embed_signup div#mce-responses {float:left; top:-1.4em; padding:0em .5em 0em .5em; overflow:hidden; width:90%;margin: 0 5%; clear: both;}
 #mc_embed_signup div.response {margin:1em 0; padding:1em .5em .5em 0; font-weight:bold; float:left; top:-1.5em; z-index:1; width:80%;}
 #mc_embed_signup #mce-error-response {display:none;}
 #mc_embed_signup #mce-success-response {color:#529214; display:none;}
 #mc_embed_signup label.error {display:block; float:none; width:auto; margin-left:1.05em; text-align:left; padding:.5em 0;}
 @media (max-width: 768px) {
-    #mc_embed_signup input.email {width:100%; margin-bottom:5px;}
+    #mc_embed_signup input.email {width:100%; margin-bottom:10px;}
     #mc_embed_signup .clear {display: block; width: 100% }
     #mc_embed_signup .button {width: 100%; margin:0; }
     }
 
 /*---footer---*/
 h3 {
-  font-weight: 300;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
   font-size: 1.7rem;
   margin-bottom: 1rem;
-  padding-top: 1rem;
+  padding-top: 2.5rem;
 }
 
 footer {
-  background-color: #A4C5BE;
+  background-color: var(--sage-light);
   text-align: center;
-  margin: 50px,0,50px,0;
+  padding-top: 0.5rem;
+  padding-bottom: 1rem;
 }
 
 a {
-  color: inherit;                 /*---wirklich ok?---*/
+  color: inherit;
   text-decoration: none;
 }
 
 .button {
-  font-size: 1.3rem;
-  padding: 1rem;
-  padding-bottom: 3rem;
+  font-size: 1.05rem;
+  font-weight: 500;
+  padding: 0.6rem 1.2rem;
   display: inline-block;
   text-transform: uppercase;
+  letter-spacing: 0.02em;
+  border-radius: 999px;
+  transition: background var(--transition), color var(--transition), transform var(--transition);
+}
+
+footer .button:hover {
+  background: var(--sage-dark);
+  color: #fff;
+  transform: translateY(-2px);
 }
 
 a:hover {
-  color: rgb(10,10,10);                  /*---gute Farbe?---*/
+  color: var(--sage-dark);
   text-decoration: none;
 }
 
 .copyright {
   text-align: center;
+  padding-top: 1.5rem;
   padding-bottom: 1rem;
+  font-size: 0.85rem;
+  opacity: 0.75;
 }
 
 
 @media(max-width: 500px) {
   body {
-    font-size: 1.35rem;
+    font-size: 1rem;
   }
 
   h1 {
-    font-size: 2.4rem;
     padding-left: 1rem;
     padding-right: 1rem;
   }
 
   h2 {
-    font-size: 1.8rem;
     padding-left: 1rem;
     padding-right: 1rem;
+  }
+
+  .banner,
+  .banner_kochbuch {
+    height: 32vh;
+  }
+
+  .banner_workshops,
+  .banner_beratung,
+  .banner_shop,
+  .banner_restaurants,
+  .bannerretreat_spanien,
+  .bannercouple_retreat,
+  .bannermealprep {
+    height: 38vh;
   }
 
   .cards {
@@ -753,7 +993,7 @@ a:hover {
   }
 
   .text-featured {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
 
   .card-product,
