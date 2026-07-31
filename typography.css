@@ -1,0 +1,22 @@
+@font-face{font-family:'Lato';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/lato/v24/S6uyw4BMUTPHjx4wXg.woff2) format('woff2');}
+@font-face{font-family:'Lato';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/lato/v24/S6u9w4BMUTPHh6UVSwiPGQ.woff2) format('woff2');}
+@font-face{font-family:'Montserrat';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2) format('woff2');}
+@font-face{font-family:'Montserrat';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/montserrat/v26/JTURjIg1_i6t8kCHKm45_dJE3gnD_g.woff2) format('woff2');}
+@font-face{font-family:'Montserrat';font-style:normal;font-weight:600;font-display:swap;src:url(https://fonts.gstatic.com/s/montserrat/v26/JTURjIg1_i6t8kCHKm45_bZF3gnD_g.woff2) format('woff2');}
+:root{
+--font-display:'Lato',sans-serif;
+--font-body:'Montserrat',sans-serif;
+--text-h1:clamp(1.9rem,4.2vw,3rem); /* @kind font */
+--text-h2:clamp(1.5rem,2.9vw,2rem); /* @kind font */
+--text-h3:1.7rem;
+--text-h4:1.6rem;
+--text-body:1.125rem;
+--text-small:0.95rem;
+--text-xs:0.85rem;
+--leading-body:1.6;
+--leading-loose:1.65;
+--tracking-label:0.02em;
+--tracking-wide:0.03em;
+}
+body{font-family:var(--font-body);}
+h1,h2,h3{font-family:var(--font-display);font-weight:400;}
