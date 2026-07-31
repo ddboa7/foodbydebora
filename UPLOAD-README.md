@@ -9,12 +9,12 @@ Diese Dateien gehören ins **Wurzelverzeichnis** von `ddboa7/foodbydebora` (dort
 - Neu im neuen Design dabei und damit ebenfalls überschrieben: presse.html, tagesretreat.html, paarretreat.html, coupleretreat.html, mealprepmasterclass.html, srilankacurry.html, srilankancurry.html.
 - Neue Dateien: yogaretreat.html (ersetzt yogaretreat_april/may/july/spanien2024), dayretreat.html, mealprepmasterclass-en.html, yogaretreat-en.html, press.html, all-links.html, imprint.html, terms.html, privacy.html.
 - Alte Seiten, die hier NICHT dabei sind (restaurants.html, retreat_september.html, yogaretreat_*.html …), liegen lassen oder löschen.
-- Bilddateien wurden umbenannt (z. B. IMG_5569.jpg wurde zu rainbow-salad-bowl-vegan.jpg). Lade die Ordner image_folder/ und uploads/ komplett neu hoch.
+- Bilder liegen ohne Ordner direkt im Hauptverzeichnis. Nur `ds/` ist ein Ordner.
 - `style.css` des alten Auftritts NICHT löschen, solange diese alten Seiten noch existieren.
 
 ## Diese Ordner/Dateien werden gebraucht
 - `ds/` (Designsystem: colors.css, typography.css, spacing.css, effects.css, styles.css, ds-bundle.js)
-- `image_folder/`, `uploads/` (Bilder)
+- alle Bilddateien liegen jetzt DIREKT im Hauptverzeichnis (keine Bildordner mehr)
 - `site.css`, `seo.js`, `alts.js`, `i18n.js`, `legal.js`, `recipe-data-de.js`, `recipe-data-en.js`
 - `shell.jsx`, `pages.jsx`, `recipes.jsx`, `links.jsx`, `app.jsx`, `tweaks-panel.jsx`
 - alle `.html`-Dateien, `sitemap.xml`, `robots.txt`, `404.html`
@@ -27,7 +27,7 @@ Diese Dateien gehören ins **Wurzelverzeichnis** von `ddboa7/foodbydebora` (dort
 
 ## Weg 1 – direkt auf main (empfohlen, ohne Terminal)
 1. github.com/ddboa7/foodbydebora öffnen → **Add file → Upload files**.
-2. Im Finder das entpackte Projekt öffnen. Alle Dateien markieren UND die drei Ordner `ds`, `image_folder`, `uploads` – als Ordner, nicht deren Inhalt – zusammen ins Browserfenster ziehen.
+2. Im Finder das entpackte Projekt öffnen. Alle Dateien markieren UND die drei Ordner `ds` – als Ordner, nicht deren Inhalt – zusammen ins Browserfenster ziehen.
 3. Warten, bis alles geladen ist, dann **Commit changes** (alles in EINEM Commit).
 4. Prüfen: im Repo muss es einen Ordner `ds` geben, der colors.css usw. enthält. Liegen diese Dateien stattdessen direkt im Hauptverzeichnis, wurde der Ordner flach gemacht – dann Schritt 2 wiederholen und den Ordner selbst ziehen.
 
