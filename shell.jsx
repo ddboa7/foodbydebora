@@ -1,6 +1,6 @@
 const DS = window.FoodByDeboraDesignSystem_3eedd1;
 const { Navbar, Banner, Button, List, ProductCard, CategoryCard, BioCard } = DS;
-const IMG = 'image_folder/';
+const IMG = '';
 
 const ROUTE_KEYS = [
   ['#/catering', 'catering'],
@@ -95,7 +95,7 @@ function Tiers({ items, images }) {
     <div className="grid-tiers" ref={ref}>
       {items.map((it, i) => (
         <Reveal key={i} delay={i * 70}>
-          <ProductCard image={images[i].startsWith('uploads/') ? images[i] : IMG + images[i]} title={it.title} price={it.price} />
+          <ProductCard image={images[i].startsWith('') ? images[i] : IMG + images[i]} title={it.title} price={it.price} />
           {it.note ? <p className="tier-note">{it.note}</p> : null}
         </Reveal>
       ))}
