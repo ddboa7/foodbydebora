@@ -346,7 +346,7 @@ en: {
       'gaining more clarity about your own path and shaping a life that feels coherent and fulfilling',
     ],
     howEyebrow: 'How I work', howTitle: 'Holistic health, four entry points',
-    diagram: 'image_folder/holistic-health-diagram.png',
+    diagram: 'holistic-health-diagram.png',
     fitEyebrow: 'Is this for you', fitTitle: 'This could be exactly right for you if you ...',
     fitList: [
       'often feel exhausted, stressed or restless inside',
@@ -771,7 +771,7 @@ de: {
       'mehr Klarheit über deinen eigenen Weg gewinnst und ein Leben gestaltest, das sich stimmig und erfüllend anfühlt',
     ],
     howEyebrow: 'Wie ich arbeite', howTitle: 'Ganzheitliche Gesundheit, vier Zugänge',
-    diagram: 'image_folder/ganzheitliche-gesundheit-diagramm.png',
+    diagram: 'ganzheitliche-gesundheit-diagramm.png',
     fitEyebrow: 'Passt das zu dir', fitTitle: 'Das könnte genau das Richtige für dich sein, wenn du ...',
     fitList: [
       'dich oft erschöpft, gestresst oder innerlich unruhig fühlst',
