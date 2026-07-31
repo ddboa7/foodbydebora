@@ -73,14 +73,41 @@ function SiteNav({ activeKey }) {
   const C = useC();
   const { lang } = useLang();
   const ref = React.useRef(null);
+  const [open, setOpen] = React.useState(false);
+  const items = navItems(C, lang);
   React.useEffect(() => {
     const img = ref.current && ref.current.querySelector('img');
     if (img && !img.alt) img.alt = window.imgAlt('logo', lang);
   }, [lang]);
+  React.useEffect(() => {
+    const onKey = (e) => { if (e.key === 'Escape') setOpen(false); };
+    document.addEventListener('keydown', onKey);
+    return () => document.removeEventListener('keydown', onKey);
+  }, []);
   return (
     <div className="navbar-shell" ref={ref}>
-      <Navbar logo={IMG + 'food-by-debora-logo.png'} items={navItems(C, lang)} active={C.nav[activeKey]} />
-      <div className="nav-lang-inline"><LangSwitch compact /></div>
+      <div className="nav-desktop">
+        <Navbar logo={IMG + 'food-by-debora-logo.png'} items={items} active={C.nav[activeKey]} />
+        <div className="nav-lang-inline"><LangSwitch compact /></div>
+      </div>
+      <div className="nav-mobile">
+        <div className="nav-mobile-bar">
+          <a className="nav-mobile-logo" href={pageUrl('catering', lang)}><img src={IMG + 'food-by-debora-logo.png'} alt={window.imgAlt('logo', lang)} /></a>
+          <button className={'nav-burger' + (open ? ' on' : '')} onClick={() => setOpen(!open)} aria-expanded={open} aria-label={lang === 'de' ? 'Menü' : 'Menu'} aria-controls="nav-mobile-panel" type="button">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+        <div className={'nav-mobile-panel' + (open ? ' on' : '')} id="nav-mobile-panel">
+          <ul>
+            {items.map((it) => (
+              <li key={it.label}>
+                <a href={it.href} className={it.label === C.nav[activeKey] ? 'on' : ''} onClick={() => setOpen(false)}>{it.label}</a>
+              </li>
+            ))}
+          </ul>
+          <div className="nav-mobile-lang"><LangSwitch /></div>
+        </div>
+      </div>
     </div>
   );
 }
