@@ -29,7 +29,7 @@ function Hero() {
 function OfferRow() {
   const C = useC();
   const items = [
-    { image: 'referenzen-veganes-catering.jpg', label: C.tiles.refs, href: '#testimonials', src: 'rainbow-bowl-vegan.jpg' },
+    { image: 'referenzen-veganes-catering.jpg', label: C.tiles.refs, href: 'https://maps.app.goo.gl/jYsZ3Vw52Q3RVynY7', src: 'rainbow-bowl-vegan.jpg' },
     { image: 'veganer-kochkurs-zug.jpg', label: C.nav.workshops, href: pageUrl('workshops', useLang().lang), src: 'kochkurse-und-retreats.jpg' },
     { image: 'veganer-haferbrei.jpg', label: C.tiles.press, href: pageUrl('presse', useLang().lang), src: 'veganer-brunch.jpg' },
   ];
