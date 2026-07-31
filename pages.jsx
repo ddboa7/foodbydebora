@@ -19,7 +19,7 @@ function Hero() {
       </Reveal>
       <Reveal delay={120}>
         <div className="hero-media">
-          <img src="uploads/veganes-catering-buffet-zug.png" alt={A('heroCatering')} />
+          <img src="veganes-catering-buffet-zug.png" alt={A('heroCatering')} />
         </div>
       </Reveal>
     </section>
@@ -29,9 +29,9 @@ function Hero() {
 function OfferRow() {
   const C = useC();
   const items = [
-    { image: 'referenzen-veganes-catering.jpg', label: C.tiles.refs, href: '#testimonials', src: 'uploads/rainbow-bowl-vegan.jpg' },
-    { image: 'veganer-kochkurs-zug.jpg', label: C.nav.workshops, href: pageUrl('workshops', useLang().lang), src: 'uploads/kochkurse-und-retreats.jpg' },
-    { image: 'veganer-haferbrei.jpg', label: C.tiles.press, href: pageUrl('presse', useLang().lang), src: 'uploads/veganer-brunch.jpg' },
+    { image: 'referenzen-veganes-catering.jpg', label: C.tiles.refs, href: '#testimonials', src: 'rainbow-bowl-vegan.jpg' },
+    { image: 'veganer-kochkurs-zug.jpg', label: C.nav.workshops, href: pageUrl('workshops', useLang().lang), src: 'kochkurse-und-retreats.jpg' },
+    { image: 'veganer-haferbrei.jpg', label: C.tiles.press, href: pageUrl('presse', useLang().lang), src: 'veganer-brunch.jpg' },
   ];
   return (
     <section className="sec" style={{ paddingTop: 'calc(clamp(36px,5vw,72px) * var(--dens))' }}>
@@ -80,14 +80,14 @@ function Why() {
           </div>
         </Reveal>
         <Reveal delay={80}>
-          <div className="media media-tall lift"><img src="uploads/naehrstoffreiche-vegane-bowl.jpg" alt={A('why')} loading="lazy" /></div>
+          <div className="media media-tall lift"><img src="naehrstoffreiche-vegane-bowl.jpg" alt={A('why')} loading="lazy" /></div>
         </Reveal>
       </div>
     </section>
   );
 }
 
-const CATERING_IMAGES = ['uploads/veganes-take-away-rifferswil.jpg', 'uploads/veganes-catering-standard-paket.jpg', 'uploads/veganes-buffet-golden-paket.jpg', 'uploads/private-chef-service-vegan.jpg'];
+const CATERING_IMAGES = ['veganes-take-away-rifferswil.jpg', 'veganes-catering-standard-paket.jpg', 'veganes-buffet-golden-paket.jpg', 'private-chef-service-vegan.jpg'];
 
 function Packages() {
   const C = useC().home;
@@ -128,7 +128,7 @@ function About() {
           </div>
         </Reveal>
         <Reveal delay={80}>
-          <div className="media media-tall lift"><img src="uploads/debora-doehrbeck-in-der-kueche.jpeg" alt={A('aboutPortrait')} loading="lazy" /></div>
+          <div className="media media-tall lift"><img src="debora-doehrbeck-in-der-kueche.jpeg" alt={A('aboutPortrait')} loading="lazy" /></div>
         </Reveal>
       </div>
     </section>
@@ -153,7 +153,7 @@ function Catering() {
 
 function PageBanner({ image, eyebrow, title, position }) {
   return (
-    <Banner image={image.startsWith('uploads/') ? image : IMG + image} height="min(62vh,620px)" position={position || '50% 55%'}>
+    <Banner image={image.startsWith('') ? image : IMG + image} height="min(62vh,620px)" position={position || '50% 55%'}>
       <div style={{ position: 'relative', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', height: 'min(62vh,620px)', padding: '0 clamp(20px,5vw,56px) clamp(32px,5vw,64px)', maxWidth: 1240, margin: '0 auto', textAlign: 'left' }}>
         {eyebrow ? <p className="eyebrow" style={{ position: 'relative', color: '#fff', margin: '0 0 12px', textShadow: '0 2px 14px rgba(40,32,24,.6)' }}>{eyebrow}</p> : null}
         <h1 className="display" style={{ position: 'relative', color: '#fff', maxWidth: '15ch', textShadow: '0 1px 2px rgba(40,32,24,.5), 0 4px 24px rgba(40,32,24,.55)' }}>{title}</h1>
@@ -168,7 +168,7 @@ function Cookbook() {
   const R = useC().recipes;
   return (
     <>
-      <PageBanner image="uploads/veganes-tiramisu-kochbuch.png" position="50% 55%" eyebrow={C.eyebrow} title={C.title} />
+      <PageBanner image="veganes-tiramisu-kochbuch.png" position="50% 55%" eyebrow={C.eyebrow} title={C.title} />
       <section className="sec">
         <div className="wrap split split-narrow">
           <Reveal>
@@ -203,7 +203,7 @@ function Workshops() {
   const C = useC().workshops;
   return (
     <>
-      <PageBanner image="uploads/veganer-kochkurs-workshop.jpg" position="50% 40%" eyebrow={C.eyebrow} title={C.title} />
+      <PageBanner image="veganer-kochkurs-workshop.jpg" position="50% 40%" eyebrow={C.eyebrow} title={C.title} />
       <section className="sec">
         <div className="wrap">
           <Reveal>
@@ -250,7 +250,7 @@ function Workshops() {
             </div>
           </Reveal>
           <Reveal delay={80}>
-            <div className="media media-tall lift"><img src="uploads/kochkurs-bowls-zuerich.png" alt={A('workshopsBowls')} loading="lazy" /></div>
+            <div className="media media-tall lift"><img src="kochkurs-bowls-zuerich.png" alt={A('workshopsBowls')} loading="lazy" /></div>
           </Reveal>
         </div>
       </section>
