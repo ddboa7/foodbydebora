@@ -1,0 +1,196 @@
+window.RECIPES_DE = [
+  {
+    slug: 'haferbrei', name: 'Haferbrei', title: 'Cremiger Bananen Haferbrei', cat: 'Frühstück', photo: 'veganer-haferbrei-beeren.jpg', scan: 'rezept-haferbrei-kochbuch.png',
+    intro: 'Die Banane und das Nussmus verleihen dem Haferbrei eine wunderbar cremige Konsistenz. Eine Prise Salz hebt den süssen Geschmack hervor. Als Topping eignen sich Samen, getrocknete Beeren wie Gojibeeren oder gehackte Nüsse wie Pistazien oder Kokosraspeln besonders gut.',
+    servings: '4 Personen',
+    ingredients: [
+      { items: ['160 g Haferflocken, grob', '1/2 TL Ceylon Zimtpulver', '1/8 TL Steinsalz', '350 g heisses Wasser', '4 zerdrückte, reife Bananen', '28 g (4 EL) gemahlene Leinsamen (Omega 3)*', '30 g Nussmus'] },
+      { label: 'Dekoration', items: ['2 EL Sesam', '2 EL Chia Samen'] },
+    ],
+    steps: [
+      'Haferflocken, Zimt und Salz in eine Schüssel geben, vermengen und mit heissem Wasser übergiessen. Anschliessend 5-10 Minuten quellen lassen.',
+      'Da B-Vitamine und Vitamin C hitzeempfindlich sind, Banane, Samen und Nussmus erst zum Schluss hinzufügen und alles gut verrühren.',
+    ],
+    note: '*Ungemahlene Leinsamen werden meist unverdaut ausgeschieden. Frisch mahlen und im Kühlschrank aufbewahren.',
+    creative: ['Gib etwas Zitronenabrieb hinzu.', 'Verwende statt zwei Bananen zwei gekochte Äpfel für eine säuerliche Süsse.', 'Füge gefrorene Beeren bei. Sie bringen eine angenehme Säure. Besonders Erdbeeren setzen beim Auftauen viel Flüssigkeit frei.'],
+  },
+  {
+    slug: 'smoothie', name: 'Grüner Smoothie', title: 'Grüner Smoothie', cat: 'Frühstück', photo: 'gruener-smoothie-vegan.jpeg', scan: 'rezept-gruener-smoothie-kochbuch.png',
+    intro: 'Ein grüner Smoothie ist eine wunderbare Möglichkeit, täglich mehr Blattgemüse in die Ernährung zu integrieren. Am besten geniesst du ihn langsam mit einem Löffel - so wird die Speichelproduktion angeregt und mehr Verdauungsenzyme können gebildet werden. Wenn möglich, warte nach dem Trinken oder Löffeln mindestens 20 Minuten, bevor du die nächste Mahlzeit zu dir nimmst.',
+    servings: '4 Personen',
+    ingredients: [
+      { items: ['2 Bananen', '450 g Mango oder Ananas', '100 g frischen Spinat, Pak Choi oder Grünkohl', '10 Blätter frische Minze', '700 g Wasser oder Sojadrink', 'kleines Stück Ingwer (7 g)', '15 g frischer Zitronensaft', '1/8 TL Ceylon Zimt', '3 Prisen Steinsalz'] },
+      { label: 'Garnitur', items: ['Mango, Kiwi, Feigen, Minze'] },
+    ],
+    steps: [
+      'Gib alle Zutaten in einen Standmixer und püriere sie zu einem cremigen Smoothie. Platziere das weiche Obst dabei idealerweise unten im Mixer - so lässt sich alles leichter verarbeiten.',
+      'Wenn du gefrorene Mango verwendest, kann der Smoothie etwas weniger süss schmecken. In diesem Fall empfehlen sich etwa drei Esslöffel Dattelkaramell (einfach Datteln mit etwas Wasser pürieren).',
+      'Am besten geniesst du deinen Smoothie frisch, da er dann die meisten Nährstoffe enthält. Du kannst ihn aber auch am Vorabend zubereiten und in einem luftdicht verschlossenen Glas im Kühlschrank aufbewahren - so hast du morgens einen nährstoffreichen Begleiter für Schule oder Arbeit.',
+    ],
+    creative: ['Füge Brennnessel, Petersilie, 1/2 Gurke oder Sprossen hinzu.', 'Füge Kurkuma, Bitterstoffe oder andere Nahrungsergänzungsmittel hinzu.'],
+  },
+  {
+    slug: 'tofuscramble', pos: '50% 68%', name: 'Tofu Scramble', title: 'Scramble mit Räuchertofu', cat: 'Frühstück', photo: 'tofu-scramble-vegan.jpg', scan: 'rezept-tofu-scramble-kochbuch.png',
+    intro: 'Dieses Scramble ist eine perfekte Ergänzung zu einem herzhaften veganen Brunch. Es schmeckt ausgezeichnet auf Sauerteigbrot mit angebratenen Pilzen und frischem Rucola. Tomaten, abgeschmeckt mit Olivenöl, Salz und Knoblauch runden die Mahlzeit ab.',
+    servings: '4 Personen',
+    ingredients: [
+      { items: ['1 EL natives Olivenöl extra', '1 grosse Zwiebel, kleingeschnitten', 'wenig Kristallsalz', '1/8 TL Kurkuma Pulver', '500 g Räuchertofu', '200 ml Wasser', '40 g Cashews, im Food Processor gemahlen', '1/8 TL Kala Namak Salz, fein'] },
+      { label: 'Garnitur', items: ['frische Kräuter, frisch gemahlener Pfeffer'] },
+    ],
+    steps: [
+      'In einer Bratpfanne die Zwiebeln mit etwas Salz in Olivenöl anbraten, bis sie leicht braun sind. Kurkuma beigeben.',
+      'Den Tofu mit beiden Händen zerreiben, zu den Zwiebeln hinzugeben und unter Rühren gut anbraten.',
+      'Das Wasser und die gemahlenen Cashews hinzufügen. Alles gut verrühren und braten lassen, bis die gewünschte Konsistenz erreicht ist.',
+      'Das Kala Namak Salz am Ende hinzufügen und abschmecken.',
+      'Mit frischen Kräutern und Pfeffer garnieren.',
+    ],
+    creative: ['Benutze Kichererbsen Mehl oder gemahlene Kürbiskerne statt Tofu für eine sojafreie Variante.', 'Anstelle von Cashews verwende andere gemahlene Nüsse, Kokosmilch oder Hafersahne.'],
+  },
+  {
+    slug: 'hummus', name: 'Hummus', title: 'Traditioneller mediterraner Hummus', cat: 'Sauce', photo: 'hummus-selbstgemacht.jpeg', scan: 'rezept-hummus-kochbuch.png',
+    intro: 'Das Wort "Hummus" stammt aus dem Arabischen und bedeutet "Kichererbse". Es ist eine orientalische Spezialität aus pürierten Kichererbsen und Sesampaste und passt hervorragend zu geröstetem Gemüse oder Pita Brot. Das Kichererbsen-Wasser kann für Mousse au Chocolat verwendet werden.',
+    servings: '4 Personen',
+    ingredients: [
+      { items: ['120 g getrocknete oder 360 g gekochte Kichererbsen', '3 EL Tahini (Sesampaste)', '3 TL Zitronensaft', '1/2 Knoblauchzehe, ohne Kern', '3/4 TL Kristallsalz, mehr nach Geschmack', 'frisch gemahlener Pfeffer', '1/2 TL gemahlener Kreuzkümmel (für eine bessere Verdauung)', '68 g Wasser'] },
+      { label: 'Garnitur', items: ['gekochte Kichererbsen, Olivenöl, Paprikapulver, Petersilie'] },
+    ],
+    steps: [
+      'Die getrockneten Kichererbsen 24 h in kaltem Wasser einweichen. Wasser mind. zweimal wechseln. Kichererbsen gut abspülen. Kichererbsen für 25 Min. in einem Druckkochtopf oder 2-3 h in einem Kochtopf auf niedriger Stufe kochen. Gelegentlich den Schaum entfernen.',
+      'Damit der Hummus noch cremiger wird, schäle die Kichererbsen, indem du die warmen Kichererbsen mit beiden Händen leicht aneinander reibst. Es hilft, das in einem mit Wasser gefüllten Topf zu machen. Die Schalen schwimmen oben auf und können dadurch gut abgegossen werden.',
+      'Die noch warmen Kichererbsen mit den restlichen Zutaten pürieren. Noch ein bisschen warmer Hummus schmeckt besser als kalter.',
+      'Aufbewahrt im Kühlschrank in einem luftdichten Behälter bleibt der Hummus mehrere Tage haltbar.',
+    ],
+    creative: ['Verwende rote, schwarze oder weisse Bohnen statt Kichererbsen.', 'Mische eine geröstete rote Paprika oder gekochte rote Beete hinzu. Verwende dafür weniger Wasser.', 'Verwende Avocado oder Nussmus statt Tahini.', 'Benütze andere Gewürze (z.B. Curry, Basilikum, Chili).'],
+  },
+  {
+    slug: 'kimchi', name: 'Kimchi', title: 'Kimchi', cat: 'Fermentiertes', photo: 'kimchi-selbst-fermentiert.jpg', scan: 'rezept-kimchi-kochbuch.png',
+    intro: 'Kimchi ist pikanter, fermentierter Kohl mit Knoblauch, Ingwer und Chilischoten, den ich in Seoul zu lieben gelernt habe. Kimchi ist sehr gesund wegen den lebenden Darmbakterien (Probiotika, im Kühlschrank aufbewahren), die das Immunsystem stärken, Entzündungen reduzieren und die Verdauung unterstützen. Kimchi enthält auch Vitamin A, C und Kalium.',
+    ingredients: [
+      { items: ['650 g Chinakohl', '100 g Karotten, Julienne (optional)', '1 EL Kristallsalz', '1/2 Frühlingszwiebel, kleingeschnitten', '4-6 Knoblauchzehen, gepresst (ohne Kern)', '1 EL frischer Ingwer, gerieben', '1 EL Gochugaru (koreanische Chiliflocken)', '1 TL weisse Miso Paste (optional)'] },
+    ],
+    steps: [
+      'Den Kohl waschen und gut abtropfen.',
+      'Den unteren Kern entfernen, in der Mitte halbieren und (mit den Karotten) in eine grosse Schüssel geben. Blätter voneinander nehmen.',
+      'Das Salz hinzufügen und in den Kohl mit den Händen oder einem Stampfer einmassieren, bis die Blätter weich und welk sind. Dies setzt Wasser aus dem Kohl frei (Osmose) und reicht aus, um den Kohl zu bedecken. 4 h bei Raumtemperatur einwirken lassen.',
+      'Das Salz mit kaltem Wasser gründlich abwaschen.',
+      'Den Kohl in eine Schüssel geben und die restlichen Zutaten hinzufügen. Mit Handschuhen einmassieren, da die Chilis die Hände reizen können.',
+      'In ein sterilisiertes Glas geben und nach unten pressen, so dass der Kohl mit Flüssigkeit bedeckt ist. Mit einem sehr dünnen Handtuch und Gummiband abdecken, damit die Luft entweichen kann. Lasse oben Platz, damit mehr Saft freigesetzt werden kann.',
+      'Mind. zwei Tage (48-72 h) an einem dunklen Ort bei Raumtemperatur gären lassen. Wenn du den Geschmack magst, verschliesse das Glas und stelle es mindestens 3 Tage in den Kühlschrank. Kimchi bleibt monatelang gut, solange der Kohl in Flüssigkeit eingelegt ist.',
+    ],
+    creative: ['Diese Art der Fermentation kann auch für andere Lebensmittel (Rote Beeten, Zucchini, Paprika) angewendet werden.', 'Verwende andere Gewürze (z. B. Kreuzkümmel, Curry).', 'Füge Ahornsirup oder Kokosblütenzucker hinzu für einen süss-sauren Geschmack.'],
+  },
+  {
+    slug: 'buddhabowl', name: 'Buddha Bowl', title: 'Buddha Bowl', cat: 'Hauptgericht', photo: 'buddha-bowl-vegan.jpeg', scan: 'rezept-buddha-bowl-kochbuch.png',
+    intro: 'Wir haben es uns zur Gewohnheit gemacht, einmal am Tag zum Mittagessen Salat zu essen. Oft verwerte ich dadurch auch Resten. Sofern als Hauptgericht gilt als Faustregel 200 g Gemüse, 60-80 g Getreide (Reis, Buchweizen, Quinoa) und 100 g gekochte Hülsenfrüchte (Kichererbsen, Edamame, gebratener Tofu, Tempeh) pro Person. Hier eine meiner liebsten Saucen.',
+    servings: '4 Personen',
+    ingredients: [
+      { label: 'Salatdressing', items: ['68 g Mandelmus', '90-120 g Wasser oder Kokosmilch', '19 g Ahornsirup', '1 TL Reis- oder Apfelessig', '1 TL frischer Zitronensaft', '1 Knoblauchzehe, ohne Kern, gepresst', '1 TL Ingwer, gerieben', '1 TL Sojasauce', 'frisch gemahlener Pfeffer'] },
+      { label: 'Bowl', items: ['40 g Samen und Kerne', '1 EL Sojasauce', 'Blattgemüse wie Salat, Spinat, Rucola, massierter Grünkohl', 'Gedämpftes Gemüse wie Rote Beete, Karotte, Kürbis, Brokkoli, Blumenkohl, Pilze', 'Peperoni, Mais, Gurken, Radieschen, Kohlrabi', 'Kalamata Oliven, Kapern', 'Sprossen, Zucchini', '1 Avocado'] },
+    ],
+    steps: [
+      'Getreide und Hülsenfrüchte entweder kochen oder anbraten (bei Tofu und Tempeh).',
+      'In einer Bratpfanne Sesam, Sonnenblumenkerne und Kürbiskerne ohne Öl anrösten, bis die Kerne zu knacken beginnen. Sojasauce beigeben. Die Samen und Kerne aus der Pfanne nehmen und zum Abkühlen beiseite stellen.',
+      'Gemüse rüsten, in mundgerechte Stücke schneiden und bei Bedarf dämpfen. Verwende, worauf du Lust hast und wenn möglich saisonal.',
+      'Schön anrichten. Avocado erst kurz vor dem Essen anrichten.',
+    ],
+    creative: [],
+  },
+  {
+    slug: 'linsencurry', name: 'Linsen Kokosnuss Curry', title: 'Linsen Kokosnuss Curry', cat: 'Hauptgericht', photo: 'veganes-linsencurry.jpg', scan: 'rezept-linsencurry-kochbuch.png',
+    intro: 'Dal ist eines meiner Lieblingsgerichte, da es so vielfältig verändert werden kann (Currypulver, Wahl der Linsen). Linsen enthalten viele Proteine, Ballaststoffe, Kalzium, Eisen und andere Nährstoffe. Geschälte Linsen (rot und gelb) müssen nicht eingeweicht werden, da sich die meisten Antinährstoffe in der Schale befinden. Dieses Gericht passt gut zu Reis, Naan-Brot oder Joghurt.',
+    servings: '4 Personen',
+    ingredients: [
+      { items: ['1 EL natives Olivenöl extra', '1 Zwiebel, kleingewürfelt', 'Kristallsalz', '12 g Ingwer, geraffelt', '14 g Currypulver', '4 Knoblauchzehen, gepresst (optional)', '2 Tomaten oder 1 EL Tomatenmark', '200 g getrocknete, rote Linsen', '300 g Wasser', '250 g Kokosnussmilch', '1/8 TL Zitronensaft', 'frisch gemahlener Pfeffer'] },
+      { label: 'Garnitur', items: ['frischer Koriander', '40 g geröstete Cashews'] },
+    ],
+    steps: [
+      'In einer grossen Bratpfanne erst die Zwiebeln mit etwas Salz in Olivenöl anbraten, bis sie leicht braun sind. Currypulver und Ingwer beigeben und kurz mitbraten. Der Geschmack der Gewürze entwickelt sich beim Anbraten besser.',
+      'Wenn gewünscht, Knoblauch beigeben und nur kurz mitbraten, da er sonst bitter schmeckt.',
+      'Linsen waschen.',
+      'Die gewürfelten Tomaten oder das Tomatenmark, Linsen, das Wasser und die Kokosmilch hinzufügen und 15-20 Minuten bei geschlossenem Deckel bei schwacher Hitze köcheln lassen. Füge mehr Wasser hinzu, wenn eine flüssigere Konsistenz gewünscht ist.',
+      'Zitronensaft beigeben und mit Salz und Pfeffer abschmecken.',
+    ],
+    creative: ['Füge, nachdem die Linsen gekocht sind, 800 g Gemüse (z. B. Brokkoli, Bohnen, Okra, Karotten, Paprika) hinzu und lasse das Gemüse 3-5 Min. köcheln.', 'Füge geröstetes Gemüse wie Auberginen, Paprika oder Pilze hinzu.', 'Füge Nussmus hinzu, um das Dal noch cremiger zu machen.'],
+  },
+  {
+    slug: 'chanamasala', name: 'Chana Masala', title: 'Chana Masala', cat: 'Hauptgericht', photo: 'chana-masala-vegan.jpg', scan: 'rezept-chana-masala-kochbuch.png',
+    intro: 'Ein indisches Gericht aus Kichererbsen in einer würzigen Tomatensosse, oft mit Gewürzen wie Kreuzkümmel, Kurkuma und Garam Masala.',
+    servings: '4 Personen',
+    ingredients: [
+      { items: ['200 g getrocknete / 600 g gekochte Kichererbsen', '2 EL natives Olivenöl extra', '1 Zwiebel, kleingeschnitten', 'Kristallsalz', '12 g Currypulver', '1 EL Tomatenmark', '400 g passierte Tomaten', '300 ml Wasser', '1 TL Kokosblütenzucker', '80 g Cashewmus', 'frisch gemahlener Pfeffer'] },
+    ],
+    steps: [
+      'Die getrockneten Kichererbsen 24 h in kaltem Wasser einweichen. Wasser mind. zweimal wechseln. Kichererbsen gut abspülen. Kichererbsen für 20 Min. in einem Druckkochtopf oder 2-3 h in einem Kochtopf auf niedriger Stufe kochen. Gelegentlich den Schaum entfernen.',
+      'In einer grossen Bratpfanne erst die Zwiebeln mit etwas Salz in Olivenöl anbraten, bis sie leicht braun sind. Currypulver beigeben und kurz mitbraten.',
+      'Tomatenmark, passierte Tomaten, Wasser, Salz, Kokosblütenzucker und Kichererbsen beigeben und für 10 Minuten köcheln lassen.',
+      'Danach Cashewmus beigeben und gut verrühren.',
+      'Mit frisch gemahlenem Pfeffer abschmecken.',
+    ],
+    creative: ['Verwende weisses Mandelmus oder Avocadoöl anstelle von Cashewmus.', 'Verwende Blumenkohl anstelle von Tofu. Gleiche Vorgehensweise.', 'Verwende zusätzlich Chilipulver.', 'Füge 2 gebackene / geröstete Auberginen hinzu.'],
+  },
+  {
+    slug: 'sushi', pos: '50% 68%', name: 'Sushi', title: 'Sushi', cat: 'Hauptgericht', photo: 'veganes-sushi-catering.jpg', scan: 'rezept-veganes-sushi-kochbuch.png',
+    intro: 'Reis muss frisch sein, da er sonst nicht mehr klebt. Grundsätzlich unterscheidet man zwei Grundformen von Sushi: Maki (gerollte Sushi) und Nigiri (belegtes ovales Stückchen Sushireis). Bei Maki kann das Algenblatt sowohl aussen (Futo-Maki) als auch innen (Ura-Maki) sein.',
+    servings: '4 Personen',
+    ingredients: [
+      { items: ['320 g Sushi- / Risotto-Reis', '640 ml Wasser', 'wenig Salz', '1 TL Kokosblütenzucker'] },
+      { label: 'Füllung', items: ['400 g Karotten Lax', '6 Nori Blätter', '1 reife Avocado', '200 g Räuchertofu', 'Essig'] },
+      { label: 'Zubehör', items: ['Sushi-Matte', 'Sojasauce'] },
+    ],
+    steps: [
+      'In einem Topf, Reis mit Wasser, Salz und Kokosblütenzucker gemäss Verpackung kochen (kleine Stufe, mit Deckel). Reis in eine flache Schüssel füllen, um abzukühlen.',
+      'In der Zwischenzeit 400 g Karotten Lax zubereiten. Räuchertofu und Avocado in Streifen schneiden.',
+      'Lege ein Nori-Blatt mit der glänzenden Seite nach unten und der rauen Seite nach oben auf eine Sushi-Matte.',
+      'Befeuchte deine Hände mit Essig-Wasser (in Schale vorbereiten), damit der Reis weniger an deinen Fingern kleben bleibt. Nimm eine Handvoll Reis und drücke ihn gleichmässig auf das untere zwei Drittel des Nori-Blatts.',
+      'Ordne die Füllung im untersten Drittel in einer Linie auf dem Reis an. Starte von unten und rolle mit sanftem Druck eine kompakte Rolle. Mit einem scharfen Messer in mundgerechte Stücke schneiden.',
+    ],
+    creative: ['Verwende zusätzlich 1 gebackene rote Paprika, Gurkenstreifen oder 1 Mango.', 'Iss zusammen mit Sojasauce, Wasabi oder veganer Mayonnaise.'],
+  },
+  {
+    slug: 'pesto', pos: '50% 40%', name: 'Pesto', title: 'Pesto', cat: 'Sauce', photo: 'baerlauch-pesto-vegan.jpg', scan: 'rezept-baerlauch-pesto-kochbuch.png',
+    intro: 'Pesto enthält in seiner Ursprungsform Basilikum, Pinienkernen, Knoblauch, Olivenöl, Salz und Käse. Im Frühling verwende ich gerne Bärlauch anstelle von Basilikum, da dieser in der Schweiz vielerorts wild wächst. Den Knoblauch lasse ich dann weg. Pesto essen wir gerne mit Pasta, als Risotto oder auf frischem Brot.',
+    servings: '4 Personen',
+    ingredients: [
+      { items: ['150 g Basilikumblätter oder Bärlauch', '50 g Pinienkerne oder Cashews', '2-3 EL natives Olivenöl extra', '1 Knoblauchzehe', 'Kristallsalz', 'Pfeffer nach Geschmack', '2-3 EL (10-15 g) Edelhefe-Flocken (für Käsegeschmack)', 'wenig Tropfen Zitronensaft'] },
+    ],
+    steps: [
+      'Die Pinienkerne in einer Bratpfanne ohne Öl bei mittlerer Hitze goldbraun anrösten. Beiseite stellen und abkühlen lassen.',
+      'Den Bärlauch, nicht aber den Basilikum, waschen und mit einer Salatschleuder oder auf einem Geschirrtuch trocknen.',
+      'Alle Zutaten in einem Food Processor zu einer sämigen Paste verarbeiten. Bei Bedarf alle 30 bis 60 Sekunden anhalten, um die Seiten runterzuschieben.',
+    ],
+    creative: ['Verwende Rucola, Petersilie und / oder Koriander anstelle von Basilikum.', 'Füge anstelle des Olivenöls eine Avocado hinzu.'],
+  },
+  {
+    slug: 'gebackenekartoffeln', pos: '50% 62%', name: 'Gebackenes Gemüse', title: 'Gebackenes Gemüse', cat: 'Hauptgericht', photo: 'gebackene-kartoffeln-vegan.jpg', scan: 'rezept-gebackene-kartoffeln-kochbuch.png',
+    intro: 'Mein Tipp für alle, die gerne mehr Gemüse in ihren Speiseplan integrieren möchten. Es ist in zehn Minuten vorbereitet und in 20 Minuten gebacken. Während dem Backen kann eine leckere Sauce zubereitet werden.',
+    servings: '4 Personen',
+    ingredients: [
+      { items: ['800 g Kartoffeln', '400 g Karotten', '1 TL natives Olivenöl extra', 'Kristallsalz', 'Garam Masala', 'Backpapier'] },
+    ],
+    steps: [
+      'Backofen auf 200 °C Umluft aufheizen. Wenn Gemüse wie Brokkoli, Kürbis, rote Beete, Fenchel, Blumenkohl, Zucchini, Tomaten oder Rosenkohl verwendet wird, lieber 180 °C Umluft.',
+      'Kartoffeln & Karotten waschen, rüsten und in 1 cm Streifen schneiden.',
+      'Beides auf ein Backblech mit Backpapier legen.',
+      'Olivenöl, Salz und Curry darüber streuen und mit gewaschenen Händen kurz einmassieren.',
+      'In Ofen für 20 Minuten. In der Halbzeit die Kartoffeln & Karotten wenden.',
+      'Je nach Grösse des verwendeten Gemüses, braucht es weniger lange im Ofen. Cherry Tomaten brauchen beispielsweise nur 10-15 Minuten.',
+    ],
+    creative: ['Funktioniert auch super mit Süsskartoffeln, Pastinaken, Kohlrabi, Aubergine und Paprika.', 'Geniesse mit Hummus, veganer Mayonnaise oder Tsatsiki.', 'Verwende Rosmarin, Ras el hanout oder selbstgemachtes Curry.'],
+  },
+  {
+    slug: 'apfelcrumble', pos: '50% 40%', name: 'Apfel Crumble', title: 'Apfel Crumble', cat: 'Süsses', photo: 'veganer-apfelcrumble.jpg', scan: 'rezept-apfelcrumble-kochbuch.png',
+    intro: 'Eine Nachspeise, die warm gegessen wird. Der Apfel Crumble kann entweder alleine gegessen werden oder zusammen mit Zimt oder Vanille Eiscreme. Zimt Eiscreme ist mein Favorit seit ich ein Kind bin.',
+    servings: '4 Personen',
+    ingredients: [
+      { items: ['700 g (3-4) Äpfel', '40 ml Wasser', '1/2 TL Ceylon Zimtpulver'] },
+      { label: 'Streusel', items: ['150 g Mehl', '2 EL Ahornsirup', '2 EL natives Kokosnussöl', '2 EL Nussmus'] },
+    ],
+    steps: [
+      'Die Äpfel waschen, das Kerngehäuse entfernen und in Würfel schneiden. Mit dem Wasser und Zimt in einen Topf geben und bei mittlerer Hitze für 15 Minuten köcheln lassen oder bis keine Flüssigkeit mehr drin ist. Gelegentlich umrühren.',
+      'In der Zwischenzeit die Zutaten für die Streusel in einer Schüssel erst mit einer Gabel vermischen und dann mit den Händen zu Streusel verarbeiten. Die Konsistenz sollte wie ein Teig sein, der leicht zerfällt.',
+      'Die Äpfel in eine Pie Form geben. Die Streusel gleichmässig über die Äpfel verteilen.',
+      'Den Apfel Crumble in den vorgewärmten Backofen (mittlere Rille) geben und bei 180 °C Umluft für 15 Minuten backen.',
+    ],
+    creative: ['Verwende Beeren oder andere Früchte (Rhabarber, Birne) anstelle von Äpfeln. Je nach Säure dieser Frucht ein bisschen Kokosblütenzucker beimischen.', 'Verwende ein anderes Süssungsmittel anstelle von Ahornsirup. Es sollte flüssig sein, so dass es das Mehl aufsaugt.'],
+  },
+];
