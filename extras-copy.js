@@ -164,10 +164,6 @@ window.EXTRAS = {
       eyebrow: 'Presse', title: 'Presse', sub: 'Interviews und Zeitungsberichte',
       banner: 'referenzen-veganes-catering.jpg', bannerPos: '50% 50%',
       blocks: [
-        { t: 'prose', p: ['Beiträge über Food by Debora, Ernährung, Darmgesundheit und Ayurveda.'] },
-        { t: 'links', items: [
-          { label: 'Interview mit Humasana über Ernährung, Darmgesundheit und Ayurveda', href: 'https://daswesentliche.humasana.com/2022/12/14/debora-dohrbeck-ernahrung-fur-gesunden-darm/', meta: 'Humasana · Dezember 2022' },
-        ] },
         { t: 'clips', items: [
           { img: 'presse-bieler-tagblatt.jpg', label: 'Bieler Tagblatt · Dezember 2021' },
           { img: 'presse-zuger-zeitung.jpg', label: 'Zuger Zeitung · Dezember 2020' },
@@ -333,10 +329,6 @@ window.EXTRAS = {
       eyebrow: 'Press', title: 'Press', sub: 'Interviews and newspaper features',
       banner: 'referenzen-veganes-catering.jpg', bannerPos: '50% 50%',
       blocks: [
-        { t: 'prose', p: ['Features about Food by Debora, nutrition, gut health and Ayurveda.'] },
-        { t: 'links', items: [
-          { label: 'Interview with Humasana about nutrition, gut health and Ayurveda', href: 'https://daswesentliche.humasana.com/2022/12/14/debora-dohrbeck-ernahrung-fur-gesunden-darm/', meta: 'Humasana · December 2022' },
-        ] },
         { t: 'clips', items: [
           { img: 'presse-bieler-tagblatt.jpg', label: 'Bieler Tagblatt · December 2021' },
           { img: 'presse-zuger-zeitung.jpg', label: 'Zuger Zeitung · December 2020' },
