@@ -1,0 +1,196 @@
+window.RECIPES_EN = [
+  {
+    slug: 'haferbrei', name: 'Banana oatmeal', title: 'Creamy banana oatmeal', cat: 'Breakfast', photo: 'veganer-haferbrei-beeren.jpg', scan: 'recipe-oatmeal-cookbook.png',
+    intro: 'The banana and the nut butter give this porridge a wonderfully creamy texture. A pinch of salt lifts the sweetness. Seeds, dried berries such as goji, or chopped nuts like pistachios and coconut flakes make especially good toppings.',
+    servings: '4 people',
+    ingredients: [
+      { items: ['160 g rolled oats, coarse', '1/2 tsp Ceylon cinnamon', '1/8 tsp rock salt', '350 g hot water', '4 mashed ripe bananas', '28 g (4 tbsp) ground flaxseed (omega 3)*', '30 g nut butter'] },
+      { label: 'To decorate', items: ['2 tbsp sesame seeds', '2 tbsp chia seeds'] },
+    ],
+    steps: [
+      'Put the oats, cinnamon and salt in a bowl, mix and pour over the hot water. Let it swell for 5-10 minutes.',
+      'Because B vitamins and vitamin C are heat sensitive, add the banana, seeds and nut butter only at the end, then stir everything well.',
+    ],
+    note: '*Unground flaxseed mostly passes undigested. Grind it fresh and keep it in the fridge.',
+    creative: ['Add a little lemon zest.', 'Use two cooked apples instead of two bananas for a tarter sweetness.', 'Add frozen berries. They bring a pleasant acidity - strawberries in particular release a lot of liquid as they thaw.'],
+  },
+  {
+    slug: 'smoothie', name: 'Green smoothie', title: 'Green smoothie', cat: 'Breakfast', photo: 'gruener-smoothie-vegan.jpeg', scan: 'recipe-green-smoothie-cookbook.png',
+    intro: 'A green smoothie is a wonderful way to get more leafy greens into your day. It is best enjoyed slowly with a spoon - that stimulates saliva production so more digestive enzymes can form. If possible, wait at least 20 minutes after drinking or spooning it before your next meal.',
+    servings: '4 people',
+    ingredients: [
+      { items: ['2 bananas', '450 g mango or pineapple', '100 g fresh spinach, pak choi or kale', '10 leaves fresh mint', '700 g water or soy drink', 'small piece of ginger (7 g)', '15 g fresh lemon juice', '1/8 tsp Ceylon cinnamon', '3 pinches rock salt'] },
+      { label: 'To garnish', items: ['Mango, kiwi, figs, mint'] },
+    ],
+    steps: [
+      'Put all ingredients in a blender and blend into a creamy smoothie. Ideally place the soft fruit at the bottom of the blender - everything comes together more easily that way.',
+      'If you use frozen mango, the smoothie can taste a little less sweet. In that case about three tablespoons of date caramel work well (simply blend dates with a little water).',
+      'The smoothie is best enjoyed fresh, when it holds the most nutrients. You can also prepare it the evening before and keep it in an airtight jar in the fridge - a nutrient-rich companion for school or work.',
+    ],
+    creative: ['Add nettle, parsley, 1/2 cucumber or sprouts.', 'Add turmeric, bitters or other supplements.'],
+  },
+  {
+    slug: 'tofuscramble', pos: '50% 68%', name: 'Tofu scramble', title: 'Scramble with smoked tofu', cat: 'Breakfast', photo: 'tofu-scramble-vegan.jpg', scan: 'rezept-tofu-scramble-kochbuch.png',
+    intro: 'This scramble is a perfect addition to a hearty vegan brunch. It tastes excellent on sourdough bread with pan-fried mushrooms and fresh rocket. Tomatoes seasoned with olive oil, salt and garlic round off the meal.',
+    servings: '4 people',
+    ingredients: [
+      { items: ['1 tbsp extra virgin olive oil', '1 large onion, finely chopped', 'a little rock salt', '1/8 tsp turmeric powder', '500 g smoked tofu', '200 ml water', '40 g cashews, ground in a food processor', '1/8 tsp fine kala namak salt'] },
+      { label: 'To garnish', items: ['fresh herbs, freshly ground pepper'] },
+    ],
+    steps: [
+      'In a frying pan, fry the onions with a little salt in olive oil until lightly browned. Add the turmeric.',
+      'Crumble the tofu with both hands, add it to the onions and fry well while stirring.',
+      'Add the water and the ground cashews. Stir well and let it fry until the desired consistency is reached.',
+      'Add the kala namak salt at the end and season to taste.',
+      'Garnish with fresh herbs and pepper.',
+    ],
+    creative: ['Use chickpea flour or ground pumpkin seeds instead of tofu for a soy-free version.', 'Instead of cashews use other ground nuts, coconut milk or oat cream.'],
+  },
+  {
+    slug: 'hummus', name: 'Hummus', title: 'Traditional Mediterranean hummus', cat: 'Sauce', photo: 'hummus-selbstgemacht.jpeg', scan: 'rezept-hummus-kochbuch.png',
+    intro: 'The word "hummus" comes from Arabic and means "chickpea". It is an oriental speciality of blended chickpeas and sesame paste, and goes beautifully with roasted vegetables or pita bread. The chickpea water can be used for mousse au chocolat.',
+    servings: '4 people',
+    ingredients: [
+      { items: ['120 g dried or 360 g cooked chickpeas', '3 tbsp tahini (sesame paste)', '3 tsp lemon juice', '1/2 garlic clove, germ removed', '3/4 tsp rock salt, more to taste', 'freshly ground pepper', '1/2 tsp ground cumin (for better digestion)', '68 g water'] },
+      { label: 'To garnish', items: ['cooked chickpeas, olive oil, paprika powder, parsley'] },
+    ],
+    steps: [
+      'Soak the dried chickpeas in cold water for 24 h, changing the water at least twice. Rinse well. Cook the chickpeas for 25 min in a pressure cooker, or 2-3 h in a pot on low heat. Skim off the foam occasionally.',
+      'For an even creamier hummus, peel the chickpeas by gently rubbing the warm chickpeas between both hands. It helps to do this in a pot filled with water - the skins float to the top and can be poured off.',
+      'Blend the still-warm chickpeas with the remaining ingredients. Slightly warm hummus tastes better than cold.',
+      'Kept in an airtight container in the fridge, the hummus lasts several days.',
+    ],
+    creative: ['Use red, black or white beans instead of chickpeas.', 'Blend in a roasted red pepper or cooked beetroot - use less water then.', 'Use avocado or nut butter instead of tahini.', 'Use other spices (e.g. curry, basil, chilli).'],
+  },
+  {
+    slug: 'kimchi', name: 'Kimchi', title: 'Kimchi', cat: 'Ferments', photo: 'kimchi-selbst-fermentiert.jpg', scan: 'recipe-kimchi-cookbook.png',
+    intro: 'Kimchi is spicy, fermented cabbage with garlic, ginger and chilli that I learned to love in Seoul. It is very healthy thanks to the living gut bacteria (probiotics - keep it in the fridge) which strengthen the immune system, reduce inflammation and support digestion. Kimchi also contains vitamin A, C and potassium.',
+    ingredients: [
+      { items: ['650 g Chinese cabbage', '100 g carrots, julienned (optional)', '1 tbsp rock salt', '1/2 spring onion, finely chopped', '4-6 garlic cloves, pressed (germ removed)', '1 tbsp fresh ginger, grated', '1 tbsp gochugaru (Korean chilli flakes)', '1 tsp white miso paste (optional)'] },
+    ],
+    steps: [
+      'Wash the cabbage and drain it well.',
+      'Remove the lower core, halve it and put it (with the carrots) in a large bowl. Separate the leaves.',
+      'Add the salt and massage it into the cabbage with your hands or a tamper until the leaves are soft and wilted. This draws water out of the cabbage (osmosis), enough to cover it. Let it work for 4 h at room temperature.',
+      'Wash the salt off thoroughly with cold water.',
+      'Put the cabbage in a bowl and add the remaining ingredients. Massage it in with gloves, as the chilli can irritate your hands.',
+      'Transfer to a sterilised jar and press down so the cabbage is covered with liquid. Cover with a very thin cloth and a rubber band so air can escape. Leave space at the top so more juice can be released.',
+      'Let it ferment for at least two days (48-72 h) in a dark place at room temperature. Once you like the taste, close the jar and put it in the fridge for at least 3 days. Kimchi keeps for months as long as the cabbage stays submerged.',
+    ],
+    creative: ['This type of fermentation also works for other foods (beetroot, courgette, peppers).', 'Use other spices (e.g. cumin, curry).', 'Add maple syrup or coconut blossom sugar for a sweet-and-sour taste.'],
+  },
+  {
+    slug: 'buddhabowl', name: 'Buddha bowl', title: 'Buddha bowl', cat: 'Mains', photo: 'buddha-bowl-vegan.jpeg', scan: 'recipe-buddha-bowl-cookbook.png',
+    intro: 'We have made it a habit to eat salad once a day at lunch. It is often how I use up leftovers, too. As a main course, a good rule of thumb is 200 g vegetables, 60-80 g grains (rice, buckwheat, quinoa) and 100 g cooked legumes (chickpeas, edamame, fried tofu, tempeh) per person. Here is one of my favourite dressings.',
+    servings: '4 people',
+    ingredients: [
+      { label: 'Salad dressing', items: ['68 g almond butter', '90-120 g water or coconut milk', '19 g maple syrup', '1 tsp rice or apple vinegar', '1 tsp fresh lemon juice', '1 garlic clove, germ removed, pressed', '1 tsp ginger, grated', '1 tsp soy sauce', 'freshly ground pepper'] },
+      { label: 'Bowl', items: ['40 g seeds and kernels', '1 tbsp soy sauce', 'Leafy greens such as lettuce, spinach, rocket, massaged kale', 'Steamed vegetables such as beetroot, carrot, pumpkin, broccoli, cauliflower, mushrooms', 'Peppers, corn, cucumber, radish, kohlrabi', 'Kalamata olives, capers', 'Sprouts, courgette', '1 avocado'] },
+    ],
+    steps: [
+      'Either cook or pan-fry the grains and legumes (fry for tofu and tempeh).',
+      'In a frying pan, toast sesame, sunflower and pumpkin seeds without oil until they start to pop. Add soy sauce. Take the seeds out of the pan and set aside to cool.',
+      'Prepare the vegetables, cut them into bite-sized pieces and steam if needed. Use whatever you feel like, seasonal if possible.',
+      'Arrange it beautifully. Add the avocado only just before eating.',
+    ],
+    creative: [],
+  },
+  {
+    slug: 'linsencurry', name: 'Lentil coconut curry', title: 'Lentil coconut curry', cat: 'Mains', photo: 'veganes-linsencurry.jpg', scan: 'recipe-coconut-lentil-curry-cookbook.png',
+    intro: 'Dal is one of my favourite dishes because it can be varied so widely (curry powder, choice of lentils). Lentils contain plenty of protein, fibre, calcium, iron and other nutrients. Split lentils (red and yellow) do not need soaking, as most antinutrients sit in the husk. This dish goes well with rice, naan bread or yoghurt.',
+    servings: '4 people',
+    ingredients: [
+      { items: ['1 tbsp extra virgin olive oil', '1 onion, finely diced', 'rock salt', '12 g ginger, grated', '14 g curry powder', '4 garlic cloves, pressed (optional)', '2 tomatoes or 1 tbsp tomato paste', '200 g dried red lentils', '300 g water', '250 g coconut milk', '1/8 tsp lemon juice', 'freshly ground pepper'] },
+      { label: 'To garnish', items: ['fresh coriander', '40 g roasted cashews'] },
+    ],
+    steps: [
+      'In a large pan, first fry the onions with a little salt in olive oil until lightly browned. Add the curry powder and ginger and fry briefly - the flavour of the spices develops better when fried.',
+      'If you like, add the garlic and fry only briefly, otherwise it turns bitter.',
+      'Rinse the lentils.',
+      'Add the diced tomatoes or tomato paste, the lentils, the water and the coconut milk and simmer for 15-20 minutes with the lid on over low heat. Add more water if you want a looser consistency.',
+      'Add the lemon juice and season with salt and pepper.',
+    ],
+    creative: ['Once the lentils are cooked, add 800 g vegetables (e.g. broccoli, beans, okra, carrots, peppers) and simmer them for 3-5 min.', 'Add roasted vegetables such as aubergine, peppers or mushrooms.', 'Add nut butter to make the dal even creamier.'],
+  },
+  {
+    slug: 'chanamasala', name: 'Chana masala', title: 'Chana masala', cat: 'Mains', photo: 'chana-masala-vegan.jpg', scan: 'rezept-chana-masala-kochbuch.png',
+    intro: 'An Indian dish of chickpeas in a spiced tomato sauce, often with spices such as cumin, turmeric and garam masala.',
+    servings: '4 people',
+    ingredients: [
+      { items: ['200 g dried / 600 g cooked chickpeas', '2 tbsp extra virgin olive oil', '1 onion, finely chopped', 'rock salt', '12 g curry powder', '1 tbsp tomato paste', '400 g passata', '300 ml water', '1 tsp coconut blossom sugar', '80 g cashew butter', 'freshly ground pepper'] },
+    ],
+    steps: [
+      'Soak the dried chickpeas in cold water for 24 h, changing the water at least twice. Rinse well. Cook them for 20 min in a pressure cooker, or 2-3 h in a pot on low heat. Skim off the foam occasionally.',
+      'In a large pan, first fry the onions with a little salt in olive oil until lightly browned. Add the curry powder and fry briefly.',
+      'Add the tomato paste, passata, water, salt, coconut blossom sugar and chickpeas and simmer for 10 minutes.',
+      'Then add the cashew butter and stir well.',
+      'Season with freshly ground pepper.',
+    ],
+    creative: ['Use white almond butter or avocado oil instead of cashew butter.', 'Use cauliflower instead of tofu - same method.', 'Add chilli powder as well.', 'Add 2 baked / roasted aubergines.'],
+  },
+  {
+    slug: 'sushi', pos: '50% 68%', name: 'Sushi', title: 'Sushi', cat: 'Mains', photo: 'veganes-sushi-catering.jpg', scan: 'rezept-veganes-sushi-kochbuch.png',
+    intro: 'The rice has to be fresh, otherwise it stops sticking. There are two basic forms of sushi: maki (rolled sushi) and nigiri (an oval piece of sushi rice with a topping). With maki the nori sheet can sit either on the outside (futo-maki) or the inside (ura-maki).',
+    servings: '4 people',
+    ingredients: [
+      { items: ['320 g sushi / risotto rice', '640 ml water', 'a little salt', '1 tsp coconut blossom sugar'] },
+      { label: 'Filling', items: ['400 g carrot lox', '6 nori sheets', '1 ripe avocado', '200 g smoked tofu', 'vinegar'] },
+      { label: 'Equipment', items: ['sushi mat', 'soy sauce'] },
+    ],
+    steps: [
+      'In a pot, cook the rice with water, salt and coconut blossom sugar according to the package (low heat, lid on). Transfer the rice to a shallow bowl to cool.',
+      'Meanwhile prepare 400 g carrot lox. Cut the smoked tofu and avocado into strips.',
+      'Place a nori sheet on a sushi mat, shiny side down and rough side up.',
+      'Moisten your hands with vinegar water (prepared in a bowl) so the rice sticks less to your fingers. Take a handful of rice and press it evenly onto the lower two thirds of the nori sheet.',
+      'Arrange the filling in a line on the rice along the lowest third. Start from the bottom and roll a compact roll with gentle pressure. Cut into bite-sized pieces with a sharp knife.',
+    ],
+    creative: ['Add 1 baked red pepper, cucumber strips or 1 mango.', 'Eat with soy sauce, wasabi or vegan mayonnaise.'],
+  },
+  {
+    slug: 'pesto', pos: '50% 40%', name: 'Pesto', title: 'Pesto', cat: 'Sauce', photo: 'baerlauch-pesto-vegan.jpg', scan: 'rezept-baerlauch-pesto-kochbuch.png',
+    intro: 'In its original form pesto contains basil, pine nuts, garlic, olive oil, salt and cheese. In spring I like to use wild garlic instead of basil, as it grows wild in many places in Switzerland - then I leave the garlic out. We love pesto with pasta, as risotto, or on fresh bread.',
+    servings: '4 people',
+    ingredients: [
+      { items: ['150 g basil leaves or wild garlic', '50 g pine nuts or cashews', '2-3 tbsp extra virgin olive oil', '1 garlic clove', 'rock salt', 'pepper to taste', '2-3 tbsp (10-15 g) nutritional yeast flakes (for a cheesy taste)', 'a few drops of lemon juice'] },
+    ],
+    steps: [
+      'Toast the pine nuts in a pan without oil over medium heat until golden brown. Set aside and let cool.',
+      'Wash the wild garlic - but not the basil - and dry it in a salad spinner or on a tea towel.',
+      'Blend all ingredients in a food processor into a smooth paste. Stop every 30 to 60 seconds if needed to push the sides down.',
+    ],
+    creative: ['Use rocket, parsley and / or coriander instead of basil.', 'Add an avocado instead of the olive oil.'],
+  },
+  {
+    slug: 'gebackenekartoffeln', pos: '50% 62%', name: 'Baked vegetables', title: 'Baked vegetables', cat: 'Mains', photo: 'gebackene-kartoffeln-vegan.jpg', scan: 'rezept-gebackene-kartoffeln-kochbuch.png',
+    intro: 'My tip for everyone who would like more vegetables in their week. Ten minutes to prepare, 20 minutes in the oven - and while it bakes you can make a good sauce.',
+    servings: '4 people',
+    ingredients: [
+      { items: ['800 g potatoes', '400 g carrots', '1 tsp extra virgin olive oil', 'rock salt', 'garam masala', 'baking paper'] },
+    ],
+    steps: [
+      'Heat the oven to 200 °C fan. For vegetables such as broccoli, pumpkin, beetroot, fennel, cauliflower, courgette, tomatoes or Brussels sprouts, use 180 °C fan instead.',
+      'Wash and prepare the potatoes and carrots and cut them into 1 cm strips.',
+      'Spread both on a baking tray lined with baking paper.',
+      'Sprinkle with olive oil, salt and curry and massage in briefly with washed hands.',
+      'Bake for 20 minutes, turning the potatoes and carrots halfway through.',
+      'Depending on the size of the vegetables, less time may be needed - cherry tomatoes, for example, only need 10-15 minutes.',
+    ],
+    creative: ['Works beautifully with sweet potato, parsnip, kohlrabi, aubergine and peppers too.', 'Enjoy with hummus, vegan mayonnaise or tzatziki.', 'Use rosemary, ras el hanout or homemade curry.'],
+  },
+  {
+    slug: 'apfelcrumble', pos: '50% 40%', name: 'Apple crumble', title: 'Apple crumble', cat: 'Sweets', photo: 'veganer-apfelcrumble.jpg', scan: 'rezept-apfelcrumble-kochbuch.png',
+    intro: 'A dessert to be eaten warm. The apple crumble is lovely on its own or together with cinnamon or vanilla ice cream. Cinnamon ice cream has been my favourite since I was a child.',
+    servings: '4 people',
+    ingredients: [
+      { items: ['700 g (3-4) apples', '40 ml water', '1/2 tsp Ceylon cinnamon'] },
+      { label: 'Crumble', items: ['150 g flour', '2 tbsp maple syrup', '2 tbsp virgin coconut oil', '2 tbsp nut butter'] },
+    ],
+    steps: [
+      'Wash the apples, remove the cores and dice them. Put them in a pot with the water and cinnamon and simmer over medium heat for 15 minutes, or until no liquid is left. Stir occasionally.',
+      'Meanwhile mix the crumble ingredients in a bowl, first with a fork and then with your hands, into crumbs. The consistency should be like a dough that falls apart easily.',
+      'Put the apples in a pie dish and spread the crumble evenly over them.',
+      'Bake the crumble in the preheated oven (middle shelf) at 180 °C fan for 15 minutes.',
+    ],
+    creative: ['Use berries or other fruit (rhubarb, pear) instead of apples. Depending on the acidity, mix in a little coconut blossom sugar.', 'Use another sweetener instead of maple syrup - it should be liquid so the flour absorbs it.'],
+  },
+];
