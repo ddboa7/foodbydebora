@@ -110,7 +110,7 @@ function ExtraCards({ b }) {
         <div className="grid-tiers">
           {b.items.map((it, i) => (
             <Reveal key={it.title} delay={i * 70}>
-              <a className="shop-card" href={it.href} target="_blank" rel="noopener">
+              <a className="shop-card" href={it.href} target="_blank" rel="noopener" onClick={() => window.track && window.track('kauf_klick', { produkt: it.title, kanal: 'payhip' })}>
                 <div className="media"><img src={IMG + it.img} alt={it.title} loading="lazy" /></div>
                 <div className="shop-card-info">
                   <span className="shop-card-title">{it.title}</span>
@@ -207,7 +207,7 @@ function ExtraPage({ pageKey }) {
         <section className="sec">
           <div className="wrap-narrow" style={{ textAlign: 'center' }}>
             <Reveal>
-              <Button variant="primary" href={C.ctaHref || ('mailto:' + MAIL + '?subject=' + encodeURIComponent(C.title))} target={C.ctaHref ? '_blank' : undefined}>{C.cta}</Button>
+              <Button variant="primary" href={C.ctaHref || ('mailto:' + MAIL + '?subject=' + encodeURIComponent(C.title))} target={C.ctaHref ? '_blank' : undefined} onClick={() => window.track && window.track(C.ctaHref ? 'kauf_klick' : 'mail_klick', { ort: pageKey, produkt: pageKey, kanal: 'payhip' })}>{C.cta}</Button>
               {C.ctaNote ? <p className="body" style={{ marginTop: 18, marginBottom: 0, fontSize: 'var(--text-small)' }}>{C.ctaNote}</p> : null}
             </Reveal>
           </div>

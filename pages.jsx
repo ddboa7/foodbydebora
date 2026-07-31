@@ -182,9 +182,9 @@ function Cookbook() {
             <div className="body" style={{ maxWidth: '46ch', marginBottom: 26 }}>{(Array.isArray(C.body) ? C.body : [C.body]).map((t, i) => <p key={i}>{t}</p>)}</div>
             <List items={C.list} />
             <div className="stack" style={{ gap: 12, alignItems: 'flex-start', marginTop: 28 }}>
-              <Button variant="primary" href="https://payhip.com/b/H2zm" target="_blank">{R.cta1}</Button>
-              <Button variant="ghost" href="https://www.amazon.de/Lieblingsrezepte-aus-Welt-Entfessle-Kreativit%C3%A4t/dp/B08NVVW8PS/" target="_blank">{R.cta2}</Button>
-              <Button variant="ghost" href="https://www.amazon.de/dp/B08NW3XDBX" target="_blank">{R.cta3}</Button>
+              <Button variant="primary" href="https://payhip.com/b/H2zm" target="_blank" onClick={() => track('kauf_klick', { produkt: 'kochbuch', kanal: 'payhip' })}>{R.cta1}</Button>
+              <Button variant="ghost" href="https://www.amazon.de/Lieblingsrezepte-aus-Welt-Entfessle-Kreativit%C3%A4t/dp/B08NVVW8PS/" target="_blank" onClick={() => track('kauf_klick', { produkt: 'kochbuch_print_de', kanal: 'amazon' })}>{R.cta2}</Button>
+              <Button variant="ghost" href="https://www.amazon.de/dp/B08NW3XDBX" target="_blank" onClick={() => track('kauf_klick', { produkt: 'kochbuch_print_en', kanal: 'amazon' })}>{R.cta3}</Button>
             </div>
           </Reveal>
         </div>
@@ -432,7 +432,7 @@ function Shop() {
           <div className="grid-tiers" style={{ gridTemplateColumns: 'repeat(auto-fit,minmax(320px,1fr))' }}>
             {C.tiers.map((t, i) => (
               <Reveal key={i} delay={i * 70}>
-                <a href={t.href} target="_blank" rel="noopener" style={{ display: 'block', textDecoration: 'none' }}>
+                <a href={t.href} target="_blank" rel="noopener" onClick={() => track('kauf_klick', { produkt: t.title, kanal: 'payhip' })} style={{ display: 'block', textDecoration: 'none' }}>
                   <ProductCard image={IMG + SHOP_IMAGES[i]} title={t.title} price={t.price} />
                 </a>
               </Reveal>
@@ -440,7 +440,7 @@ function Shop() {
           </div>
           <Reveal>
             <div className="row" style={{ gap: 12, marginTop: 'clamp(28px,3vw,40px)' }}>
-              <Button variant="primary" href="https://payhip.com/FoodbyDebora" target="_blank">{C.cta}</Button>
+              <Button variant="primary" href="https://payhip.com/FoodbyDebora" target="_blank" onClick={() => track('kauf_klick', { produkt: 'shop_uebersicht', kanal: 'payhip' })}>{C.cta}</Button>
             </div>
           </Reveal>
         </div>

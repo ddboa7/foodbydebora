@@ -2,6 +2,15 @@ const DS = window.FoodByDeboraDesignSystem_3eedd1;
 const { Navbar, Banner, Button, List, ProductCard, CategoryCard, BioCard } = DS;
 const IMG = '';
 
+function track(event, params) {
+  try {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ event, ...(params || {}) });
+    if (typeof window.gtag === 'function') window.gtag('event', event, params || {});
+  } catch (e) { /* tracking must never break the page */ }
+}
+window.track = track;
+
 const ROUTE_KEYS = [
   ['#/catering', 'catering'],
   ['#/cookbook', 'cookbook'],
@@ -174,7 +183,7 @@ function Contact({ num = '06', variant }) {
       headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
       body: JSON.stringify(data),
     }).then((r) => { if (!r.ok) throw new Error('http'); return r.json(); })
-      .then(() => setSent(true))
+      .then(() => { setSent(true); track('anfrage_gesendet', { formular: variant || 'catering' }); })
       .catch(() => setFailed(true))
       .then(() => setBusy(false));
   };
@@ -210,7 +219,7 @@ function Contact({ num = '06', variant }) {
                   ? <textarea className="field" key={f.n} name={f.n} rows="3" placeholder={f.p} required></textarea>
                   : <input className="field" key={f.n} name={f.n} type={f.t || 'text'} placeholder={f.p} required />))}
                 <div style={{ marginTop: 22 }}><Button variant="primary" onClick={() => {}}>{busy ? C.sending : C.send}</Button></div>
-                {failed ? <p style={{ fontSize: 'var(--text-xs)', color: 'var(--text-secondary)', marginTop: 14, marginBottom: 0 }}>{C.failed} <a href={'mailto:' + MAIL_TO}>{MAIL_TO}</a></p> : null}
+                {failed ? <p style={{ fontSize: 'var(--text-xs)', color: 'var(--text-secondary)', marginTop: 14, marginBottom: 0 }}>{C.failed} <a href={'mailto:' + MAIL_TO} onClick={() => track('mail_klick', { ort: 'formular_fallback' })}>{MAIL_TO}</a></p> : null}
               </div>
             )}
           </form>
@@ -228,7 +237,7 @@ function Newsletter() {
         <Reveal>
           <Eyebrow>{N.eyebrow}</Eyebrow>
           <h2 className="h2" style={{ maxWidth: '32ch' }}>{N.title}</h2>
-          <form action="https://foodbydebora.us8.list-manage.com/subscribe/post?u=51352e5c8308e085e808666b6&id=fa9051f376" method="post" target="_blank" style={{ marginTop: 28, display: 'grid', gap: 18, gridTemplateColumns: 'repeat(auto-fit,minmax(200px,1fr))', maxWidth: 760, alignItems: 'end' }}>
+          <form onSubmit={() => track('newsletter_abo')} action="https://foodbydebora.us8.list-manage.com/subscribe/post?u=51352e5c8308e085e808666b6&id=fa9051f376" method="post" target="_blank" style={{ marginTop: 28, display: 'grid', gap: 18, gridTemplateColumns: 'repeat(auto-fit,minmax(200px,1fr))', maxWidth: 760, alignItems: 'end' }}>
             <input type="text" name="FNAME" required placeholder={N.first} className="field" />
             <input type="text" name="LNAME" required placeholder={N.last} className="field" />
             <input type="email" name="EMAIL" required placeholder={N.email} className="field" />

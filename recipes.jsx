@@ -38,9 +38,9 @@ function CookbookCta({ num, compact }) {
           <h2 className="h2">{C.bookTitle}</h2>
           <p className="body" style={{ maxWidth: '46ch', marginBottom: 26 }}>{C.bookBody}</p>
           <div className="stack" style={{ gap: 12, alignItems: 'flex-start', marginTop: 28 }}>
-            <Button variant="primary" href="https://payhip.com/b/H2zm" target="_blank">{C.cta1}</Button>
-            <Button variant="ghost" href="https://www.amazon.de/Lieblingsrezepte-aus-Welt-Entfessle-Kreativit%C3%A4t/dp/B08NVVW8PS/" target="_blank">{C.cta2}</Button>
-            <Button variant="ghost" href="https://www.amazon.de/dp/B08NW3XDBX" target="_blank">{C.cta3}</Button>
+            <Button variant="primary" href="https://payhip.com/b/H2zm" target="_blank" onClick={() => track('kauf_klick', { produkt: 'kochbuch', kanal: 'payhip' })}>{C.cta1}</Button>
+            <Button variant="ghost" href="https://www.amazon.de/Lieblingsrezepte-aus-Welt-Entfessle-Kreativit%C3%A4t/dp/B08NVVW8PS/" target="_blank" onClick={() => track('kauf_klick', { produkt: 'kochbuch_print_de', kanal: 'amazon' })}>{C.cta2}</Button>
+            <Button variant="ghost" href="https://www.amazon.de/dp/B08NW3XDBX" target="_blank" onClick={() => track('kauf_klick', { produkt: 'kochbuch_print_en', kanal: 'amazon' })}>{C.cta3}</Button>
           </div>
           <p style={{ marginTop: 26, fontSize: 'var(--text-small)' }}><a href={pageUrl('cookbook', lang)}>{C.back}</a></p>
         </Reveal>
