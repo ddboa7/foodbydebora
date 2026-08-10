@@ -243,8 +243,8 @@ function Contact({ num = '06', variant }) {
                 <input type="hidden" name="_captcha" value="false" />
                 <input type="hidden" name="_template" value="table" />
                 {C.fields.map((f) => (f.area
-                  ? <textarea className="field" key={f.n} name={f.n} rows="3" placeholder={f.p} required></textarea>
-                  : <input className="field" key={f.n} name={f.n} type={f.t || 'text'} placeholder={f.p} required />))}
+                  ? <textarea className="field" key={f.n} name={f.n} rows="3" placeholder={f.p} required={!f.opt}></textarea>
+                  : <input className="field" key={f.n} name={f.n} type={f.t || 'text'} placeholder={f.p} required={!f.opt} />))}
                 <div style={{ marginTop: 22 }}><Button variant="primary" onClick={() => {}}>{busy ? C.sending : C.send}</Button></div>
                 {failed ? <p style={{ fontSize: 'var(--text-xs)', color: 'var(--text-secondary)', marginTop: 14, marginBottom: 0 }}>{C.failed} <a href={'mailto:' + MAIL_TO} onClick={() => track('mail_klick', { ort: 'formular_fallback' })}>{MAIL_TO}</a></p> : null}
               </div>

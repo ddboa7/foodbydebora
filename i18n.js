@@ -81,8 +81,7 @@ en: {
     fields: [
       { n: 'Name', p: 'Your name' },
       { n: 'E-Mail', p: 'Email', t: 'email' },
-      { n: 'Mobil', p: 'Mobile number', t: 'tel' },
-      { n: 'Anliegen', p: 'What is it about?' },
+      { n: 'Mobil', p: 'Mobile number (optional)', t: 'tel', opt: true },
       { n: 'Nachricht', p: 'What would you like to change?', area: true },
     ],
   },
@@ -506,8 +505,7 @@ de: {
     fields: [
       { n: 'Name', p: 'Dein Name' },
       { n: 'E-Mail', p: 'E-Mail', t: 'email' },
-      { n: 'Mobil', p: 'Mobilnummer', t: 'tel' },
-      { n: 'Anliegen', p: 'Um was geht es?' },
+      { n: 'Mobil', p: 'Mobilnummer (optional)', t: 'tel', opt: true },
       { n: 'Nachricht', p: 'Was möchtest du verändern?', area: true },
     ],
   },
