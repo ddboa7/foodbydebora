@@ -63,6 +63,7 @@ function App() {
 
   return (
     <LangCtx.Provider value={langCtx}>
+      <HashScroll />
       {routeKey === 'links' ? <MiniNav /> : <SiteNav activeKey={NAV_ACTIVE[routeKey] || routeKey} />}
       <main key={routeKey + (route.slug || '') + lang}>
         <Comp slug={route.slug} />

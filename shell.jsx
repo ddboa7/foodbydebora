@@ -327,4 +327,23 @@ function Footer() {
   );
 }
 
-Object.assign(window, { MiniNav, useAlt, DS, Navbar, Banner, Button, List, ProductCard, CategoryCard, BioCard, IMG, ROUTE_KEYS, LangCtx, useLang, useC, navItems, Reveal, Eyebrow, LangSwitch, SiteNav, Tiers, Testimonials, Gallery, Contact, Newsletter, Footer });
+// Deep links like /index.html#contact: the anchor doesn't exist until React has
+// rendered, so the browser's own hash jump misses. Retry briefly after mount.
+function HashScroll() {
+  React.useEffect(() => {
+    const id = decodeURIComponent(window.location.hash.slice(1));
+    if (!id) return;
+    let tries = 0;
+    const tick = () => {
+      const el = document.getElementById(id);
+      if (el) {
+        const top = el.getBoundingClientRect().top + window.pageYOffset - 72;
+        window.scrollTo({ top, behavior: 'smooth' });
+      } else if (tries++ < 40) setTimeout(tick, 50);
+    };
+    setTimeout(tick, 60);
+  }, []);
+  return null;
+}
+
+Object.assign(window, { HashScroll, MiniNav, useAlt, DS, Navbar, Banner, Button, List, ProductCard, CategoryCard, BioCard, IMG, ROUTE_KEYS, LangCtx, useLang, useC, navItems, Reveal, Eyebrow, LangSwitch, SiteNav, Tiers, Testimonials, Gallery, Contact, Newsletter, Footer });
