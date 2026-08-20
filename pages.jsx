@@ -308,69 +308,122 @@ function Counselling() {
     <>
       <PageBanner image="ganzheitliche-ernaehrungsberatung.jpg" eyebrow={C.eyebrow} title={C.title} position="50% 50%" />
       <section className="sec">
-        <div className="wrap split split-wide">
+        <div className="wrap">
           <Reveal>
-            <Eyebrow num="01">{C.secEyebrow}</Eyebrow>
-            <h2 className="h2">{C.secTitle}</h2>
-            <div className="body" style={{ maxWidth: '48ch' }}>
-              {C.body.map((p, i) => <p key={i}>{p}</p>)}
+            <Eyebrow num="01">{C.hookEyebrow}</Eyebrow>
+            <h2 className="h2" style={{ maxWidth: '26ch' }}>{C.hookTitle}</h2>
+            <div className="body" style={{ maxWidth: '54ch' }}>
+              {C.hookBody.map((s, i) => <p key={i}>{s}</p>)}
             </div>
-          </Reveal>
-          <Reveal delay={80}>
-            <div className="media media-tall lift"><img src={IMG + 'yoga-retreat-see.jpeg'} alt={A('counsellingNature')} loading="lazy" /></div>
+            <div className="row" style={{ gap: 16, marginTop: 'clamp(22px,2.4vw,32px)', alignItems: 'center' }}>
+              <Button variant="primary" href="#contact">{C.hookCta}</Button>
+              <span style={{ fontSize: 'var(--text-small)', color: 'var(--text-secondary)' }}>{C.hookCtaNote}</span>
+            </div>
           </Reveal>
         </div>
       </section>
       <section className="sec sec-alt">
         <div className="wrap split split-wide" style={{ alignItems: 'start' }}>
           <Reveal>
-            <Eyebrow num="02">{C.togetherEyebrow}</Eyebrow>
-            <h2 className="h2" style={{ maxWidth: '22ch' }}>{C.togetherTitle}</h2>
-            <List items={C.togetherList} />
+            <Eyebrow num="02">{C.familiarEyebrow}</Eyebrow>
+            <h2 className="h2" style={{ maxWidth: '26ch' }}>{C.familiarTitle}</h2>
+            <div className="list-left"><List items={C.familiarList} /></div>
+            <p className="body" style={{ fontStyle: 'italic', maxWidth: '52ch', marginTop: 'clamp(18px,2vw,26px)' }}>{C.familiarNote}</p>
           </Reveal>
           <Reveal delay={80}>
-            <h3 className="h3" style={{ marginBottom: 18 }}>{C.goalsTitle}</h3>
-            <List items={C.goalsList} />
+            <div className="media media-tall lift"><img src={IMG + 'debora-kocht-kueche.jpg'} alt={A('deboraCooking')} loading="lazy" /></div>
           </Reveal>
         </div>
       </section>
       <section className="sec">
-        <div className="wrap split split-narrow">
+        <div className="wrap">
           <Reveal>
-            <div className="media media-tall lift"><img src={IMG + 'psychologische-beratung.jpeg'} alt={A('counsellingPsychology')} loading="lazy" /></div>
-          </Reveal>
-          <Reveal delay={80}>
-            <Eyebrow num="03">{C.fitEyebrow}</Eyebrow>
-            <h2 className="h2" style={{ maxWidth: '24ch' }}>{C.fitTitle}</h2>
-            <List items={C.fitList} />
+            <Eyebrow num="03">{C.axisEyebrow}</Eyebrow>
+            <h2 className="h2" style={{ maxWidth: '26ch' }}>{C.axisTitle}</h2>
+            <div className="body" style={{ maxWidth: '58ch' }}>
+              {C.axisBody.map((s, i) => <p key={i}>{s}</p>)}
+            </div>
           </Reveal>
         </div>
       </section>
       <section className="sec sec-alt">
         <div className="wrap">
-          <Reveal><Eyebrow num="04">{C.tiersEyebrow}</Eyebrow></Reveal>
-          <Tiers items={C.tiers} images={COUNSELLING_IMAGES} />
           <Reveal>
-            <div className="row" style={{ gap: 16, marginTop: 'clamp(28px,3vw,40px)', alignItems: 'center' }}>
-              <Button variant="primary" href="#contact">{C.cta}</Button>
-              <span style={{ fontSize: 'var(--text-small)', color: 'var(--text-secondary)', maxWidth: '44ch' }}>{C.ctaNote}</span>
+            <Eyebrow num="04">{C.phasesEyebrow}</Eyebrow>
+            <h2 className="h2" style={{ maxWidth: '24ch' }}>{C.phasesTitle}</h2>
+          </Reveal>
+          <Reveal delay={80}>
+            <div className="phases">
+              {C.phases.map((ph, i) => (
+                <div className="phase" key={i}>
+                  <span className="phase-num">{i + 1}</span>
+                  <h3 className="h3 phase-title">{ph.title}</h3>
+                  <p className="phase-body">{ph.body}</p>
+                </div>
+              ))}
+            </div>
+          </Reveal>
+        </div>
+      </section>
+      <section className="sec sec-accent">
+        <div className="wrap wrap-narrow">
+          <Reveal>
+            <div className="call-card">
+              <Eyebrow num="05">{C.callEyebrow}</Eyebrow>
+              <h2 className="h2" style={{ maxWidth: '22ch' }}>{C.callTitle}</h2>
+              <p className="call-meta">{C.callMeta}</p>
+              <p className="body">{C.callBody}</p>
+              <div className="list-left"><List items={C.callList} /></div>
+              <p className="body" style={{ marginTop: 'clamp(18px,2vw,26px)' }}>{C.callNote}</p>
+              <div className="row" style={{ marginTop: 'clamp(22px,2.4vw,32px)' }}>
+                <Button variant="primary" href="#contact">{C.callCta}</Button>
+              </div>
+            </div>
+          </Reveal>
+          <Reveal delay={80}>
+            <div className="next-steps">
+              <Eyebrow>{C.nextEyebrow}</Eyebrow>
+              {C.nextTiers.map((t, i) => (
+                <div className="next-step" key={i}>
+                  <h3 className="h3 next-step-title">{t.title}</h3>
+                  <p className="next-step-meta">{t.meta}</p>
+                  <p className="next-step-body">{t.body}</p>
+                </div>
+              ))}
+            </div>
+          </Reveal>
+        </div>
+      </section>
+      <section className="sec sec-alt">
+        <div className="wrap split split-wide" style={{ alignItems: 'start' }}>
+          <Reveal>
+            <Eyebrow num="06">{C.whoEyebrow}</Eyebrow>
+            <h2 className="h2" style={{ maxWidth: '18ch', whiteSpace: 'pre-line' }}>{C.whoTitle}</h2>
+          </Reveal>
+          <Reveal delay={80}>
+            <div className="body" style={{ maxWidth: '46ch' }}>
+              {C.whoBody.map((s, i) => <p key={i}>{s}</p>)}
             </div>
           </Reveal>
         </div>
       </section>
       <section className="sec">
-        <div className="wrap">
+        <div className="wrap split split-wide" style={{ alignItems: 'start' }}>
           <Reveal>
-            <Eyebrow num="05">{C.whyEyebrow}</Eyebrow>
+            <Eyebrow num="07">{C.whyEyebrow}</Eyebrow>
             <h2 className="h2">{C.whyTitle}</h2>
-            <div className="body" style={{ maxWidth: '58ch' }}>
+            <div className="body" style={{ maxWidth: '52ch' }}>
               {C.whyBody.map((p, i) => <p key={i}>{p}</p>)}
               <p className="sig" style={{ marginTop: 18 }}>{C.signoff}</p>
             </div>
           </Reveal>
+          <Reveal delay={80}>
+            <div className="media media-tall lift"><img src={IMG + 'debora-tanzt-raum.jpeg'} alt={A('deboraDancing')} loading="lazy" /></div>
+          </Reveal>
         </div>
       </section>
-      <section className="sec sec-alt">
+      <Testimonials num="08" variant="Counselling" tone="accent" />
+      <section className="sec">
         <div className="wrap split split-narrow">
           <Reveal>
             <a href="https://www.akademie-der-naturheilkunde.com" target="_blank" rel="noopener">
@@ -378,13 +431,27 @@ function Counselling() {
             </a>
           </Reveal>
           <Reveal delay={80}>
-            <Eyebrow num="06">{C.eduEyebrow}</Eyebrow>
+            <Eyebrow num="09">{C.eduEyebrow}</Eyebrow>
             <List items={C.eduList} />
           </Reveal>
         </div>
       </section>
-      <Testimonials num="07" variant="Counselling" tone="plain" />
-      <Contact num="08" variant="Counselling" />
+      <section className="sec sec-alt">
+        <div className="wrap wrap-narrow">
+          <Reveal>
+            <Eyebrow num="10">{C.faqEyebrow}</Eyebrow>
+            <div className="faq">
+              {C.faq.map((f, i) => (
+                <details className="faq-item" key={i}>
+                  <summary className="faq-q">{f.q}<span className="faq-mark" aria-hidden="true"></span></summary>
+                  {(Array.isArray(f.a) ? f.a : [f.a]).map((t, k) => <p className="faq-a" key={k}>{t}</p>)}
+                </details>
+              ))}
+            </div>
+          </Reveal>
+        </div>
+      </section>
+      <Contact num="11" variant="Counselling" />
     </>
   );
 }

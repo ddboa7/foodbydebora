@@ -139,23 +139,42 @@ function Tiers({ items, images }) {
   );
 }
 
+// Long testimonials are clamped to a few lines; "mehr lesen" expands the full text.
+function QuoteCard({ quote, name, role, labels }) {
+  const [open, setOpen] = React.useState(false);
+  const bodyRef = React.useRef(null);
+  const [clamped, setClamped] = React.useState(false);
+  React.useEffect(() => {
+    const el = bodyRef.current;
+    if (el) setClamped(el.scrollHeight - el.clientHeight > 4);
+  }, [quote]);
+  return (
+    <div className="quote-card">
+      <p ref={bodyRef} className={'quote' + (open ? '' : ' quote-clamp')} style={{ fontStyle: 'italic' }}>“{quote}”</p>
+      {(clamped || open) && (
+        <button type="button" className="quote-more" onClick={() => setOpen(!open)}>{open ? labels.less : labels.more}</button>
+      )}
+      <div>
+        <div className="sig">- {name}</div>
+        <div style={{ fontSize: 'var(--text-xs)', color: 'var(--text-secondary)', marginTop: 4 }}>{role}</div>
+      </div>
+    </div>
+  );
+}
+
 function Testimonials({ num = '04', tone, variant }) {
   const T = useC();
+  const { lang } = useLang();
+  const labels = lang === 'en' ? { more: 'Read more', less: 'Show less' } : { more: 'Mehr lesen', less: 'Weniger' };
   const C = { testimonials: { ...T.testimonials, ...(variant ? T['testimonials' + variant] : {}) } };
   return (
-    <section className={'sec' + (tone === 'plain' ? '' : ' sec-alt')} id="testimonials">
+    <section className={'sec' + (tone === 'plain' ? '' : tone === 'accent' ? ' sec-accent' : ' sec-alt')} id="testimonials">
       <div className="wrap">
         <Reveal><Eyebrow num={num}>{C.testimonials.eyebrow}</Eyebrow></Reveal>
         <div className="grid-cards">
           {C.testimonials.items.map((t, i) => (
             <Reveal key={i} delay={i * 80}>
-              <div className="quote-card">
-                <p className="quote" style={{ fontStyle: 'italic' }}>“{t.quote}”</p>
-                <div>
-                  <div className="sig">- {t.name}</div>
-                  <div style={{ fontSize: 'var(--text-xs)', color: 'var(--text-secondary)', marginTop: 4 }}>{t.role}</div>
-                </div>
-              </div>
+              <QuoteCard quote={t.quote} name={t.name} role={t.role} labels={labels} />
             </Reveal>
           ))}
         </div>
@@ -171,9 +190,39 @@ const GALLERY_ALT = {
   en: ['Buddha bowl with vegetables and legumes', 'Creamy banana oatmeal with berries', 'Green smoothie with spinach and banana', 'Homemade hummus with olive oil', 'Home-fermented kimchi in a jar', 'Vegan lentil curry with rice', 'Vegan sushi plated for a catering', 'Baked potatoes with roasted vegetables', 'Vegan apple crumble fresh from the oven'],
 };
 
+// Click a gallery photo to view it full size. Esc, backdrop click or the close
+// button dismiss it; arrows step through the set.
+function Lightbox({ items, alts, index, onClose, onStep }) {
+  React.useEffect(() => {
+    if (index == null) return;
+    const onKey = (e) => {
+      if (e.key === 'Escape') onClose();
+      if (e.key === 'ArrowRight') onStep(1);
+      if (e.key === 'ArrowLeft') onStep(-1);
+    };
+    document.addEventListener('keydown', onKey);
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => { document.removeEventListener('keydown', onKey); document.body.style.overflow = prev; };
+  }, [index, onClose, onStep]);
+  if (index == null) return null;
+  return (
+    <div className="lightbox" onClick={onClose} role="dialog" aria-modal="true">
+      <button className="lightbox-close" onClick={onClose} aria-label="Schliessen">&times;</button>
+      <button className="lightbox-nav lightbox-prev" onClick={(e) => { e.stopPropagation(); onStep(-1); }} aria-label="Vorheriges Bild">&#8249;</button>
+      <img src={IMG + items[index]} alt={alts[index] || ''} onClick={(e) => e.stopPropagation()} />
+      <button className="lightbox-nav lightbox-next" onClick={(e) => { e.stopPropagation(); onStep(1); }} aria-label="Nächstes Bild">&#8250;</button>
+    </div>
+  );
+}
+
 function Gallery({ num = '05' }) {
   const C = useC();
   const { lang } = useLang();
+  const [open, setOpen] = React.useState(null);
+  const alts = GALLERY.map((g, i) => (GALLERY_ALT[lang] || GALLERY_ALT.de)[i] || window.imgAlt('galleryDefault', lang));
+  const step = React.useCallback((d) => setOpen((v) => (v == null ? v : (v + d + GALLERY.length) % GALLERY.length)), []);
+  const close = React.useCallback(() => setOpen(null), []);
   return (
     <section className="sec">
       <div className="wrap">
@@ -185,10 +234,11 @@ function Gallery({ num = '05' }) {
         </Reveal>
         <Reveal className="gallery">
           {GALLERY.map((g, i) => (
-            <div className="media" key={i}><img src={IMG + g} alt={(GALLERY_ALT[lang] || GALLERY_ALT.de)[i] || window.imgAlt('galleryDefault', lang)} loading="lazy" /></div>
+            <button type="button" className="media media-zoom" key={i} onClick={() => setOpen(i)} aria-label={alts[i]}><img src={IMG + g} alt={alts[i]} loading="lazy" /></button>
           ))}
         </Reveal>
       </div>
+      <Lightbox items={GALLERY} alts={alts} index={open} onClose={close} onStep={step} />
     </section>
   );
 }
@@ -285,7 +335,7 @@ function Footer() {
     { title: F.offers, links: ROUTE_KEYS.map(([, key]) => ({ label: C.nav[key], href: pageUrl(key, lang) })) },
     { title: F.elsewhere, links: [
       { label: F.links, href: pageUrl('links', lang) },
-      { label: F.instagram, href: 'https://www.instagram.com/deboraspassions/' },
+      { label: F.instagram, href: /counselling|links/.test((window.__BOOT || {}).route || '') ? 'https://www.instagram.com/wellbeingwithdebora/' : 'https://www.instagram.com/foodbydebora/' },
       { label: F.facebook, href: 'https://www.facebook.com/foodbydebora/' },
       { label: F.newsletter, href: 'https://foodbydebora.us8.list-manage.com/subscribe?u=51352e5c8308e085e808666b6&id=fa9051f376' },
     ] },
