@@ -384,9 +384,9 @@ en: {
     ],
     nextEyebrow: 'If you want to go further afterwards',
     nextTiers: [
-      { title: 'Foundation', meta: "4 video calls · CHF 980", body: 'The structured start. An individual roadmap, targeted questions and the materials that fit.' },
+      { title: 'Foundation', meta: "4 video calls · CHF 2'200", body: 'The structured start. An individual roadmap, targeted questions and the materials that fit.' },
       { title: 'Gut & nervous system', meta: "4 months · CHF 3'800", body: 'For complaints that have built up over years. Close support through gut regeneration, alongside stress regulation and the patterns behind it. Weekly calls, adjustments in between, recipes and materials included.' },
-      { title: 'Deep Dive', meta: "12 months · CHF 10'000", body: 'When it is not only about symptoms, but about a fundamentally different way of living and working. A whole year, through all phases.' },
+      { title: 'Deep Dive', meta: "12 months · CHF 35'000", body: 'When it is not only about symptoms, but about a fundamentally different way of living and working. A whole year, through all phases.' },
     ],
     secEyebrow: 'The approach', secTitle: 'Holistic, sustainable & practical',
     body: [
@@ -441,9 +441,9 @@ en: {
     tiersEyebrow: 'Ways to work together',
     tiers: [
       { title: 'Psychological counselling, 60 min.', price: 'CHF 120' },
-      { title: '1:1 support (4 video calls) - wellbeing & business', price: 'CHF 980' },
+      { title: '1:1 support (4 video calls) - wellbeing & business', price: 'CHF 2'200' },
       { title: '1:1 support (4 months)', price: "CHF 3'800" },
-      { title: '1:1 deep dive - 12 months for you', price: "CHF 10'000" },
+      { title: '1:1 deep dive - 12 months for you', price: "CHF 35'000" },
     ],
     cta: 'Book a FREE discovery call', ctaNote: 'Let us get to know each other, feel what is present for you right now, and see whether it feels like a fit.',
     eduEyebrow: 'Education', eduTitle: 'Education',
@@ -878,9 +878,9 @@ de: {
     ],
     nextEyebrow: 'Wenn du danach weiterarbeiten willst',
     nextTiers: [
-      { title: 'Fundament', meta: "4 Video Anrufe · CHF 980", body: 'Der strukturierte Einstieg. Ein individueller Fahrplan, gezielte Fragen und passende Unterlagen.' },
+      { title: 'Fundament', meta: "4 Video Anrufe · CHF 2'200", body: 'Der strukturierte Einstieg. Ein individueller Fahrplan, gezielte Fragen und passende Unterlagen.' },
       { title: 'Bauch & Nervensystem', meta: "4 Monate · CHF 3'800", body: 'Für Beschwerden, die sich über Jahre aufgebaut haben. Enge Begleitung durch die Darmregeneration, parallel dazu Stressregulation und die Muster dahinter. Wöchentliche Calls, Anpassungen zwischendurch, Rezepte und Unterlagen inklusive.' },
-      { title: 'Deep Dive', meta: "12 Monate · CHF 10'000", body: 'Wenn es nicht nur um Symptome geht, sondern um eine grundlegend andere Art zu leben und zu arbeiten. Ein ganzes Jahr, durch alle Phasen.' },
+      { title: 'Deep Dive', meta: "12 Monate · CHF 35'000", body: 'Wenn es nicht nur um Symptome geht, sondern um eine grundlegend andere Art zu leben und zu arbeiten. Ein ganzes Jahr, durch alle Phasen.' },
     ],
     secEyebrow: 'Der Ansatz', secTitle: 'Ganzheitlich, nachhaltig & alltagstauglich',
     body: [
@@ -935,9 +935,9 @@ de: {
     tiersEyebrow: 'Wege, zusammenzuarbeiten',
     tiers: [
       { title: 'Psychologische Beratung, 60 Min.', price: 'CHF 120' },
-      { title: '1:1 Begleitung (4 Video Anrufe) - Wohlbefinden & Business', price: 'CHF 980' },
+      { title: '1:1 Begleitung (4 Video Anrufe) - Wohlbefinden & Business', price: 'CHF 2'200' },
       { title: '1:1 Begleitung (4 Monate)', price: "CHF 3'800" },
-      { title: '1:1 Deep Dive - 12 Monate für dich', price: "CHF 10'000" },
+      { title: '1:1 Deep Dive - 12 Monate für dich', price: "CHF 35'000" },
     ],
     cta: '➡️ Buche einen FREE Discovery-Call', ctaNote: 'Lass uns kennenlernen, spüren, was für dich gerade aktuell ist, und schauen, ob es sich passend anfühlt.',
     eduEyebrow: 'Ausbildung', eduTitle: 'Ausbildung',
