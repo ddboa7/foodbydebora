@@ -388,8 +388,23 @@ function Counselling() {
                   <h3 className="h3 next-step-title">{t.title}</h3>
                   <p className="next-step-meta">{t.meta}</p>
                   <p className="next-step-body">{t.body}</p>
+                  {t.points && <div className="list-left" style={{ marginTop: 14 }}><List items={t.points} /></div>}
                 </div>
               ))}
+              {C.payNote && <p className="terms-pay">{C.payNote}</p>}
+              {C.terms && (
+                <div className="terms">
+                  <h3 className="terms-title">{C.termsTitle}</h3>
+                  <dl className="terms-list">
+                    {C.terms.map((t, i) => (
+                      <div className="terms-item" key={i}>
+                        <dt>{t.h}</dt>
+                        <dd>{t.p}</dd>
+                      </div>
+                    ))}
+                  </dl>
+                </div>
+              )}
             </div>
           </Reveal>
         </div>

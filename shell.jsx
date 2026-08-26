@@ -150,7 +150,7 @@ function QuoteCard({ quote, name, role, labels }) {
   }, [quote]);
   return (
     <div className="quote-card">
-      <p ref={bodyRef} className={'quote' + (open ? '' : ' quote-clamp')} style={{ fontStyle: 'italic' }}>“{quote}”</p>
+      <p ref={bodyRef} className={'quote' + (open ? '' : ' quote-clamp')} style={{ fontStyle: 'italic' }}>“{String(quote).split('**').map((s, i) => i % 2 ? <strong key={i}>{s}</strong> : s)}”</p>
       {(clamped || open) && (
         <button type="button" className="quote-more" onClick={() => setOpen(!open)}>{open ? labels.less : labels.more}</button>
       )}
