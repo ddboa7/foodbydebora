@@ -106,7 +106,9 @@
   .toggle.on .sw::after{transform:translateX(15px);}
 
   .mate{background:#fff;border:1px solid var(--line);border-radius:10px;padding:11px 12px;margin-bottom:8px;}
-  .mate-h{display:flex;justify-content:space-between;align-items:baseline;gap:8px;}
+  .mate-h{display:flex;flex-direction:column;gap:4px;}
+  .mate-meta{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:0;}
+  .mate-meta .badge{margin-left:0;}
   .mate-n{font-weight:700;font-size:14px;}
   .mate-c{font-family:var(--mono);font-size:11px;color:var(--ink-soft);white-space:nowrap;}
   .badge{font-family:var(--mono);font-size:9px;letter-spacing:.08em;text-transform:uppercase;border-radius:20px;padding:2px 7px;margin-left:6px;vertical-align:1px;border:1px solid var(--lichen);color:var(--pine);}
@@ -462,9 +464,9 @@
         const done = dots.filter(x=>x>0).length;
         const kept = dots.reduce((a,b)=>a+(b||0),0);
         const extra = total > 5;
-        return '<div class="mate"><div class="mate-h"><span class="mate-n">'+esc(m.name)+
-          '<span class="badge'+(extra?' extra':'')+'">'+total+' practices'+(extra?' · extra':'')+'</span></span>'+
-          '<span class="mate-c">'+done+'/14 days · '+kept+' kept</span></div>'+
+        return '<div class="mate"><div class="mate-h"><span class="mate-n">'+esc(m.name)+'</span>'+
+          '<span class="mate-meta"><span class="badge'+(extra?' extra':'')+'">'+total+' practices'+(extra?' · extra':'')+'</span>'+
+          '<span class="mate-c">'+done+'/14 days · '+kept+' kept</span></span></div>'+
           '<div class="dots">'+dots.map(x=>{const v=x||0,f=Math.round(v/total*100);
             return '<i class="'+(v&&v<total?'part':'')+'" style="--f:'+f+'%" title="'+v+' of '+total+'"></i>';}).join('')+'</div>'+
           '<div class="dots-n">'+dots.map(x=>'<span>'+(x?x:'')+'</span>').join('')+'</div>'+
