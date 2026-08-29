@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Turn down the noise &amp; notice the pull · 14 days | Food by Debora</title>
+<meta name="description" content="A private 14-day tracker for the Wings of Wellbeing dopamine detox challenge.">
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" type="image/png" sizes="512x512" href="food-by-debora-favicon.png?v=4"><link rel="shortcut icon" type="image/png" href="food-by-debora-favicon.png?v=4"><link rel="apple-touch-icon" href="food-by-debora-favicon.png?v=4">
+<style>body{background:#fdf9f7;margin:0}.dd-top{display:flex;flex-direction:column;align-items:center;gap:10px;padding:26px 18px 20px}.dd-top img{height:52px;width:auto}.dd-top span{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:1.5rem;letter-spacing:-.01em;color:#2B5147}.dd-foot{max-width:800px;margin:0 auto;padding:22px 18px 48px;font-family:'Montserrat',system-ui,sans-serif;font-size:.85rem;color:#7c766e;text-align:center}.dd-foot a{color:#5c8778}.dd-foot a:hover{color:#c9a15f}</style>
+</head>
+<body>
+<div class="dd-top"><img src="wings-butterfly-mark.png" alt=""><span>Wings of Wellbeing</span></div>
+<div id="root"><div class="boot">Loading your tracker…</div></div>
+<div class="dd-foot">Your entries are saved on your own device. Questions? <a href="mailto:foodbydebora@gmail.com">foodbydebora@gmail.com</a></div>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Karla:wght@400;500;700&family=JetBrains+Mono:wght@400;700&display=swap');
+
+  #root {
+    --fog:#E7EBE6; --paper:#F5F7F3; --ink:#16211D; --ink-soft:#55635C;
+    --pine:#2B5147; --lichen:#8A4F62; --plum:#C9A15F; --line:#C9D2C7; --dim:#D8DFD5;
+    --gold:#C9A15F; --gold-lt:#E7CF9E;
+  --display:'Fraunces',Georgia,serif; --body:'Karla',system-ui,sans-serif; --mono:'JetBrains Mono',ui-monospace,monospace;
+    font-family:var(--body); color:var(--ink); background:var(--fog);
+    padding:22px 18px 40px; border-radius:14px; max-width:800px; margin:0 auto;
+    line-height:1.5; -webkit-font-smoothing:antialiased;
+  }
+  #root *,#root *::before,#root *::after{box-sizing:border-box;}
+  .boot{font-family:var(--mono);font-size:13px;color:var(--ink-soft);padding:40px 0;text-align:center;}
+
+  .eyebrow{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin:0 0 8px;}
+  .eyebrow::after{content:'';display:block;width:44px;height:1px;margin-top:7px;background:linear-gradient(90deg,var(--gold),rgba(201,161,95,0));}
+  #root h1{font-family:var(--display);font-weight:600;font-size:clamp(28px,6vw,40px);line-height:1.05;margin:0 0 6px;letter-spacing:-.015em;}
+  #root h1 em{display:inline-block;padding-right:.12em;margin-right:-.12em;font-style:italic;background:linear-gradient(100deg,var(--pine) 0%,var(--pine) 32%,var(--gold-lt) 46%,var(--gold) 54%,var(--pine) 70%,var(--pine) 100%);background-size:280% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 7s ease-in-out infinite;}
+  @keyframes shine{0%,100%{background-position:110% 0}50%{background-position:-10% 0}}
+  .sub{color:var(--ink-soft);font-size:14.5px;margin:0 0 24px;max-width:none;text-wrap:pretty;}
+
+  .card{position:relative;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:18px;margin-bottom:16px;overflow:hidden;}
+  .card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,rgba(201,161,95,0),var(--gold-lt) 22%,var(--gold) 50%,var(--gold-lt) 78%,rgba(201,161,95,0));opacity:.75;}
+  .card h2{font-family:var(--display);font-weight:600;font-size:19px;margin:0 0 4px;letter-spacing:-.01em;}
+  .card .hint{font-size:13px;color:var(--ink-soft);margin:0 0 14px;}
+
+  .meter{display:flex;gap:4px;align-items:flex-end;height:74px;margin:0 0 5px;}
+  .meter-col{flex:1;height:100%;display:flex;flex-direction:column-reverse;gap:2px;background:none;border:0;padding:0;cursor:pointer;}
+  .meter-col .seg{flex:1;border-radius:2px;background:var(--dim);transition:background .25s ease;}
+  .meter-col .seg.on{background:var(--lichen);}
+  .meter-col.active .seg{background:#CBD5C8;}
+  .meter-col.active .seg.on{background:var(--pine);}
+  .meter-col:focus-visible{outline:2px solid var(--plum);outline-offset:3px;border-radius:4px;}
+  .meter-labels{display:flex;gap:4px;font-family:var(--mono);font-size:9.5px;color:var(--ink-soft);}
+  .meter-labels span{flex:1;text-align:center;padding-top:3px;}
+  .meter-labels span.active{color:var(--pine);font-weight:700;}
+  .meter-labels span.today{border-top:2px solid var(--gold);}
+
+  .rule{display:flex;gap:12px;align-items:flex-start;width:100%;text-align:left;background:#fff;border:1px solid var(--line);border-radius:10px;padding:11px 12px;margin-bottom:7px;cursor:pointer;font:inherit;color:inherit;transition:border-color .15s,background .15s;}
+  .rule:hover{border-color:var(--pine);}
+  .rule:focus-visible{outline:2px solid var(--plum);outline-offset:2px;}
+  .rule.kept{background:#F5E9EC;border-color:var(--lichen);}
+  .rule.locked{cursor:default;}
+  .box{width:20px;height:20px;flex:0 0 20px;border-radius:6px;margin-top:1px;border:1.5px solid var(--line);background:#fff;display:grid;place-items:center;font-size:12px;color:#fff;}
+  .rule.kept .box{background:var(--pine);border-color:var(--pine);}
+  .rule-t{font-weight:700;font-size:14.5px;display:block;}
+  .rule-d{font-size:12.5px;color:var(--ink-soft);display:block;margin-top:1px;}
+  .tag{font-family:var(--mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--plum);border:1px solid var(--plum);border-radius:20px;padding:1px 6px;margin-left:6px;vertical-align:1.5px;}
+  .cat{font-family:var(--mono);font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-soft);margin:18px 0 8px;display:flex;align-items:center;gap:8px;}
+  .cat::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,var(--gold-lt),rgba(201,161,95,0));}
+
+  label.fld{display:block;font-weight:700;font-size:13px;margin:16px 0 5px;}
+  #root textarea,#root input[type=text]{width:100%;font:inherit;font-size:14px;padding:10px 11px;border:1px solid var(--line);border-radius:9px;background:#fff;color:var(--ink);resize:vertical;}
+  #root textarea:focus,#root input:focus{outline:2px solid var(--pine);outline-offset:-1px;border-color:var(--pine);}
+
+  .scale{display:flex;gap:6px;}
+  .scale button{flex:1;font-family:var(--mono);font-size:13px;padding:9px 0;border:1px solid var(--line);background:#fff;border-radius:8px;cursor:pointer;color:var(--ink-soft);}
+  .scale button.on{background:var(--pine);border-color:var(--pine);color:#fff;}
+  .scale button:focus-visible{outline:2px solid var(--plum);outline-offset:2px;}
+  .scale-ends{display:flex;justify-content:space-between;font-size:11px;color:var(--ink-soft);margin-top:4px;}
+
+  #root .btn{font:inherit;font-weight:700;font-size:14px;padding:11px 20px;border-radius:9px;border:1.5px solid var(--pine);background:var(--pine);color:#fff;cursor:pointer;box-shadow:0 0 0 1px rgba(201,161,95,.45),0 1px 0 rgba(201,161,95,.3);}
+  #root .btn.ghost{background:transparent;color:var(--pine);}
+  #root .btn.sm{padding:7px 13px;font-size:13px;}
+  #root .btn:focus-visible{outline:2px solid var(--plum);outline-offset:2px;}
+  #root .btn:disabled{opacity:.4;cursor:not-allowed;}
+  .row{display:flex;gap:8px;align-items:center;flex-wrap:wrap;}
+
+  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px;}
+  .stat{background:#fff;border:1px solid var(--line);border-radius:10px;padding:11px 12px;box-shadow:inset 0 -2px 0 rgba(201,161,95,.35);}
+  .stat b{font-family:var(--display);font-size:24px;font-weight:600;display:block;line-height:1;color:var(--gold);}
+  .stat span{font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);}
+
+  .note{font-size:12.5px;color:var(--ink-soft);border-left:2px solid var(--gold);padding-left:11px;margin:14px 0 0;}
+  .daynav{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;}
+  .daynav .d{font-family:var(--display);font-size:22px;font-weight:600;}
+  .daynav button{font-family:var(--mono);font-size:12px;background:#fff;border:1px solid var(--line);border-radius:7px;padding:6px 11px;cursor:pointer;color:var(--ink);}
+  .daynav button:disabled{opacity:.35;cursor:not-allowed;}
+  .saved{font-family:var(--mono);font-size:11px;color:var(--lichen);min-height:15px;}
+  .err{font-family:var(--mono);font-size:11.5px;color:var(--plum);}
+  hr.sep{border:0;height:1px;background:linear-gradient(90deg,rgba(201,161,95,0),var(--gold) 50%,rgba(201,161,95,0));opacity:.55;margin:18px 0;}
+
+  .toggle{display:flex;gap:10px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px;cursor:pointer;width:100%;text-align:left;font:inherit;color:inherit;}
+  .toggle.on{background:#F5E9EC;border-color:var(--lichen);}
+  .sw{width:36px;height:21px;flex:0 0 36px;border-radius:20px;background:var(--dim);position:relative;margin-top:1px;transition:background .2s;}
+  .sw::after{content:'';position:absolute;top:2.5px;left:2.5px;width:16px;height:16px;border-radius:50%;background:#fff;transition:transform .2s;}
+  .toggle.on .sw{background:var(--pine);}
+  .toggle.on .sw::after{transform:translateX(15px);}
+
+  .mate{background:#fff;border:1px solid var(--line);border-radius:10px;padding:11px 12px;margin-bottom:8px;}
+  .mate-h{display:flex;justify-content:space-between;align-items:baseline;gap:8px;}
+  .mate-n{font-weight:700;font-size:14px;}
+  .mate-c{font-family:var(--mono);font-size:11px;color:var(--ink-soft);white-space:nowrap;}
+  .badge{font-family:var(--mono);font-size:9px;letter-spacing:.08em;text-transform:uppercase;border-radius:20px;padding:2px 7px;margin-left:6px;vertical-align:1px;border:1px solid var(--lichen);color:var(--pine);}
+  .badge.extra{border-color:var(--plum);color:var(--plum);}
+  .dots{display:flex;gap:3px;margin:8px 0 0;}
+  .dots i{width:100%;height:7px;border-radius:2px;background:var(--dim);}
+  .dots i.lo{background:#E3C2CC;}
+  .dots i.mid{background:var(--lichen);}
+  .dots i.hi{background:var(--pine);}
+  .mate-r{font-family:var(--mono);font-size:10.5px;color:var(--ink-soft);margin:8px 0 0;line-height:1.6;}
+  .mate-i{font-size:12.5px;color:var(--ink-soft);margin:6px 0 0;font-style:italic;}
+
+  svg.chart{width:100%;height:auto;display:block;}
+  .legend{font-family:var(--mono);font-size:10.5px;color:var(--ink-soft);display:flex;gap:14px;margin-top:6px;flex-wrap:wrap;}
+  .legend b{font-weight:400;display:inline-flex;align-items:center;gap:5px;}
+  .legend i{width:14px;height:3px;border-radius:2px;display:inline-block;}
+
+  @media (max-width:480px){.stats{grid-template-columns:1fr 1fr;}.meter{height:60px;}}
+  @media (prefers-reduced-motion:reduce){#root *{transition:none!important;}}
+</style>
+
+<script>
+(function () {
+
+  /* ===================================================================
+     CONFIG — the only line Debora needs to edit.
+
+     Leave empty ('') and the tracker still works: each person's own
+     log is saved on their own device. The group board will be off.
+
+     Paste your Google Apps Script web app URL here to switch the
+     shared group board on. Setup instructions are in
+     group-board-setup.md.
+     =================================================================== */
+  const BOARD_ENDPOINT = 'https://script.google.com/macros/s/AKfycbyy5mOJZ_V-vdMKUyth_vpE3BDVZOZZqe0GLwAQYAHZVwQ2qBTVFsH_irm4aeUI40KB/exec';
+
+  const KEY = 'ddc14:v3';
+  const DAYS = 14;
+
+  const CORE = [
+    { id:'curfew', t:'Screen curfew - 60 min before bed', d:'Phone charges outside the bedroom.' },
+    { id:'slow',   t:'Slow start - first 60 min awake',   d:'No phone, no laptop, no TV.' },
+    { id:'cues',   t:'Cues off',                          d:'Notifications silenced except calls. Two pull-apps or websites logged out.' }
+  ];
+
+  const OPTIONAL = [
+    { c:'Screens & attention', id:'social',   t:'No social media at all',      s:'No social media',      d:'The whole category, 14 days.' },
+    { c:'Screens & attention', id:'shortvid', t:'No short-form video',          s:'No short video',       d:'Reels, TikTok, Shorts.' },
+    { c:'Screens & attention', id:'onescreen',t:'One screen at a time',         s:'One screen',           d:'If you watch something, you only watch it.' },
+    { c:'Screens & attention', id:'grey',     t:'Phone in greyscale',           s:'Greyscale',            d:'Set it once on day 1. Costs nothing, works surprisingly well.' },
+    { c:'Screens & attention', id:'table',    t:'No phone at the table',        s:'No phone at meals',    d:'Any meal, alone or not.' },
+    { c:'Screens & attention', id:'bath',     t:'No phone in the bathroom',     s:'No phone in bathroom', d:'Small practice, oddly revealing.' },
+    { c:'Screens & attention', id:'email2',   t:'Email in two fixed windows',   s:'Email 2× a day',       d:'You pick the times. Closed the rest of the day.' },
+    { c:'Screens & attention', id:'offday',   t:'One fully offline day',        s:'One offline day',      d:'Pick your day now and tell the group.' },
+    { c:'Screens & attention', id:'box',      t:'Phone in a box from 20:00',    s:'Phone boxed at 20:00', d:'A real box, in a real other room.' },
+
+    { c:'Sound & stimulation', id:'quiet',  t:'20 minutes of nothing',  s:'20 min of nothing',  d:'A walk with no podcast, no music, no phone. Daily.' },
+    { c:'Sound & stimulation', id:'chores', t:'No audio during chores', s:'Silent chores',      d:'Cook and clean in silence.' },
+    { c:'Sound & stimulation', id:'mono',   t:'One task at a time',     s:'One task at a time', d:'No second thing running alongside the first.' },
+
+    { c:'Consumption', id:'drinks',  t:'No sweet drinks, no packaged snacks', s:'No sweet drinks/snacks', d:'Sugar in a meal you sit down for is fine. This is the automatic kind.' },
+    { c:'Consumption', id:'caff',    t:'Caffeine curfew at 14:00',            s:'Caffeine curfew 14:00',  d:'Nothing caffeinated after 2pm.' },
+    { c:'Consumption', id:'nocaff',  t:'No caffeine at all',                  s:'No caffeine',            d:'Advanced. Expect a headache days 1–3.' },
+    { c:'Consumption', id:'alcohol', t:'No alcohol',                          s:'No alcohol',             d:'Also protects your sleep.' },
+    { c:'Consumption', id:'nicotine',t:'No nicotine',                         s:'No nicotine',            d:'Cigarettes, vapes, pouches.' },
+    { c:'Consumption', id:'sweetnr', t:'No refined sugar',                  s:'No refined sugar',       d:'Fruit or maple syrup is fine.' },
+    { c:'Consumption', id:'atteat',  t:'Eat without anything else',           s:'Undistracted meals',     d:'No screen, no book, no phone. Just the meal.' },
+    { c:'Consumption', id:'impulse', t:'48 hours before any purchase',        s:'48h before buying',      d:'Write it down, wait two days, then decide.' }
+  ];
+
+  let state = null, viewDay = 1, board = [], boardErr = '', saveTimer = null;
+  const $root = document.getElementById('root');
+  const esc = s => String(s||'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  const byId = id => OPTIONAL.find(r=>r.id===id);
+
+  const hasClaudeStore = typeof window !== 'undefined' && !!window.storage;
+  const boardMode = BOARD_ENDPOINT ? 'endpoint' : (hasClaudeStore ? 'shared' : 'off');
+
+  const store = {
+    async get(k) {
+      if (hasClaudeStore) { const r = await window.storage.get(k, false); return r ? r.value : null; }
+      return localStorage.getItem(k);
+    },
+    async set(k, v) {
+      if (hasClaudeStore) return window.storage.set(k, v, false);
+      localStorage.setItem(k, v);
+    }
+  };
+
+  const blankDay = () => ({ rules:{}, instead:'', urge:0, urgeNote:'', energy:0, sleep:0 });
+  const activeRules = () => CORE.concat(state.picks.map(byId).filter(Boolean));
+  const MAX = () => activeRules().length;
+
+  function currentDay() {
+    if (!state.startedAt) return 1;
+    const s = new Date(state.startedAt); s.setHours(0,0,0,0);
+    const n = new Date(); n.setHours(0,0,0,0);
+    return Math.min(Math.max(Math.floor((n-s)/86400000)+1, 1), DAYS);
+  }
+  function dayPoints(n) {
+    const d = state.days[n]; if (!d) return 0;
+    return activeRules().reduce((p,r)=>p+(d.rules[r.id]?1:0),0);
+  }
+  function isTouched(d) {
+    if (!d) return false;
+    return Object.keys(d.rules||{}).some(k=>d.rules[k]) || !!d.urge || !!d.energy || !!d.sleep || !!(d.instead||'').trim();
+  }
+
+  async function load() {
+    try { const v = await store.get(KEY); if (v) state = JSON.parse(v); } catch(e) { state = null; }
+    if (state && !state.days) state.days = {};
+  }
+  async function save(flash) {
+    try {
+      await store.set(KEY, JSON.stringify(state));
+      if (state.onBoard && state.name) { try { await pushBoard(); } catch(e) {} }
+      if (flash) {
+        const el = document.getElementById('savedMsg');
+        if (el) { el.className='saved'; el.textContent='saved'; clearTimeout(saveTimer);
+          saveTimer = setTimeout(()=>{ if(el) el.textContent=''; },1600); }
+      }
+    } catch(e) {
+      const el = document.getElementById('savedMsg');
+      if (el) { el.className='err'; el.textContent="couldn't save - try again"; }
+    }
+  }
+
+  const slug = s => String(s).toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'').slice(0,60) || 'member';
+
+  function boardPayload() {
+    const dots = [];
+    for (let i=1;i<=DAYS;i++) dots.push(dayPoints(i));
+    const d = state.days[currentDay()];
+    return {
+      name: state.name,
+      total: MAX(),
+      picks: state.picks.map(id => { const r = byId(id); return r ? r.s : null; }).filter(Boolean),
+      dots,
+      instead: (d && d.instead ? d.instead.slice(0,140) : ''),
+      at: Date.now()
+    };
+  }
+
+  async function pushBoard() {
+    const p = boardPayload();
+    if (boardMode === 'endpoint') {
+      await fetch(BOARD_ENDPOINT, { method:'POST', body: JSON.stringify(p), headers:{'Content-Type':'text/plain'} });
+    } else if (boardMode === 'shared') {
+      await window.storage.set('board:'+slug(state.name), JSON.stringify(p), true);
+    }
+  }
+
+  async function loadBoard() {
+    board = []; boardErr = '';
+    if (boardMode === 'off') { boardErr = 'off'; return; }
+    try {
+      if (boardMode === 'endpoint') {
+        const res = await fetch(BOARD_ENDPOINT, { method:'GET' });
+        const data = await res.json();
+        board = Array.isArray(data) ? data : [];
+      } else {
+        const r = await window.storage.list('board:', true);
+        const keys = r ? r.keys : [];
+        for (const k of keys) {
+          try { const v = await window.storage.get(k, true); if (v && v.value) board.push(JSON.parse(v.value)); } catch(e) {}
+        }
+      }
+      board.sort((a,b)=>(b.at||0)-(a.at||0));
+    } catch(e) { boardErr = 'fail'; }
+  }
+
+  // ---------------- setup ----------------
+  function renderSetup() {
+    const p = state.picks;
+    let cat = '';
+    const opts = OPTIONAL.map(r=>{
+      let head = '';
+      if (r.c !== cat) { cat = r.c; head = '<p class="cat">'+r.c+'</p>'; }
+      const on = p.indexOf(r.id) > -1;
+      return head + '<button class="rule '+(on?'kept':'')+'" data-pick="'+r.id+'">'+
+        '<span class="box">'+(on?'✓':'')+'</span>'+
+        '<span><span class="rule-t">'+r.t+'</span><span class="rule-d">'+r.d+'</span></span></button>';
+    }).join('');
+
+    let counter;
+    if (p.length === 0) counter = 'pick at least two';
+    else if (p.length < 2) counter = '1 chosen · pick at least two';
+    else if (p.length === 2) counter = '2 chosen · the recommended number';
+    else counter = p.length + ' chosen · extra challenge, and the board will show it';
+
+    $root.innerHTML =
+      '<p class="eyebrow">Wings of Wellbeing · 14 days</p>'+
+      '<h1>Turn down the <em>noise</em> <em>&amp;</em> notice the <em>pull</em></h1>'+
+      '<p class="sub">Three practices everyone keeps, then as many of your own as you want.<br>Chosen practices hold better than assigned ones. That\'s what the habit research shows.</p>'+
+
+      '<div class="card">'+
+        '<h2>Your name</h2>'+
+        '<p class="hint">First and last name, so nobody has to guess which Debora you are. If you prefer to stay anonymous use a made-up name. You decide separately whether to appear on the group board at all.</p>'+
+        '<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">'+
+          '<input type="text" id="firstIn" placeholder="First name" autocomplete="given-name" value="'+esc(state.name.split(' ')[0]||'')+'">'+
+          '<input type="text" id="lastIn" placeholder="Last name" autocomplete="family-name" value="'+esc(state.name.split(' ').slice(1).join(' '))+'">'+
+        '</div>'+
+      '</div>'+
+
+      '<div class="card">'+
+        '<h2>The three everyone keeps</h2>'+
+        '<p class="hint">These target the cue, not the pleasure. That\'s the part with evidence behind it.</p>'+
+        CORE.map(r=>'<div class="rule kept locked"><span class="box">✓</span>'+
+          '<span><span class="rule-t">'+r.t+'</span><span class="rule-d">'+r.d+'</span></span></div>').join('')+
+      '</div>'+
+
+      '<div class="card">'+
+        '<h2>Now choose your own</h2>'+
+        '<p class="hint">Two is the recommended number. Take more if you want the harder version. Pick the ones that would actually be uncomfortable.</p>'+
+        opts+
+        '<p class="note">If restriction around food has ever been a hard area for you, skip the food practices entirely and choose from the others. Nothing here is worth that trade.</p>'+
+        '<div class="row" style="margin-top:18px">'+
+          '<button class="btn" id="startBtn" '+(p.length>=2?'':'disabled')+'>Start day 1</button>'+
+          '<span class="hint" style="margin:0">'+counter+'</span>'+
+        '</div>'+
+      '</div>';
+
+    const firstIn = document.getElementById('firstIn'), lastIn = document.getElementById('lastIn');
+    const readName = () => ((firstIn.value||'').trim()+' '+(lastIn.value||'').trim()).trim();
+    firstIn.oninput = lastIn.oninput = () => { state.name = readName(); };
+    $root.querySelectorAll('[data-pick]').forEach(b=>{
+      b.onclick = () => {
+        state.name = readName();
+        const id = b.dataset.pick, i = state.picks.indexOf(id);
+        if (i>-1) state.picks.splice(i,1); else state.picks.push(id);
+        renderSetup();
+      };
+    });
+    const sb = document.getElementById('startBtn');
+    if (sb) sb.onclick = async () => {
+      state.name = readName() || 'Member';
+      state.startedAt = new Date().toISOString();
+      await save(); viewDay = 1; await loadBoard(); renderMain();
+    };
+  }
+
+  // ---------------- main ----------------
+  function renderMain() {
+    const today = currentDay();
+    if (!state.days[viewDay]) state.days[viewDay] = blankDay();
+    const d = state.days[viewDay], rules = activeRules(), max = MAX();
+
+    let kept=0, logged=0;
+    for (let i=1;i<=DAYS;i++){ kept += dayPoints(i); if (isTouched(state.days[i])) logged++; }
+
+    const cols=[], labels=[];
+    for (let i=1;i<=DAYS;i++){
+      const pts=dayPoints(i), segs=[];
+      for (let s=0;s<max;s++) segs.push('<span class="seg '+(s<pts?'on':'')+'"></span>');
+      cols.push('<button class="meter-col '+(i===viewDay?'active':'')+'" data-day="'+i+'" aria-label="Day '+i+', '+pts+' of '+max+'">'+segs.join('')+'</button>');
+      labels.push('<span class="'+(i===viewDay?'active':'')+' '+(i===today?'today':'')+'">'+i+'</span>');
+    }
+
+    $root.innerHTML =
+      '<p class="eyebrow">Day '+today+' of 14 · '+max+' practices · '+kept+' kept</p>'+
+      '<h1>Turn down the <em>noise</em> <em>&amp;</em> notice the <em>pull</em></h1>'+
+
+      '<div class="card">'+
+        '<div class="meter">'+cols.join('')+'</div>'+
+        '<div class="meter-labels">'+labels.join('')+'</div>'+
+        '<p class="note" style="margin-top:12px">Tap any day to fill it in. Gaps don\'t reset anything. A blank day is data, not failure.</p>'+
+      '</div>'+
+
+      '<div class="card">'+
+        '<div class="daynav">'+
+          '<button id="prevD" '+(viewDay===1?'disabled':'')+'>←</button>'+
+          '<span class="d">Day '+viewDay+(viewDay===today?' · today':'')+'</span>'+
+          '<button id="nextD" '+(viewDay===DAYS?'disabled':'')+'>→</button>'+
+        '</div>'+
+        rules.map(r=>'<button class="rule '+(d.rules[r.id]?'kept':'')+'" data-rule="'+r.id+'">'+
+          '<span class="box">'+(d.rules[r.id]?'✓':'')+'</span>'+
+          '<span><span class="rule-t">'+r.t+(CORE.some(c=>c.id===r.id)?'':'<span class="tag">yours</span>')+'</span>'+
+          '<span class="rule-d">'+r.d+'</span></span></button>').join('')+
+
+        '<label class="fld" for="instead">What did you do instead?</label>'+
+        '<textarea id="instead" rows="2" placeholder="Walked to the lake. Called my sister. Stared at the ceiling for 20 minutes.">'+esc(d.instead)+'</textarea>'+
+
+        '<label class="fld">Strongest urge today, before it passed</label>'+
+        '<div class="scale">'+[1,2,3,4,5].map(n=>'<button data-urge="'+n+'" class="'+(d.urge===n?'on':'')+'">'+n+'</button>').join('')+'</div>'+
+        '<div class="scale-ends"><span>barely noticed it</span><span>white-knuckle</span></div>'+
+        '<input type="text" id="urgeNote" placeholder="What triggered it? Where were you?" value="'+esc(d.urgeNote)+'" style="margin-top:8px">'+
+
+        '<label class="fld">Energy today</label>'+
+        '<div class="scale">'+[1,2,3,4,5].map(n=>'<button data-energy="'+n+'" class="'+(d.energy===n?'on':'')+'">'+n+'</button>').join('')+'</div>'+
+        '<label class="fld">Last night\'s sleep</label>'+
+        '<div class="scale">'+[1,2,3,4,5].map(n=>'<button data-sleep="'+n+'" class="'+(d.sleep===n?'on':'')+'">'+n+'</button>').join('')+'</div>'+
+
+        '<div class="row" style="margin-top:18px">'+
+          '<button class="btn" id="saveBtn">Save day '+viewDay+'</button>'+
+          '<span class="saved" id="savedMsg"></span>'+
+        '</div>'+
+      '</div>'+
+
+      boardCard()+
+
+      '<div class="card">'+
+        '<h2>Where you are</h2>'+
+        '<div class="stats">'+
+          '<div class="stat"><b>'+logged+'</b><span>days logged</span></div>'+
+          '<div class="stat"><b>'+kept+'</b><span>practices kept</span></div>'+
+          '<div class="stat"><b>'+avgOf('sleep')+'</b><span>average sleep</span></div>'+
+        '</div>'+
+        (logged>=3 ? review() : '<p class="note">Your charts appear once you have logged three days.</p>')+
+        '<hr class="sep">'+
+        '<button class="btn ghost sm" id="resetBtn">Start over</button>'+
+      '</div>';
+
+    function grab() {
+      const i = document.getElementById('instead'), u = document.getElementById('urgeNote');
+      if (i) d.instead = i.value;
+      if (u) d.urgeNote = u.value;
+    }
+
+    $root.querySelectorAll('[data-day]').forEach(b=>b.onclick=()=>{grab();save();viewDay=+b.dataset.day;renderMain();});
+    $root.querySelectorAll('[data-rule]').forEach(b=>b.onclick=()=>{
+      grab(); d.rules[b.dataset.rule] = !d.rules[b.dataset.rule]; save(); renderMain();
+    });
+    ['urge','energy','sleep'].forEach(f=>{
+      $root.querySelectorAll('[data-'+f+']').forEach(b=>b.onclick=()=>{
+        grab(); const v=+b.dataset[f]; d[f] = d[f]===v?0:v; save(); renderMain();
+      });
+    });
+    document.getElementById('prevD').onclick=()=>{grab();save();viewDay--;renderMain();};
+    document.getElementById('nextD').onclick=()=>{grab();save();viewDay++;renderMain();};
+    document.getElementById('saveBtn').onclick=async()=>{ grab(); await save(true); await loadBoard(); renderMain(); };
+    document.getElementById('resetBtn').onclick=async()=>{
+      state={name:state.name,picks:[],startedAt:null,days:{},onBoard:false}; await save(); renderSetup();
+    };
+    const bt = document.getElementById('boardToggle');
+    if (bt) bt.onclick = async () => { grab(); state.onBoard = !state.onBoard; await save(); await loadBoard(); renderMain(); };
+    const rb = document.getElementById('refreshBoard');
+    if (rb) rb.onclick = async () => { await loadBoard(); renderMain(); };
+  }
+
+  function boardCard() {
+    if (boardMode === 'off') {
+      return '<div class="card"><h2>The group board</h2>'+
+        '<p class="note">The shared board isn\'t switched on for this copy of the tracker, so your log stays on this device only. Everything else works normally.</p></div>';
+    }
+    const others = board.filter(b => b && b.name && b.name !== state.name);
+    let inner = '';
+    if (state.onBoard) {
+      if (boardErr) inner = '<p class="note">The board is unreachable right now. Your own log is safe - try refreshing in a minute.</p>';
+      else if (!others.length) inner = '<p class="note">Nobody else has joined the board yet. You are first.</p>';
+      else inner = '<div style="margin-top:14px">' + others.slice(0,40).map(m=>{
+        const dots = m.dots||[], total = m.total||5;
+        const done = dots.filter(x=>x>0).length;
+        const extra = total > 5;
+        const cls = v => { if(!v) return ''; const f=v/total; return f>=1?'hi':(f>=0.6?'mid':'lo'); };
+        return '<div class="mate"><div class="mate-h"><span class="mate-n">'+esc(m.name)+
+          '<span class="badge'+(extra?' extra':'')+'">'+total+' practices'+(extra?' · extra':'')+'</span></span>'+
+          '<span class="mate-c">'+done+'/14 days</span></div>'+
+          '<div class="dots">'+dots.map(x=>'<i class="'+cls(x)+'"></i>').join('')+'</div>'+
+          (m.picks && m.picks.length ? '<p class="mate-r">'+m.picks.map(esc).join(' · ')+'</p>' : '')+
+          (m.instead?'<p class="mate-i">"'+esc(m.instead)+'"</p>':'')+'</div>';
+      }).join('') + '<button class="btn ghost sm" id="refreshBoard">Refresh board</button></div>';
+    }
+    return '<div class="card">'+
+      '<h2>The group board</h2>'+
+      '<p class="hint">Seeing other people move is one of the few things that reliably helps when starting alone is hard.</p>'+
+      '<button class="toggle '+(state.onBoard?'on':'')+'" id="boardToggle">'+
+        '<span class="sw"></span>'+
+        '<span><span class="rule-t">Show me on the board</span>'+
+        '<span class="rule-d">Everyone with the challenge link sees your name, how many practices you took on and which ones, your daily bars, and your "what I did instead" line. Your urge notes, sleep and energy stay private.</span></span>'+
+      '</button>'+ inner + '</div>';
+  }
+
+  function avgOf(f) {
+    let s=0,n=0;
+    for (let i=1;i<=DAYS;i++){ const d=state.days[i]; if(d&&d[f]){s+=d[f];n++;} }
+    return n ? (s/n).toFixed(1) : '—';
+  }
+
+  function review() {
+    const W=560, H=110, PL=24, PR=8, PT=10, PB=20;
+    const x = i => PL + (i/(DAYS-1))*(W-PL-PR);
+    const y = v => PT + (1-(v-1)/4)*(H-PT-PB);
+
+    const mini = (field,color,label) => {
+      const pts=[];
+      for(let i=1;i<=DAYS;i++){ const d=state.days[i]; if(d&&d[field]) pts.push([x(i-1),y(d[field])]); }
+      const grid = [1,3,5].map(v=>
+        '<line x1="'+PL+'" y1="'+y(v)+'" x2="'+(W-PR)+'" y2="'+y(v)+'" stroke="#D8DFD5" stroke-width="1"/>'+
+        '<text x="'+(PL-6)+'" y="'+(y(v)+3.5)+'" text-anchor="end" font-family="monospace" font-size="9" fill="#55635C">'+v+'</text>').join('');
+      const xl = [1,4,7,10,14].map(i=>
+        '<text x="'+x(i-1)+'" y="'+(H-5)+'" text-anchor="middle" font-family="monospace" font-size="9" fill="#55635C">'+i+'</text>').join('');
+      let body = '';
+      if (pts.length) {
+        const path = pts.map((p,i)=>(i?'L':'M')+p[0].toFixed(1)+' '+p[1].toFixed(1)).join(' ');
+        body = '<path d="'+path+'" fill="none" stroke="'+color+'" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>'+
+          pts.map(p=>'<circle cx="'+p[0].toFixed(1)+'" cy="'+p[1].toFixed(1)+'" r="3.5" fill="'+color+'"/>').join('');
+      }
+      return '<div style="margin-bottom:14px">'+
+        '<p class="legend" style="margin:0 0 2px"><b><i style="background:'+color+'"></i>'+label+'</b></p>'+
+        '<svg class="chart" viewBox="0 0 '+W+' '+H+'" role="img" aria-label="'+label+' across the challenge">'+grid+xl+body+'</svg></div>';
+    };
+
+    const grid = '';
+    const xl = '';
+
+    const rules = activeRules();
+    let touched = 0;
+    for (let i=1;i<=DAYS;i++) if (isTouched(state.days[i])) touched++;
+    const bars = rules.map(r=>{
+      let n=0;
+      for(let i=1;i<=DAYS;i++){ const d=state.days[i]; if(isTouched(d) && d.rules[r.id]) n++; }
+      const pct = touched ? Math.round(n/touched*100) : 0;
+      const col = pct>=70?'var(--pine)':pct>=40?'var(--lichen)':'var(--plum)';
+      return '<div style="margin-bottom:9px">'+
+        '<div style="display:flex;justify-content:space-between;font-size:12.5px;gap:8px">'+
+        '<span style="font-weight:500">'+r.t+'</span><span class="mate-c">'+n+'/'+touched+'</span></div>'+
+        '<div style="height:7px;background:var(--dim);border-radius:3px;margin-top:4px;overflow:hidden">'+
+        '<div style="height:100%;width:'+pct+'%;background:'+col+'"></div></div></div>';
+    }).join('');
+
+    const seg = (a,b)=>{ let s=0,n=0; for(let i=a;i<=b;i++){const d=state.days[i]; if(d&&d.urge){s+=d.urge;n++;}} return n?s/n:null; };
+    const e=seg(1,4), l=seg(11,14);
+    let verdict='';
+    if (e!==null && l!==null) {
+      verdict = l<e
+        ? '<p style="font-size:14px;margin:14px 0 0">Your urge intensity fell from <b>'+e.toFixed(1)+'</b> in days 1-4 to <b>'+l.toFixed(1)+'</b> in days 11-14. That curve is the whole mechanism, measured in your own data.</p>'
+        : '<p style="font-size:14px;margin:14px 0 0">Your urge intensity did not fall ('+e.toFixed(1)+' → '+l.toFixed(1)+'). Worth bringing to the closing call - often it means the trigger is a situation, not a habit.</p>';
+    }
+
+    const insteads=[];
+    for(let i=1;i<=DAYS;i++){ const d=state.days[i]; if(d&&d.instead&&d.instead.trim()) insteads.push('Day '+i+': '+esc(d.instead.trim())); }
+
+    return '<hr class="sep"><h2>Your fourteen days</h2>'+
+      mini('urge','#C9A15F','urge intensity')+
+      mini('energy','#8A4F62','energy')+
+      mini('sleep','#2B5147','sleep')+
+      verdict+
+      '<p style="font-weight:700;font-size:13px;margin:20px 0 8px">Which practice held</p>'+bars+
+      (insteads.length?'<p style="font-weight:700;font-size:13px;margin:20px 0 6px">What you did instead</p><ul style="margin:0;padding-left:18px">'+
+        insteads.map(s=>'<li style="font-size:13.5px;margin-bottom:5px">'+s+'</li>').join('')+'</ul>':'');
+  }
+
+  (async function init(){
+    await load();
+    if (!state) state = { name:'', picks:[], startedAt:null, days:{}, onBoard:false };
+    if (!state.picks) state.picks = [];
+    if (typeof state.name !== 'string') state.name = '';
+    if (!state.startedAt || state.picks.length < 2) renderSetup();
+    else { viewDay = currentDay(); await loadBoard(); renderMain(); }
+  })();
+})();
+</script>
+</body>
+</html>
