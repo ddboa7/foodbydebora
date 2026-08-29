@@ -42,8 +42,9 @@
   .card .hint{font-size:13px;color:var(--ink-soft);margin:0 0 14px;}
 
   .meter{display:flex;gap:4px;align-items:flex-end;height:74px;margin:0 0 5px;}
-  .meter-col{flex:1;height:100%;display:flex;flex-direction:column-reverse;gap:2px;background:none;border:0;padding:0;cursor:pointer;}
-  .meter-col .seg{flex:1;border-radius:2px;background:var(--dim);transition:background .25s ease;}
+  .meter-col{flex:1;height:100%;display:block;background:none;border:0;padding:0;margin:0;cursor:pointer;-webkit-appearance:none;appearance:none;}
+  .meter-col .stack{display:flex;flex-direction:column-reverse;gap:2px;height:100%;width:100%;}
+  .meter-col .seg{flex:1 1 0;min-height:2px;border-radius:2px;background:var(--dim);transition:background .25s ease;}
   .meter-col .seg.on{background:var(--lichen);}
   .meter-col.active .seg{background:#CBD5C8;}
   .meter-col.active .seg.on{background:var(--pine);}
@@ -110,11 +111,12 @@
   .mate-c{font-family:var(--mono);font-size:11px;color:var(--ink-soft);white-space:nowrap;}
   .badge{font-family:var(--mono);font-size:9px;letter-spacing:.08em;text-transform:uppercase;border-radius:20px;padding:2px 7px;margin-left:6px;vertical-align:1px;border:1px solid var(--lichen);color:var(--pine);}
   .badge.extra{border-color:var(--plum);color:var(--plum);}
-  .dots{display:flex;gap:3px;margin:8px 0 0;}
-  .dots i{width:100%;height:7px;border-radius:2px;background:var(--dim);}
-  .dots i.lo{background:#E3C2CC;}
-  .dots i.mid{background:var(--lichen);}
-  .dots i.hi{background:var(--pine);}
+  .dots{display:flex;gap:3px;align-items:flex-end;height:24px;margin:8px 0 0;}
+  .dots i{width:100%;height:100%;border-radius:3px;background:var(--dim);position:relative;overflow:hidden;}
+  .dots i::after{content:'';position:absolute;left:0;right:0;bottom:0;height:var(--f,0%);background:var(--pine);border-radius:3px;}
+  .dots i.part::after{background:var(--lichen);}
+  .dots-n{display:flex;gap:3px;font-family:var(--mono);font-size:9px;color:var(--ink-soft);margin-top:3px;}
+  .dots-n span{width:100%;text-align:center;}
   .mate-r{font-family:var(--mono);font-size:10.5px;color:var(--ink-soft);margin:8px 0 0;line-height:1.6;}
   .mate-i{font-size:12.5px;color:var(--ink-soft);margin:6px 0 0;font-style:italic;}
 
@@ -360,7 +362,7 @@
     for (let i=1;i<=DAYS;i++){
       const pts=dayPoints(i), segs=[];
       for (let s=0;s<max;s++) segs.push('<span class="seg '+(s<pts?'on':'')+'"></span>');
-      cols.push('<button class="meter-col '+(i===viewDay?'active':'')+'" data-day="'+i+'" aria-label="Day '+i+', '+pts+' of '+max+'">'+segs.join('')+'</button>');
+      cols.push('<button class="meter-col '+(i===viewDay?'active':'')+'" data-day="'+i+'" aria-label="Day '+i+', '+pts+' of '+max+'"><span class="stack">'+segs.join('')+'</span></button>');
       labels.push('<span class="'+(i===viewDay?'active':'')+' '+(i===today?'today':'')+'">'+i+'</span>');
     }
 
@@ -458,12 +460,14 @@
       else inner = '<div style="margin-top:14px">' + others.slice(0,40).map(m=>{
         const dots = m.dots||[], total = m.total||5;
         const done = dots.filter(x=>x>0).length;
+        const kept = dots.reduce((a,b)=>a+(b||0),0);
         const extra = total > 5;
-        const cls = v => { if(!v) return ''; const f=v/total; return f>=1?'hi':(f>=0.6?'mid':'lo'); };
         return '<div class="mate"><div class="mate-h"><span class="mate-n">'+esc(m.name)+
           '<span class="badge'+(extra?' extra':'')+'">'+total+' practices'+(extra?' · extra':'')+'</span></span>'+
-          '<span class="mate-c">'+done+'/14 days</span></div>'+
-          '<div class="dots">'+dots.map(x=>'<i class="'+cls(x)+'"></i>').join('')+'</div>'+
+          '<span class="mate-c">'+done+'/14 days · '+kept+' kept</span></div>'+
+          '<div class="dots">'+dots.map(x=>{const v=x||0,f=Math.round(v/total*100);
+            return '<i class="'+(v&&v<total?'part':'')+'" style="--f:'+f+'%" title="'+v+' of '+total+'"></i>';}).join('')+'</div>'+
+          '<div class="dots-n">'+dots.map(x=>'<span>'+(x?x:'')+'</span>').join('')+'</div>'+
           (m.picks && m.picks.length ? '<p class="mate-r">'+m.picks.map(esc).join(' · ')+'</p>' : '')+
           (m.instead?'<p class="mate-i">"'+esc(m.instead)+'"</p>':'')+'</div>';
       }).join('') + '<button class="btn ghost sm" id="refreshBoard">Refresh board</button></div>';
