@@ -315,10 +315,6 @@ function Counselling() {
             <div className="body" style={{ maxWidth: '54ch' }}>
               {C.hookBody.map((s, i) => <p key={i}>{s}</p>)}
             </div>
-            <div className="row" style={{ gap: 16, marginTop: 'clamp(22px,2.4vw,32px)', alignItems: 'center' }}>
-              <Button variant="primary" href="#contact">{C.hookCta}</Button>
-              <span style={{ fontSize: 'var(--text-small)', color: 'var(--text-secondary)' }}>{C.hookCtaNote}</span>
-            </div>
           </Reveal>
         </div>
       </section>

@@ -146,7 +146,7 @@ en: {
       { quote: "Debora fed us with her magical food throughout our retreat. It was varied, colourful, healthy and very delicious. The shared meals became a real highlight and we enjoyed them enormously. The brunch was always beautifully arranged and ready at exactly the right time. I can only recommend Debora's cooking. :)", name: 'Janina', role: 'Retreat catering' },
       { quote: 'I took the vegan cooking class with Debora. In a small group we cooked a really delicious menu, and along the way Debora shared a lot of knowledge about nutrition, gut health and vegan cooking - likeable and very inspiring.', name: 'Yvonne', role: 'Vegan cooking class' },
       { quote: 'We had a private cooking class with Debora. It was very instructive, cosy and easy-going, and afterwards we got to enjoy a delicious vegan menu. Thank you, dear Debora', name: 'Rebecca', role: 'Private cooking class' },
-      { quote: 'Debora looked after us throughout a retreat in September and fed us wonderfully - from a fresh smoothie in the morning to a generous brunch and a dinner buffet. Her food is simply a dream: full of flavours, delicious, healthy and so easy to digest. I would book her for catering any time!', name: 'Lina', role: 'Retreat catering' },
+      { quote: 'Debora looked after us throughout a retreat in September and fed us wonderfully - from a fresh smoothie in the morning to a generous brunch and a dinner buffet. Her food is simply a dream: Full of flavours, delicious, healthy and so easy to digest. I would book her for catering any time!', name: 'Lina', role: 'Retreat catering' },
       { quote: "In early April I took Debora's Ayurvedic cooking class. She is a very easy-going, likeable and competent woman. Everything I learned with her I cooked again at home. My guests and my husband were delighted too. Debora also told us about the system of the three doshas. She made it easy for me to get started. Thank you very much, and hopefully see you soon.", name: 'Annamaria', role: 'Ayurvedic cooking class' },
     ],
   },
@@ -160,14 +160,14 @@ en: {
     approachEyebrow: 'How I cook',
     approachTitle: 'Craft you can taste',
     approachBody: [
-      'I place great importance on craft, because it shows in the taste: everything is prepared fresh and largely from scratch. No ready-made mixes with additives.',
+      'I place great importance on craft, because it shows in the taste: Everything is prepared fresh and largely from scratch. No ready-made mixes with additives.',
       'Even though we buy as locally as possible, there are a few treasures that I, as a passionate cook, simply love. Chocolate, cardamom and mango, to name a few. That makes it all the more important to me that they come from producers who work fairly and sustainably. Some of the herbs even come from our own permaculture garden.',
     ],
     approachList: [
       'Vegan (vegetarian or gluten-free on request)',
       'With a focus on whole foods',
       'Free from refined sugar',
-      'Only high-quality cold-pressed oils: olive, sesame, avocado and, in smaller quantities, coconut',
+      'Only high-quality cold-pressed oils: Olive, sesame, avocado and, in smaller quantities, coconut',
       'No canned products. Legumes are soaked and carefully cooked',
     ],
     whyEyebrow: 'What makes my catering special',
@@ -211,12 +211,12 @@ en: {
     eyebrow: 'From the cookbook', title: 'Recipes',
     introEyebrow: 'Fibre & digestion',
     intro: [
-      { p: 'Look at what gets eaten here every day: pasta, risotto, sandwiches, pizza, burgers, schnitzel with fries, cake. Dishes that are 80-90 % refined carbohydrates, because they are cheap, filling and tasty. Vegetables play a supporting role at best. The result: the large majority of adults in Western countries never reach the recommended fibre intake.' },
+      { p: 'Look at what gets eaten here every day: Pasta, risotto, sandwiches, pizza, burgers, schnitzel with fries, cake. Dishes that are 80-90 % refined carbohydrates, because they are cheap, filling and tasty. Vegetables play a supporting role at best. The result: The large majority of adults in Western countries never reach the recommended fibre intake.' },
       { h: 'What you are missing out on', p: 'Fibre is food for your beneficial gut bacteria. They ferment it in the colon, producing short-chain fatty acids. These molecules nourish your gut lining, calm inflammatory processes and reach all the way into the brain via the gut-brain axis.' },
       { p: 'Animal products contain none of it. Fibre comes exclusively from vegetables, fruit, legumes, whole grains, nuts and seeds.' },
       { h: 'The one step that changes the most', p: 'Fill half your plate with vegetables - whether you eat vegan, vegetarian or everything. Vegetables that are properly seasoned and roasted are the reason you look forward to a meal. That is exactly what I develop my recipes for.' },
-      { h: 'Two things to know before you start', p: 'If you tend towards constipation: more fibre makes it worse, not better. It sits, ferments too long, and the methane produced slows motility further. Get your rhythm going first, then increase the amount.' },
-      { p: 'If legumes bloat you: that is not a sign you cannot tolerate them, but that your bacteria are not yet specialised in them. Start small, stay consistent. The gut can be trained like a muscle.' },
+      { h: 'Two things to know before you start', p: 'If you tend towards constipation: More fibre makes it worse, not better. It sits, ferments too long, and the methane produced slows motility further. Get your rhythm going first, then increase the amount.' },
+      { p: 'If legumes bloat you: That is not a sign you cannot tolerate them, but that your bacteria are not yet specialised in them. Start small, stay consistent. The gut can be trained like a muscle.' },
       { h: 'When you get the most out of it', p: 'Put your largest, most vegetable-rich meal at midday, when your metabolism is most receptive. Digestion slows down in the evening. The recipes below are whole-food, plant-based and delicious.' },
     ],
     gridEyebrow: 'Recipes',
@@ -261,8 +261,8 @@ en: {
     onlineEyebrow: 'Online courses', onlineTitle: 'At your own pace, from anywhere',
     courses: [
       { title: 'Goodbye bloating', sub: 'Root-cause analysis & your gut-rehab protocol', points: [
-        'Systematic root-cause analysis: what is behind your bloating',
-        'Your personal gut-rehab protocol: step by step towards stable digestion',
+        'Systematic root-cause analysis: What is behind your bloating',
+        'Your personal gut-rehab protocol: Step by step towards stable digestion',
         'Concrete tools for the moment your belly feels tight',
       ] },
       { title: 'Goodbye cravings', sub: 'Why cravings are rarely a willpower problem, and how to resolve them for good', points: [
@@ -277,7 +277,7 @@ en: {
       { title: 'Meal prep masterclass', sub: 'Batch cooking that survives a real week', points: [
         'How to prep in 2-3 hours a week without losing variety or nutrients',
         'Protein- and fibre-rich base recipes you can combine freely',
-        'Storage & refreshing: what keeps flavour and texture alive for days',
+        'Storage & refreshing: What keeps flavour and texture alive for days',
       ] },
       { title: 'Healthy variety', sub: 'For people who already eat healthily, may have been vegan for years and have health issues, or who are starting out vegan and want to get it right from the beginning', points: [
         'How to cover the nutrients that most often fall short (beyond B12 and omega-3)',
@@ -293,7 +293,7 @@ en: {
     communityEyebrow: 'Community membership', communityTitle: 'Wings of Wellbeing',
     communityBody: [
       'For people who take care of everyone and forget themselves.',
-      'This is a place to help you come back to yourself: your energy, your boundaries, and your routine.',
+      'This is a place to help you come back to yourself: Your energy, your boundaries, and your routine.',
       'Join challenges and live sessions with me, and receive a gut-friendly recipe worth repeating. Plus a private group of people who support you along the way.',
     ],
     communityListTitle: 'What you get',
@@ -323,7 +323,7 @@ en: {
     hookTitle: "When your gut won't settle - and neither will your mind.",
     hookBody: [
       'I am a psychologist and nutritionist, and I work where food, the nervous system and everyday life influence each other.',
-      'That means I do not only look at what you eat, but also when, how and under what inner pressure.',
+      'That means I not only look at what you eat, but also when, how and under what inner pressure.',
     ],
     hookCta: 'Book an initial analysis, CHF 120',
     hookCtaNote: '60 minutes, by video or phone. If you continue working with me afterwards, I credit the CHF 120 towards the mentoring.',
@@ -333,7 +333,7 @@ en: {
       'You know more about nutrition than most people - it just does not help',
       'In the morning your belly is flat, by the evening your trousers no longer fit',
       'At the doctor everything is "unremarkable". You do not feel unremarkable',
-      'Your list of foods left out keeps growing. The symptoms stay',
+      'Your list of foods to avoid keeps growing. The symptoms stay',
       'In the afternoon or evening cravings take over',
       'You are exhausted, irritable, overstimulated and you wonder whether this is simply how it stays',
     ],
@@ -343,13 +343,13 @@ en: {
     axisBody: [
       'Through nerves, hormones and messenger molecules the two are in constant exchange. That is why stress changes the way your gut works. And that is why persistent gut complaints drag sleep, mood and concentration down with them.',
       'Two things follow from that.',
-      'First: a nutrition plan alone often falls short. Digestion changes under stress, which is why psychological measures matter as the second lever.',
-      'Second: leaving things out gets narrow over time. Elimination phases have their place, but they are meant as a phase, with a structured reintroduction after a few weeks. In practice that is exactly what gets skipped. What remains is an ever shorter list and a more one-sided diet.',
+      'First: A nutrition plan alone often falls short. Digestion changes under stress, which is why psychological measures matter as the second lever.',
+      'Second: Leaving things out gets too limiting over time. Elimination phases have their place, but they are meant as a phase, with a structured reintroduction after a few weeks. In practice that is exactly what gets skipped. What remains is an ever shorter list and a more one-sided diet.',
     ],
     phasesEyebrow: 'How we work together',
     phasesTitle: 'Three phases',
     phases: [
-      { title: 'Understand', body: 'We go deeper than the initial analysis: history, background and connections, observed over several weeks. What emerges is a picture, not a snapshot.' },
+      { title: 'Understand', body: 'We go deeper than the initial analysis: History, background and connections, observed over several weeks. So at the end I do not just know what one single day looked like, but how good days, bad days and everything in between are connected.' },
       { title: 'Calm', body: 'Before anything can be built up, the irritation has to come down. That concerns the gut and the nervous system alike, with adjustments that fit your everyday life.' },
       { title: 'Build', body: 'Variety back on the plate instead of leaving out more and more. Plus routines that hold on bad days too. The goal is that you no longer need me at the end.' },
     ],
@@ -362,14 +362,14 @@ en: {
     callEyebrow: 'The first step',
     callTitle: 'Book an initial analysis',
     callMeta: '60 minutes · CHF 120 · video or phone',
-    callBody: 'We look at your goals, your obstacles, your everyday life and your eating patterns. Afterwards you get from me:',
+    callBody: 'We look at your goals, your obstacles, your everyday life and your eating patterns. Afterwards you learn:',
     callList: [
       'The next step you can start with right away',
       'Whether I can help you and if so, which longer mentoring would make sense and whether something should be medically checked first',
     ],
     callNote: 'If you continue working with me afterwards, I credit the CHF 120 towards the mentoring.',
     callCta: 'Request an appointment',
-    payNote: 'Payment in instalments is possible: first instalment before we start, the rest monthly, interest-free. Just say so in the call.',
+    payNote: 'Payment in instalments is possible: First instalment before we start, the rest monthly, interest-free. Just say so in the call.',
     termsTitle: 'Cancellation policy',
     terms: [
       { h: 'Rescheduling', p: 'You can reschedule free of charge up to 24 hours in advance. For later cancellations the session counts as taken. In case of illness or emergencies we will find a solution.' },
@@ -381,21 +381,21 @@ en: {
     faqTitle: 'Before you write.',
     faq: [
       { q: 'Do I have to eat vegan to work with you?', a: 'No. I cook plant-based myself and know it very well, but I work with what fits your life. It is about variety and tolerance, not about a label.' },
-      { q: 'How long is a video call?', a: 'Between 60 and 90 minutes. I schedule it generously on purpose: if we are in the middle of a topic, I do not want to cut it off just because the hour is up.' },
+      { q: 'How long is a video call?', a: 'Between 60 and 90 minutes. I schedule it generously on purpose: If we are in the middle of a topic, I do not want to cut it off just because the hour is up.' },
       { q: 'Does my health insurance cover any of this?', a: 'No, my counselling is paid privately.' },
       { q: 'How quickly will I notice something?', a: 'With cravings, many clients report first changes within three to five weeks. Things that have built up over years take longer.' },
       { q: 'I have already tried so much. Why would this be different?', a: [
-        'Most plans fail because they ignore everyday life: your evenings after work, your exhaustion, your history. That is exactly where I work, as a psychologist AND a nutritionist.',
+        'Most plans fail because they ignore everyday life: Your evenings after work, your exhaustion, your history. That is exactly where I work, as a psychologist AND a nutritionist.',
         'In practice that means: I ask more questions than I give answers. Between sessions you get something small and doable to try. You get recipes you actually want to cook. No diet programme with calorie counting that you are tired of after ten days.',
         'And I do not judge. If a week did not work, that is not failure. We look at why.',
-        'What I do not promise: that it will be quick, or that every symptom will disappear. I will tell you honestly if I am the wrong person for you.',
+        'What I do not promise: That it will be quick, or that every symptom will disappear. I will tell you honestly if I am the wrong person for you.',
       ] },
     ],
     nextEyebrow: 'If you want to go further afterwards',
     nextTiers: [
       { title: 'Foundation', meta: "4 video calls · 1-2 months · CHF 1'800", body: 'The structured start. An individual roadmap, targeted questions and the materials that fit.' },
       { title: 'Gut & nervous system', meta: "16 video calls · 4 months · CHF 3'800", body: 'For complaints that have built up over years. Close support through gut regeneration, alongside stress regulation and the patterns behind it. Weekly calls, adjustments in between, recipes and materials included.' },
-      { title: 'Deep Dive', meta: "12 months · CHF 18'000", points: ['Two half-days cooking together', 'Individual recipe development across the 12 months', 'Reachable on weekdays within 48 h by email or WhatsApp - for short questions in between, not crisis support'], body: 'When it is not only about symptoms, but about a fundamentally different way of living and working. A whole year, through all phases.' },
+      { title: 'Deep Dive', meta: "Weekly video calls · 12 months · CHF 18'000", points: ['A weekly video call over the whole 12 months', 'Two half-days cooking together', 'Individual recipe development across the 12 months', 'Reachable on weekdays within 48 h by email or WhatsApp - for short questions in between, not crisis support'], body: 'When it is not only about symptoms, but about a fundamentally different way of living and working. A whole year, through all phases.' },
     ],
     secEyebrow: 'The approach', secTitle: 'Holistic, sustainable & practical',
     body: [
@@ -442,9 +442,9 @@ en: {
     whyBody: [
       'Cravings, restrictive eating, gut complaints, exhaustion - I do not know these topics from counselling alone.',
       'What I would have needed fifteen years ago were not rules, but the knowledge that breakfast is not optional, how much vegetables and protein are actually necessary, and how to combine both so it holds up in everyday life. That sounds unspectacular, but it is the part that works.',
-      'And I have learnt not to wait for symptoms. With cardiovascular disease and type 2 diabetes, for instance, there are none for a long time. By the time they arrive, the best moment has passed. That is why knowing the right values, being able to interpret them and knowing which of them behaviour can actually change is part of my work.',
-      'Today, as a psychologist and nutritionist, I combine both: the professional interpretation and the question of why putting things into practice so often fails.',
-      'If you want to know whether this fits you: the first conversation is exactly for that.',
+      'And I have learnt not to wait for symptoms. With cardiovascular disease and type 2 diabetes, for instance, there are none for a long time. By the time they arrive, the best moment to act has passed. That is why knowing the right values, being able to interpret them and knowing which of them behaviour can actually change is part of my work.',
+      'Today, as a psychologist and nutritionist, I combine both: The professional interpretation and the question of why putting things into practice so often fails.',
+      'If you want to know whether this fits you: The first conversation is exactly for that.',
     ],
     signoff: 'Debora',
     tiersEyebrow: 'Ways to work together',
@@ -457,8 +457,8 @@ en: {
     cta: 'Book a FREE discovery call', ctaNote: 'Let us get to know each other, feel what is present for you right now, and see whether it feels like a fit.',
     eduEyebrow: 'Education', eduTitle: 'Education',
     eduList: [
-      'Master of Psychology. Focus: clinical psychology, psychotherapy and personality psychology (09/2014 - 09/2016)',
-      'Bachelor in Psychology. Minor: educational science & art history (09/2010 - 06/2013)',
+      'Master of Psychology. Focus: Clinical psychology, psychotherapy and personality psychology (09/2014 - 09/2016)',
+      'Bachelor in Psychology. Minor: Educational science & art history (09/2010 - 06/2013)',
       'Holistic nutrition and health counselling, Akademie der Naturheilkunde (10/2020 - 01/2022)',
       'Various courses and seminars in gut health and Ayurveda',
       '350+ consultations delivered',
@@ -549,7 +549,7 @@ de: {
       { quote: 'Debora hat mir die Türen zur Welt des grossartigen veganen Essens geöffnet. Obwohl ich nicht vegan lebe und beim Essen recht heikel bin, hat sie mich mit Geschmack und Qualität überrascht. Ich träume noch immer von diesem Zimt-Eis … Kaum zu glauben, dass es vegan und so köstlich ist.', name: 'Polina', role: '' },
       { quote: 'Debora macht das köstlichste vegane Essen, mit Leidenschaft und Kreativität! Am meisten liebe ich ihre Gabe, Stile aus verschiedenen Teilen der Welt zu verbinden. Mit ihrer aufmerksamen, herzlichen Art hat sie mich neugierig gemacht - also habe ich ihr Kochbuch gekauft :)', name: 'Lea', role: '' },
       { quote: 'Deboras Rezeptbuch ist wirklich ein Must-have. Und nicht nur für Veganer. Ihre Rezepte sind köstlich, nährstoffreich und einfach. Alle lassen sich mit Zutaten kochen, die wir schnell in unserer Küche finden. Ich bin keine grosse Köchin, aber dank dieses Buchs beeindrucke ich nicht nur meinen veganen Partner, sondern auch meine nicht-vegane Familie und Freunde!', name: 'Daniela', role: '' },
-      { quote: 'Debora ist eine grossartige Frau und eine fantastische vegane Köchin! Sie macht aus jedem Rezept etwas Besonderes. Und was ich besonders liebe: viele ihrer Rezepte sind wirklich schnell gekocht - perfekt für alle, die gesund leben wollen, aber lange arbeiten. Wenn du eine abwechslungsreiche vegane Küche suchst, wende dich an Debora! Ob Kochkurse, Retreats, Catering oder ihr Kochbuch - sie ist immer für dich da.', name: 'Kirsten', role: '' },
+      { quote: 'Debora ist eine grossartige Frau und eine fantastische vegane Köchin! Sie macht aus jedem Rezept etwas Besonderes. Und was ich besonders liebe: Viele ihrer Rezepte sind wirklich schnell gekocht - perfekt für alle, die gesund leben wollen, aber lange arbeiten. Wenn du eine abwechslungsreiche vegane Küche suchst, wende dich an Debora! Ob Kochkurse, Retreats, Catering oder ihr Kochbuch - sie ist immer für dich da.', name: 'Kirsten', role: '' },
     ],
   },
   contactCookbook: {
@@ -639,7 +639,7 @@ de: {
       { quote: 'Ich kann Debora wärmstens empfehlen. Sie hat mir sehr dabei geholfen, eine gesunde Balance zu finden und mein Wunschgewicht zu erreichen. Ihr enormes Fachwissen vermittelt sie verständlich und empathisch, und es ist Raum für jede Frage - Tagesgestaltung, Work-Life-Balance oder was dich sonst belastet. Ihr Fokus liegt nicht auf der Zahl auf der Waage, sondern darauf, wie man sich dabei fühlt.', name: 'Viktoria', role: 'Ernährungsberatung' },
       { quote: 'Anfang April habe ich Deboras ayurvedischen Kochkurs besucht. Sie ist eine sehr unkomplizierte, sympathische und kompetente Frau. Alles, was ich bei ihr gelernt habe, habe ich zu Hause nachgekocht. Meine Gäste und mein Mann waren ebenfalls begeistert. Debora hat uns auch das System der drei Doshas erklärt. Sie hat mir den Einstieg leicht gemacht. Herzlichen Dank und hoffentlich bis bald.', name: 'Annamaria', role: 'Ayurvedischer Kochkurs' },
       { quote: 'Wir haben Debora für unsere Hochzeit gebucht. Sie hat ein absolut köstliches veganes Menü kreiert, das alle glücklich gemacht hat (auch unsere überwiegend nicht-veganen Gäste). Obwohl das kleine Schloss, in dem unsere Hochzeit stattfand, recht klein und nicht voll ausgestattet war, haben Debora und ihr Team ein absolut unvergessliches Abendessen gemeistert. Ausserdem sind sie wunderbare Menschen und es war eine Freude, mit ihnen zu sprechen. Wir würden sie wieder buchen und können sie absolut empfehlen!', name: 'Lydia', role: 'Hochzeits-Catering' },
-      { quote: 'Das Essen war köstlich! Als Foodie ist mir wichtig, gut zu essen und satt zu werden - bei Deboras Essen war beides der Fall: sehr gut, und ich war satt und zufrieden. Ich kann ihr Essen wärmstens empfehlen, und mit ihr zu plaudern ist ebenfalls eine Freude!', name: 'Christina', role: 'Event-Catering' },
+      { quote: 'Das Essen war köstlich! Als Foodie ist mir wichtig, gut zu essen und satt zu werden - bei Deboras Essen war beides der Fall: Sehr gut, und ich war satt und zufrieden. Ich kann ihr Essen wärmstens empfehlen, und mit ihr zu plaudern ist ebenfalls eine Freude!', name: 'Christina', role: 'Event-Catering' },
     ],
   },
   testimonialsWorkshops: {
@@ -764,7 +764,7 @@ de: {
     onlineEyebrow: 'Onlinekurse', onlineTitle: 'In deinem Tempo, von überall',
     courses: [
       { title: 'Blähbauch ade', sub: 'Ursachenanalyse & dein Gut-Rehab-Protokoll', points: [
-        'Systematische Ursachenanalyse: was hinter deinem Blähbauch steckt',
+        'Systematische Ursachenanalyse: Was hinter deinem Blähbauch steckt',
         'Dein persönliches Gut-Rehab-Protokoll: Schritt für Schritt zu einer stabilen Verdauung',
         'Konkrete Tools für den Moment, wenn der Bauch spannt',
       ] },
@@ -780,7 +780,7 @@ de: {
       { title: 'Meal Prep Masterclass', sub: 'Vorkochen, das im Alltag hält', points: [
         'Wie du in 2-3 Stunden pro Woche vorkochst, ohne dass Vielfalt oder Nährstoffe auf der Strecke bleiben',
         'Eiweiss- und ballaststoffreiche Grundrezepte, die sich beliebig kombinieren lassen',
-        'Aufbewahrung & Auffrischen: was Geschmack und Textur über mehrere Tage erhält',
+        'Aufbewahrung & Auffrischen: Was Geschmack und Textur über mehrere Tage erhält',
       ] },
       { title: 'Gesunde Vielfalt', sub: 'Für Personen, die sich bereits gesund ernähren, evtl. seit Jahren vegan sind und Gesundheitsprobleme haben, oder die frisch vegan starten und von Anfang an alles richtig machen wollen', points: [
         'Wie du alle Nährstoffe abdeckst, die häufig zu kurz kommen (abgesehen von B12 und Omega-3)',
@@ -796,7 +796,7 @@ de: {
     communityEyebrow: 'Community-Mitgliedschaft', communityTitle: 'Wings of Wellbeing',
     communityBody: [
       'Für Menschen, die sich um alle kümmern und sich selbst dabei vergessen.',
-      'Hier findest du zurück zu dir: zu deiner Energie, deinen Grenzen und deiner Routine.',
+      'Hier findest du zurück zu dir: Zu deiner Energie, deinen Grenzen und deiner Routine.',
       'Mach mit bei Challenges und Live-Sessions mit mir und erhalte jeden Monat ein darmfreundliches Rezept, das es wert ist, wiederholt zu werden. Dazu eine private Gruppe von Menschen, die dich auf dem Weg unterstützen.',
     ],
     communityListTitle: 'Was du bekommst',
@@ -836,7 +836,7 @@ de: {
       'Du weisst mehr über Ernährung als die meisten Menschen - es hilft nur nicht',
       'Am Morgen ist der Bauch flach, am Abend passt die Hose nicht mehr',
       'Beim Arzt ist «alles unauffällig». Du fühlst dich aber nicht unauffällig',
-      'Deine Liste der weggelassenen Lebensmittel wird länger. Die Beschwerden bleiben',
+      'Deine Liste der Lebensmittel, die du meidest, wird länger. Die Beschwerden bleiben',
       'Nachmittags oder abends überkommt dich Heisshunger',
       'Du bist erschöpft, gereizt, überreizt und fragst dich, ob das jetzt einfach so bleibt',
     ],
@@ -847,12 +847,12 @@ de: {
       'Über Nerven, Hormone und Botenstoffe stehen beide in ständigem Austausch. Deshalb verändert Stress, wie dein Darm arbeitet. Und deshalb ziehen anhaltende Darmbeschwerden Schlaf, Stimmung und Konzentration mit hinunter.',
       'Daraus folgt zweierlei.',
       'Erstens: Ein Ernährungsplan allein greift oft zu kurz. Die Verdauung verändert sich unter Stress, und daher sind psychologische Massnahmen wichtig als zweiter Hebel.',
-      'Zweitens: Weglassen allein wird auf Dauer eng. Eliminationsphasen haben ihren Platz, aber sie sind als Phase gedacht, mit strukturierter Wiedereinführung nach einigen Wochen. Genau die fällt in der Praxis oft aus. Was bleibt, ist eine immer kürzere Liste und eine einseitigere Ernährung.',
+      'Zweitens: Weglassen allein wird auf Dauer zu einschränkend. Eliminationsphasen haben ihren Platz, aber sie sind als Phase gedacht, mit strukturierter Wiedereinführung nach einigen Wochen. Genau die fällt in der Praxis oft aus. Was bleibt, ist eine immer kürzere Liste und eine einseitigere Ernährung.',
     ],
     phasesEyebrow: 'So arbeiten wir zusammen',
     phasesTitle: 'Drei Phasen',
     phases: [
-      { title: 'Verstehen', body: 'Wir gehen tiefer als in der Erstanalyse: Verlauf, Vorgeschichte und Zusammenhänge, über mehrere Wochen beobachtet. Am Ende steht ein Bild, nicht eine Momentaufnahme.' },
+      { title: 'Verstehen', body: 'Wir gehen tiefer als in der Erstanalyse: Verlauf, Vorgeschichte und Zusammenhänge, über mehrere Wochen beobachtet. Am Ende weiss ich nicht nur, wie ein einzelner Tag ausgesehen hat, sondern wie gute Tage, schlechte Tage und alles dazwischen zusammenhängen.' },
       { title: 'Beruhigen', body: 'Bevor etwas aufgebaut werden kann, muss die Reizung runter. Das betrifft den Darm und das Nervensystem gleichermassen mit Anpassungen, die in deinen Alltag passen.' },
       { title: 'Aufbauen', body: 'Vielfalt zurück auf den Teller, statt immer mehr wegzulassen. Dazu Routinen, die auch an schlechten Tagen halten. Ziel ist, dass du mich am Schluss nicht mehr brauchst.' },
     ],
@@ -865,14 +865,14 @@ de: {
     callEyebrow: 'Der erste Schritt',
     callTitle: 'Erstanalyse buchen',
     callMeta: '60 Minuten · CHF 120 · Video oder Telefon',
-    callBody: 'Wir schauen uns deine Ziele, Hindernisse, deinen Alltag und deine Essmuster an. Danach bekommst du von mir:',
+    callBody: 'Wir schauen uns deine Ziele, Hindernisse, deinen Alltag und deine Essmuster an. Danach weisst du:',
     callList: [
       'Den nächsten Schritt, mit dem du sofort beginnen kannst',
       'Ob ich dir helfen kann und wenn ja, welches längere Mentoring sinnvoll wäre und ob du erst etwas medizinisch abklären lassen solltest',
     ],
     callNote: 'Wenn du danach mit mir weiterarbeitest, rechne ich die CHF 120 an das Mentoring an.',
     callCta: 'Termin anfragen',
-    payNote: 'Ratenzahlung ist möglich: erste Rate vor dem Start, der Rest monatlich, zinsfrei. Sag es einfach im Gespräch.',
+    payNote: 'Ratenzahlung ist möglich: Erste Rate vor dem Start, der Rest monatlich, zinsfrei. Sag es einfach im Gespräch.',
     termsTitle: 'Stornoregelung',
     terms: [
       { h: 'Verschieben', p: 'Termine kannst du bis 24 Stunden vorher kostenlos verschieben. Bei kurzfristigeren Absagen gilt der Termin als bezogen. Bei Krankheit oder Notfällen finden wir eine Lösung.' },
@@ -888,7 +888,7 @@ de: {
       { q: 'Zahlt meine Krankenkasse etwas daran?', a: 'Nein, meine Beratungen rechnest du privat ab.' },
       { q: 'Wie schnell merke ich etwas?', a: 'Bei Heisshunger berichten viele Klient:innen von ersten Veränderungen innerhalb von drei bis fünf Wochen. Themen, die sich über Jahre aufgebaut haben, brauchen länger.' },
       { q: 'Ich habe schon so viel probiert. Warum sollte das hier anders sein?', a: [
-        'Die meisten Pläne scheitern daran, dass sie den Alltag nicht berücksichtigen: deinen Feierabend, deine Erschöpfung, deine Geschichte. Genau dort arbeite ich als Psychologin UND Ernährungsberaterin.',
+        'Die meisten Pläne scheitern daran, dass sie den Alltag nicht berücksichtigen: Deinen Feierabend, deine Erschöpfung, deine Geschichte. Genau dort arbeite ich als Psychologin UND Ernährungsberaterin.',
         'Konkret heisst das: Ich stelle mehr Fragen, als ich Antworten gebe. Du bekommst zwischen den Terminen etwas kleines und machbares zu tun. Du bekommst Rezepte, die du wirklich kochen willst. Kein Diätprogramm mit Kalorienzählen, das du nach zehn Tagen satt hast.',
         'Und ich bewerte nicht. Wenn eine Woche nicht funktioniert hat, ist das kein Scheitern. Wir schauen, woran es lag.',
         'Was ich dir nicht verspreche: Dass es schnell geht oder dass jede Beschwerde verschwindet. Ich sage dir ehrlich, wenn ich die Falsche bin.',
@@ -898,7 +898,7 @@ de: {
     nextTiers: [
       { title: 'Fundament', meta: "4 Video Anrufe · 1-2 Monate · CHF 1'800", body: 'Der strukturierte Einstieg. Ein individueller Fahrplan, gezielte Fragen und passende Unterlagen.' },
       { title: 'Bauch & Nervensystem', meta: "16 Video Anrufe · 4 Monate · CHF 3'800", body: 'Für Beschwerden, die sich über Jahre aufgebaut haben. Enge Begleitung durch die Darmregeneration, parallel dazu Stressregulation und die Muster dahinter. Wöchentliche Calls, Anpassungen zwischendurch, Rezepte und Unterlagen inklusive.' },
-      { title: 'Deep Dive', meta: "12 Monate · CHF 18'000", points: ['Zwei Halbtage gemeinsam kochen', 'Individuelle Rezeptentwicklung über 12 Monate', 'Erreichbarkeit werktags innert 48 h per E-Mail oder WhatsApp - für kurze Fragen zwischendurch, keine Krisenbegleitung'], body: 'Wenn es nicht nur um Symptome geht, sondern um eine grundlegend andere Art zu leben und zu arbeiten. Ein ganzes Jahr, durch alle Phasen.' },
+      { title: 'Deep Dive', meta: "Wöchentliche Video Anrufe · 12 Monate · CHF 18'000", points: ['Ein wöchentlicher Video Anruf über die ganzen 12 Monate', 'Zwei Halbtage gemeinsam kochen', 'Individuelle Rezeptentwicklung über 12 Monate', 'Erreichbarkeit werktags innert 48 h per E-Mail oder WhatsApp - für kurze Fragen zwischendurch, keine Krisenbegleitung'], body: 'Wenn es nicht nur um Symptome geht, sondern um eine grundlegend andere Art zu leben und zu arbeiten. Ein ganzes Jahr, durch alle Phasen.' },
     ],
     secEyebrow: 'Der Ansatz', secTitle: 'Ganzheitlich, nachhaltig & alltagstauglich',
     body: [
@@ -945,8 +945,8 @@ de: {
     whyBody: [
       'Heisshunger, restriktives Essen, Darmbeschwerden, Erschöpfung - ich kenne diese Themen nicht nur aus der Beratung.',
       'Was ich vor fünfzehn Jahren gebraucht hätte, waren keine Regeln, sondern dass Frühstück nicht optional ist, wie viel Gemüse und Protein tatsächlich nötig sind und wie man beides so kombiniert, dass es im Alltag hält. Das klingt unspektakulär, ist aber der Teil, der wirkt.',
-      'Und ich habe gelernt, nicht auf Symptome zu warten. Bei Herz-Kreislauf-Erkrankungen und Typ-2-Diabetes beispielsweise gibt es lange keine. Wenn sie kommen, ist der beste Zeitpunkt vorbei. Deshalb gehört für mich dazu, die richtigen Werte zu kennen, sie einordnen zu können und zu wissen, welche davon sich durch Verhalten überhaupt verändern lassen und welche nicht.',
-      'Heute verbinde ich als Psychologin und Ernährungsberaterin beides: die fachliche Einordnung und die Frage, warum Umsetzung im Alltag so oft nicht klappt.',
+      'Und ich habe gelernt, nicht auf Symptome zu warten. Bei Herz-Kreislauf-Erkrankungen und Typ-2-Diabetes beispielsweise gibt es lange keine. Wenn sie kommen, ist der beste Zeitpunkt zu handeln vorbei. Deshalb gehört für mich dazu, die richtigen Werte zu kennen, sie einordnen zu können und zu wissen, welche davon sich durch Verhalten überhaupt verändern lassen und welche nicht.',
+      'Heute verbinde ich als Psychologin und Ernährungsberaterin beides: Die fachliche Einordnung und die Frage, warum Umsetzung im Alltag so oft nicht klappt.',
       'Wenn du wissen willst, ob das zu dir passt: Das erste Gespräch ist genau dafür da.',
     ],
     signoff: 'Debora',
