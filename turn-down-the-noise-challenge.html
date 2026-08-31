@@ -144,7 +144,7 @@
      shared group board on. Setup instructions are in
      group-board-setup.md.
      =================================================================== */
-  const BOARD_ENDPOINT = 'https://script.google.com/macros/s/AKfycbyy5mOJZ_V-vdMKUyth_vpE3BDVZOZZqe0GLwAQYAHZVwQ2qBTVFsH_irm4aeUI40KB/exec';
+  const BOARD_ENDPOINT = 'https://script.google.com/macros/s/AKfycbxp0K0Hp5iA52eX4Qm_EiQr4Xyw8eWJMRsQryse7IT_nXpCKKXchCnjlHIOjncrhlw1/exec';
 
   const KEY = 'ddc14:v3';
   const DAYS = 14;
@@ -185,6 +185,7 @@
   const esc = s => String(s||'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
   const byId = id => OPTIONAL.find(r=>r.id===id);
 
+  const ADMIN = /[?&]admin=debora/i.test(location.search);
   const hasClaudeStore = typeof window !== 'undefined' && !!window.storage;
   const boardMode = BOARD_ENDPOINT ? 'endpoint' : (hasClaudeStore ? 'shared' : 'off');
 
@@ -251,6 +252,14 @@
       instead: (d && d.instead ? d.instead.slice(0,140) : ''),
       at: Date.now()
     };
+  }
+
+  async function deleteEntry(name) {
+    if (boardMode === 'endpoint') {
+      await fetch(BOARD_ENDPOINT, { method:'POST', body: JSON.stringify({ action:'delete', name:name }), headers:{'Content-Type':'text/plain'} });
+    } else if (boardMode === 'shared') {
+      await window.storage.set('board:'+slug(name), '', true);
+    }
   }
 
   async function pushBoard() {
@@ -447,6 +456,13 @@
     if (bt) bt.onclick = async () => { grab(); state.onBoard = !state.onBoard; await save(); await loadBoard(); renderMain(); };
     const rb = document.getElementById('refreshBoard');
     if (rb) rb.onclick = async () => { await loadBoard(); renderMain(); };
+    $root.querySelectorAll('[data-del]').forEach(b=>b.onclick = async () => {
+      const n = b.dataset.del;
+      if (!confirm('Remove '+n+' from the board?')) return;
+      b.disabled = true; b.textContent = 'Removing…';
+      try { await deleteEntry(n); } catch(e) {}
+      await loadBoard(); renderMain();
+    });
   }
 
   function boardCard() {
@@ -454,9 +470,9 @@
       return '<div class="card"><h2>The group board</h2>'+
         '<p class="note">The shared board isn\'t switched on for this copy of the tracker, so your log stays on this device only. Everything else works normally.</p></div>';
     }
-    const others = board.filter(b => b && b.name && b.name !== state.name);
+    const others = board.filter(b => b && b.name && (ADMIN || b.name !== state.name));
     let inner = '';
-    if (state.onBoard) {
+    if (state.onBoard || ADMIN) {
       if (boardErr) inner = '<p class="note">The board is unreachable right now. Your own log is safe - try refreshing in a minute.</p>';
       else if (!others.length) inner = '<p class="note">Nobody else has joined the board yet. You are first.</p>';
       else inner = '<div style="margin-top:14px">' + others.slice(0,40).map(m=>{
@@ -471,7 +487,8 @@
             return '<i class="'+(v&&v<total?'part':'')+'" style="--f:'+f+'%" title="'+v+' of '+total+'"></i>';}).join('')+'</div>'+
           '<div class="dots-n">'+dots.map(x=>'<span>'+(x?x:'')+'</span>').join('')+'</div>'+
           (m.picks && m.picks.length ? '<p class="mate-r">'+m.picks.map(esc).join(' · ')+'</p>' : '')+
-          (m.instead?'<p class="mate-i">"'+esc(m.instead)+'"</p>':'')+'</div>';
+          (m.instead?'<p class="mate-i">"'+esc(m.instead)+'"</p>':'')+
+          (ADMIN?'<button class="btn ghost sm" style="margin-top:9px" data-del="'+esc(m.name)+'">Remove from board</button>':'')+'</div>';
       }).join('') + '<button class="btn ghost sm" id="refreshBoard">Refresh board</button></div>';
     }
     return '<div class="card">'+
