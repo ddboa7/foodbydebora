@@ -181,8 +181,8 @@ en: {
     packagesBody: 'I cook food no one misses the meat in. Starting from your wishes, your occasion and the season, I put together a concept made for you - you just let yourself be spoiled.',
     packagesNote: 'Minimum guest count varies by package · Zug, Zürich and surroundings',
     tiers: [
-      { title: 'Take-Away', price: 'CHF 23 per meal\nPick-up in Rifferswil', note: 'Every Wednesday evening. Order by the Friday before. The menu changes weekly.' },
-      { title: 'Standard Package', price: 'From CHF 26 per person\nFrom 10 guests', note: 'The same meal of your choice for everyone.' },
+      { title: 'Take-Away', price: 'CHF 26 per meal\nPick-up in Rifferswil', note: 'Every Wednesday evening. Order by the Friday before. The menu changes weekly.' },
+      { title: 'Standard Package', price: 'Minimum order CHF 500', note: 'The same meal of your choice for everyone.' },
       { title: 'Golden Package', price: 'From CHF 48 per person\nFrom 15 guests', note: 'Several dishes (generous buffet) or finger-food apéro bites (not a full meal). Filling apéro riche from CHF 65 per person.' },
       { title: 'Deluxe Package', price: 'From CHF 150 per person\nFrom 4 guests', note: 'Private-chef service, multi-course.' },
     ],
@@ -684,8 +684,8 @@ de: {
     packagesBody: 'Ich koche Essen, bei dem niemand das Fleisch vermisst. Ausgehend von deinen Wünschen, deinem Anlass und der Saison stelle ich ein Konzept zusammen, das für dich gemacht ist - du lässt dich einfach verwöhnen.',
     packagesNote: 'Mindestanzahl Gäste je nach Paket · Zug, Zürich und Umgebung',
     tiers: [
-      { title: 'Take-Away', price: 'CHF 23 pro Mahlzeit\nAbholung in Rifferswil', note: 'Jeden Mittwochabend. Bestellung bis am Freitag davor. Das Menü wechselt wöchentlich.' },
-      { title: 'Standard Paket', price: 'Ab CHF 26 pro Person\nAb 10 Gästen', note: 'Für alle dieselbe Mahlzeit nach deiner Wahl.' },
+      { title: 'Take-Away', price: 'CHF 26 pro Mahlzeit\nAbholung in Rifferswil', note: 'Jeden Mittwochabend. Bestellung bis am Freitag davor. Das Menü wechselt wöchentlich.' },
+      { title: 'Standard Paket', price: 'Mindestbestellwert CHF 500', note: 'Für alle dieselbe Mahlzeit nach deiner Wahl.' },
       { title: 'Golden Paket', price: 'Ab CHF 48 pro Person\nAb 15 Gästen', note: 'Mehrere Gerichte (grosszügiges Buffet) oder Fingerfood-Apéro (keine ganze Mahlzeit). Sättigender Apéro riche ab CHF 65 pro Person.' },
       { title: 'Deluxe Paket', price: 'Ab CHF 150 pro Person\nAb 4 Gästen', note: 'Private-Chef-Service, mehrgängig.' },
     ],
