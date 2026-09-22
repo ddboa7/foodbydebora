@@ -584,7 +584,7 @@ function LegalDoc({ L }) {
       </section>
       <section className="sec">
         <div className="wrap">
-          <div className="stack" style={{ gap: 'clamp(28px,3vw,44px)', maxWidth: '62ch' }}>
+          <div className="stack" style={{ gap: 'clamp(18px,2vw,28px)', maxWidth: '62ch' }}>
             {L.sections.map((s, i) => (
               <Reveal key={s.h}>
                 <h2 className="h3" style={{ marginBottom: 10 }}>{s.h}</h2>
