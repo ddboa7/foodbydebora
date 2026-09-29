@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Weihnachts-Tavolata | Food by Debora</title>
+<meta name="description" content="Ein gemeinsames Weihnachtsessen an einer langen Tafel im Freiraum Rifferswil. 12. Dezember, spendenbasiert, 20 Plätze.">
+<meta property="og:title" content="Weihnachts-Tavolata | Food by Debora">
+<meta property="og:description" content="12. Dezember, 18:00 bis 20:00, Freiraum Rifferswil. Spendenbasiert, 20 Plätze.">
+<meta property="og:image" content="https://foodbydebora.com/weihnachts-tavolata-rifferswil.png">
+<link rel="icon" type="image/png" sizes="512x512" href="food-by-debora-favicon.png?v=4"><link rel="shortcut icon" type="image/png" href="food-by-debora-favicon.png?v=4"><link rel="apple-touch-icon" href="food-by-debora-favicon.png?v=4">
+<link rel="stylesheet" href="ds/colors.css"><link rel="stylesheet" href="ds/typography.css"><link rel="stylesheet" href="ds/spacing.css"><link rel="stylesheet" href="ds/effects.css">
+<style>
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:#fdf9f7;color:#47433e;font-family:'Montserrat',system-ui,sans-serif;font-size:1.0625rem;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:#5c8778}a:hover{color:#c9a15f}
+.tv-top{display:flex;justify-content:space-between;align-items:center;gap:16px;max-width:1100px;margin:0 auto;padding:16px 22px}
+.tv-top img{height:46px;width:auto;display:block}
+.tv-lang{display:flex;gap:4px}
+.tv-lang button{font:inherit;font-size:.8rem;font-weight:600;letter-spacing:.08em;color:#5c8778;background:none;border:0;border-radius:999px;padding:8px 12px;cursor:pointer;min-height:40px}
+.tv-lang button[aria-pressed="true"]{background:#d9e8e2}
+.tv-hero{position:relative;min-height:min(58vh,540px);display:grid;align-items:end;background:#5c8778 url('weihnachts-tavolata-rifferswil.png') center 60%/cover no-repeat}
+.tv-hero::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.08),rgba(0,0,0,.5))}
+.tv-hero-in{position:relative;max-width:760px;width:100%;margin:0 auto;padding:0 22px clamp(28px,5vw,56px);color:#fff}
+.tv-eyebrow{font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600;margin:0 0 10px}
+.tv-hero h1{font-family:'Lato',sans-serif;font-weight:400;font-size:clamp(2.4rem,7vw,4.4rem);line-height:1.05;margin:0}
+.tv-wrap{max-width:760px;margin:0 auto;padding:clamp(32px,5vw,56px) 22px 64px;display:flex;flex-direction:column;gap:clamp(32px,4vw,44px)}
+.tv-intro{max-width:600px;margin:0;text-wrap:pretty}
+.tv-facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;margin:0}
+.tv-fact{background:#f2ece5;border-radius:14px;padding:16px 18px;display:flex;flex-direction:column;gap:2px}
+.tv-fact dt{font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:#5c8778}
+.tv-fact dd{margin:0;font-weight:500}
+.tv-fact small{display:block;font-weight:400;font-size:.9rem;color:#6d675f;margin-top:4px;text-wrap:pretty}
+.tv-card{background:#fff;border-radius:14px;box-shadow:0 6px 24px rgba(60,50,40,.08);padding:clamp(22px,4vw,36px);display:flex;flex-direction:column;gap:20px}
+.tv-card h2{font-family:'Lato',sans-serif;font-weight:400;font-size:clamp(1.6rem,3.4vw,2.1rem);line-height:1.15;margin:0}
+.tv-seats{display:flex;align-items:center;gap:10px;font-size:.95rem;color:#5c8778;font-weight:500;margin:-8px 0 0}
+.tv-seats i{width:9px;height:9px;border-radius:50%;background:#7fa89a;flex:none}
+.tv-tally{width:100%;border:0;min-height:420px}
+form{display:flex;flex-direction:column;gap:16px}
+.tv-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+label{display:flex;flex-direction:column;gap:6px;font-size:.9rem;font-weight:600}
+label span.opt{font-weight:400;color:#7c766e}
+input,textarea{font:inherit;font-size:1rem;font-weight:400;color:#47433e;background:#fdf9f7;border:1px solid #e3dcd3;border-radius:10px;padding:12px 14px;width:100%}
+textarea{resize:vertical;min-height:52px}
+input:focus,textarea:focus{outline:2px solid #7fa89a;outline-offset:-1px;border-color:#7fa89a;background:#fff}
+.tv-count{display:flex;align-items:center;border:1px solid #e3dcd3;border-radius:999px;background:#fdf9f7;width:max-content}
+.tv-count button{width:48px;height:48px;border:0;background:none;font:inherit;font-size:1.3rem;color:#5c8778;cursor:pointer;border-radius:999px}
+.tv-count button:hover:not(:disabled){background:#d9e8e2}
+.tv-count button:disabled{opacity:.3;cursor:default}
+.tv-count output{min-width:34px;text-align:center;font-weight:600;font-size:1.05rem}
+.tv-btn{align-self:flex-start;font:inherit;font-weight:600;font-size:1rem;color:#fff;background:#5c8778;border:0;border-radius:999px;padding:14px 30px;cursor:pointer;transition:background .25s ease,transform .25s ease}
+.tv-btn:hover:not(:disabled){background:#7fa89a;transform:translateY(-2px)}
+.tv-btn:disabled{opacity:.6;cursor:default}
+.tv-err{color:#a3503f;font-size:.9rem;margin:0}
+.tv-done{display:flex;flex-direction:column;gap:10px}
+.tv-done p{margin:0}
+.tv-credit{position:absolute;right:14px;bottom:10px;z-index:1;font-size:.75rem;color:#fff;margin:0;max-width:calc(100% - 28px);text-align:right;text-shadow:0 1px 3px rgba(0,0,0,.6)}.tv-foot{max-width:760px;margin:0 auto;padding:0 22px 48px;font-size:.85rem;color:#7c766e;display:flex;flex-wrap:wrap;gap:6px 18px}
+[hidden]{display:none!important}
+</style>
+</head>
+<body>
+<header class="tv-top"><a href="index.html"><img src="food-by-debora-logo.png" alt="Food by Debora"></a><div class="tv-lang"><button type="button" data-lang="de" aria-pressed="true">DE</button><button type="button" data-lang="en" aria-pressed="false">EN</button></div></header>
+<section class="tv-hero" data-screen-label="Hero">
+<div class="tv-hero-in">
+<p class="tv-eyebrow" data-t="eyebrow">12. Dezember · Rifferswil</p>
+<h1 data-t="title">Weihnachts-Tavolata</h1>
+</div>
+<p class="tv-credit" data-t="credit">Bild mit KI generiert. Die Dekoration wird einfacher.</p>
+</section>
+<main class="tv-wrap">
+<p class="tv-intro" data-t="intro">Komm mitten im kalten Dezember zu einem gemeinsamen Abendessen vorbei. Wir sitzen zusammen an einer langen Tafel, geniessen verschiedene hausgemachte Gerichte und lassen es uns bei Kerzenlicht gut gehen. Lerne neue Menschen kennen und nimm schöne Erinnerungen mit nach Hause.</p>
+<dl class="tv-facts">
+<div class="tv-fact"><dt data-t="whenL">Wann</dt><dd data-t="when">Samstag, 12. Dezember<br>18:00 bis 20:00</dd></div>
+<div class="tv-fact"><dt data-t="whereL">Wo</dt><dd>Freiraum, Rifferswil</dd></div>
+<div class="tv-fact"><dt data-t="giveL">Beitrag</dt><dd data-t="give">Auf Spendenbasis<small>Vor Ort (bar oder Twint). Damit bezahlen wir Raum, Lebensmittel, Deko und Helfer:innen.</small></dd></div>
+</dl>
+<section class="tv-card" id="anmelden" data-screen-label="Anmeldung">
+<h2 id="tv-title" data-t="formTitle">Platz reservieren</h2>
+<p class="tv-seats" id="tv-seats"><i></i><span data-t="seats">20 Plätze an der Tafel</span></p>
+<div id="tv-tally-wrap" hidden></div>
+<form id="tv-form" novalidate>
+<div class="tv-row">
+<label><span data-t="first">Vorname</span><input name="Vorname" autocomplete="given-name" required></label>
+<label><span data-t="last">Nachname</span><input name="Nachname" autocomplete="family-name" required></label>
+<label><span data-t="email">E-Mail</span><input name="email" type="email" autocomplete="email" inputmode="email" required></label>
+</div>
+<label><span data-t="people">Wie viele Personen?</span>
+<div class="tv-count"><button type="button" id="tv-minus" aria-label="−">−</button><output id="tv-n">1</output><button type="button" id="tv-plus" aria-label="+">+</button></div>
+</label>
+<label><span><span data-t="allergies">Allergien oder Unverträglichkeiten</span> <span class="opt" data-t="opt">optional</span></span><textarea name="Allergien" rows="2"></textarea></label>
+<p class="tv-err" id="tv-err" hidden></p>
+<button class="tv-btn" id="tv-submit" type="submit" data-t="submit">Platz reservieren</button>
+</form>
+<div class="tv-done" id="tv-done" hidden><p><strong data-t="doneH">Schön, dass du dabei bist.</strong></p><p data-t="doneP">Dein Platz ist reserviert. Falls du doch nicht kommen kannst, schreib mir kurz, dann geht der Platz an jemand anderen.</p></div>
+<div class="tv-done" id="tv-full" hidden><p><strong data-t="fullH">Die Tafel ist voll.</strong></p><p data-t="fullP">Alle 20 Plätze sind vergeben. Schreib mir an <a href="mailto:foodbydebora@gmail.com">foodbydebora@gmail.com</a>, dann setze ich dich auf die Warteliste.</p></div>
+</section>
+</main>
+<footer class="tv-foot"><a href="index.html">foodbydebora.com</a><a href="impressum.html">Impressum</a><a href="datenschutz.html" data-t="privacy">Datenschutz</a></footer>
+<script>
+// Einstellungen
+var TAVOLATA = {
+  tallyDE: '', // Tally-Formular-ID (z.B. 'wA1bCd'). Leer = eingebautes Formular (Anmeldung per Mail)
+  tallyEN: '', // optional englische Version, sonst wird tallyDE verwendet
+  voll: false  // nur für das eingebaute Formular: auf true setzen, wenn 20 Plätze vergeben sind
+};
+var TV_T = {
+  de: {
+    eyebrow:'12. Dezember · Rifferswil', title:'Weihnachts-Tavolata', credit:'Bild mit KI generiert. Die Dekoration wird einfacher.',
+    intro:'Komm mitten im kalten Dezember zu einem gemeinsamen Abendessen vorbei. Wir sitzen zusammen an einer langen Tafel, geniessen verschiedene hausgemachte Gerichte und lassen es uns bei Kerzenlicht gut gehen. Lerne neue Menschen kennen und nimm schöne Erinnerungen mit nach Hause.',
+    whenL:'Wann', when:'Samstag, 12. Dezember<br>18:00 bis 20:00', whereL:'Wo', giveL:'Beitrag',
+    give:'Auf Spendenbasis<small>Vor Ort (bar oder Twint). Damit bezahlen wir Raum, Lebensmittel, Deko und Helfer:innen.</small>',
+    formTitle:'Platz reservieren', seats:'20 Plätze an der Tafel', first:'Vorname', last:'Nachname', email:'E-Mail', people:'Wie viele Personen?',
+    allergies:'Allergien oder Unverträglichkeiten', opt:'optional', submit:'Platz reservieren', sending:'Wird gesendet…',
+    invalid:'Bitte Vor- und Nachname und eine gültige E-Mail angeben.',
+    fail:'Das hat leider nicht geklappt. Versuch es nochmals oder schreib mir an <a href="mailto:foodbydebora@gmail.com">foodbydebora@gmail.com</a>.',
+    doneTitle:'Bis bald an der Tafel', doneH:'Schön, dass du dabei bist.', doneP:'Dein Platz ist reserviert. Falls du doch nicht kommen kannst, schreib mir kurz, dann geht der Platz an jemand anderen.',
+    fullTitle:'Ausgebucht', fullH:'Die Tafel ist voll.', fullP:'Alle 20 Plätze sind vergeben. Schreib mir an <a href="mailto:foodbydebora@gmail.com">foodbydebora@gmail.com</a>, dann setze ich dich auf die Warteliste.',
+    privacy:'Datenschutz'
+  },
+  en: {
+    eyebrow:'12 December · Rifferswil', title:'Christmas Tavolata', credit:'AI-generated image. The actual decorations will be simpler.',
+    intro:'Join us for a shared dinner in the middle of cold December. We sit together at one long table, enjoy a variety of homemade dishes and the evening by candlelight. Meet new people and take some lovely memories home with you.',
+    whenL:'When', when:'Saturday, 12 December<br>18:00 to 20:00', whereL:'Where', giveL:'Contribution',
+    give:'Donation-based<small>On the evening (cash or Twint). It covers the room, food, decorations and helpers.</small>',
+    formTitle:'Reserve a seat', seats:'20 seats at the table', first:'First name', last:'Last name', email:'E-mail', people:'How many people?',
+    allergies:'Allergies or intolerances', opt:'optional', submit:'Reserve a seat', sending:'Sending…',
+    invalid:'Please enter your first and last name and a valid e-mail.',
+    fail:'Something went wrong. Please try again or write to me at <a href="mailto:foodbydebora@gmail.com">foodbydebora@gmail.com</a>.',
+    doneTitle:'See you at the table', doneH:'So glad you are coming.', doneP:'Your seat is reserved. If you cannot make it after all, just drop me a line so the seat can go to someone else.',
+    fullTitle:'Fully booked', fullH:'The table is full.', fullP:'All 20 seats are taken. Write to me at <a href="mailto:foodbydebora@gmail.com">foodbydebora@gmail.com</a> and I will put you on the waiting list.',
+    privacy:'Privacy'
+  }
+};
+(function(){
+  var lang = (localStorage.getItem('tv-lang') || (navigator.language||'de').slice(0,2)) === 'en' ? 'en' : 'de';
+  var state = 'form';
+  var $ = function(id){ return document.getElementById(id); };
+  var form = $('tv-form'), err = $('tv-err'), btn = $('tv-submit');
+  function tally(){
+    var id = (lang === 'en' && TAVOLATA.tallyEN) || TAVOLATA.tallyDE;
+    var w = $('tv-tally-wrap');
+    if (!id) { w.hidden = true; w.innerHTML = ''; return false; }
+    w.innerHTML = '<iframe class="tv-tally" src="https://tally.so/embed/' + id + '?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" title="' + TV_T[lang].formTitle + '" loading="lazy"></iframe>';
+    w.hidden = false;
+    if (!window.Tally) { var s = document.createElement('script'); s.src = 'https://tally.so/widgets/embed.js'; s.onload = function(){ window.Tally && Tally.loadEmbeds(); }; document.body.appendChild(s); } else { Tally.loadEmbeds(); }
+    return true;
+  }
+  function render(){
+    var T = TV_T[lang];
+    document.documentElement.lang = lang;
+    document.title = T.title + ' | Food by Debora';
+    document.querySelectorAll('[data-t]').forEach(function(el){ var k = el.getAttribute('data-t'); if (T[k] != null) el.innerHTML = T[k]; });
+    document.querySelectorAll('.tv-lang button').forEach(function(b){ b.setAttribute('aria-pressed', b.dataset.lang === lang); });
+    var useTally = tally();
+    if (useTally) { form.hidden = true; $('tv-full').hidden = true; $('tv-done').hidden = true; $('tv-seats').hidden = false; return; }
+    if (TAVOLATA.voll) state = 'full';
+    form.hidden = state !== 'form';
+    $('tv-done').hidden = state !== 'done';
+    $('tv-full').hidden = state !== 'full';
+    $('tv-seats').hidden = state !== 'form';
+    $('tv-title').textContent = state === 'done' ? T.doneTitle : state === 'full' ? T.fullTitle : T.formTitle;
+    if (!btn.disabled) btn.textContent = T.submit;
+  }
+  document.querySelectorAll('.tv-lang button').forEach(function(b){ b.onclick = function(){ lang = b.dataset.lang; localStorage.setItem('tv-lang', lang); err.hidden = true; render(); }; });
+  var n = 1, out = $('tv-n'), minus = $('tv-minus'), plus = $('tv-plus');
+  function sync(){ out.textContent = n; minus.disabled = n <= 1; plus.disabled = n >= 6; }
+  minus.onclick = function(){ n = Math.max(1, n-1); sync(); };
+  plus.onclick = function(){ n = Math.min(6, n+1); sync(); };
+  sync();
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var T = TV_T[lang], d = Object.fromEntries(new FormData(form));
+    if (!d.Vorname.trim() || !d.Nachname.trim() || !/^\S+@\S+\.\S+$/.test(d.email)) { err.textContent = T.invalid; err.hidden = false; return; }
+    err.hidden = true; btn.disabled = true; btn.textContent = T.sending;
+    d.Personen = n; d.Sprache = lang.toUpperCase();
+    d._subject = 'Tavolata Anmeldung: ' + d.Vorname + ' ' + d.Nachname + ' (' + n + ')'; d._template = 'table';
+    fetch('https://formsubmit.co/ajax/foodbydebora@gmail.com', { method:'POST', headers:{'Content-Type':'application/json',Accept:'application/json'}, body: JSON.stringify(d) })
+      .then(function(r){ if(!r.ok) throw 0; state = 'done'; btn.disabled = false; render(); })
+      .catch(function(){ err.innerHTML = T.fail; err.hidden = false; btn.disabled = false; btn.textContent = T.submit; });
+  });
+  render();
+})();
+</script>
+</body>
+</html>
